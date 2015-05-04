@@ -1,0 +1,26 @@
+.new_banner .swiper-wrapper a {
+  display: block;
+  width: 100%;
+}
+.new_banner .swiper-wrapper img {
+  width: 100%;
+}
+.new_banner .pagination_a {
+  position: absolute;
+  z-index: 10;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+.new_banner .pagination_a .swiper-pagination-switch {
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  margin: 5px;
+  border: 1px solid #0160C0;
+  border-radius: 50%;
+}
+.new_banner .pagination_a .swiper-active-switch {
+  background: #0160C0;
+}
+/*# sourceMappingURL=banner.css.map */
