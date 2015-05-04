@@ -8,15 +8,15 @@
 .new_banner .pagination_a {
   position: absolute;
   z-index: 10;
-  bottom: 10px;
+  bottom: 5px;
   width: 100%;
   text-align: center;
 }
 .new_banner .pagination_a .swiper-pagination-switch {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   display: inline-block;
-  margin: 5px;
+  margin: 2px;
   border: 1px solid #0160C0;
   border-radius: 50%;
 }
