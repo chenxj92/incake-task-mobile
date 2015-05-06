@@ -96,7 +96,7 @@
 								</p>
 							</div>
 						</div>
-						<div class="swiper-slide">
+						<div class="swiper-slide" style="overflow: auto;">
 							<div class="peisong_scope">
 								<img src="img/ditu.jpg" />
 							</div>
@@ -171,13 +171,14 @@
 		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
 		<script>
 			$(function() {
+				//初始化页面
 				var tabsSwiper = new Swiper('.page_content', {
 					speed: 500,
 					initialSlide: 1,
 					onSlideChangeStart: function(tabsSwiper) {
 						$(".tabs .active").removeClass('active');
-						$(".tabs a").eq(tabsSwiper.activeIndex).addClass('active')
-							//						更改标题
+						$(".tabs a").eq(tabsSwiper.activeIndex).addClass('active');
+						//更改标题
 						var _pagenow = tabsSwiper.activeIndex,
 							title = document.getElementById('title');
 						switch (_pagenow) {
@@ -190,7 +191,7 @@
 							default:
 								title.innerHTML = '联系我们'
 								break;
-						}
+						};
 					}
 				});
 				//书签点击事件
