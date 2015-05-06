@@ -22,10 +22,10 @@
 		<script src="./INCAKE_files/script.js" type="text/javascript"></script>
 		<link rel="stylesheet" type="text/css" href="./INCAKE_files/swiper.min.css">
 		<script src="./INCAKE_files/lazyload.min.js" type="text/javascript"></script>
-		<script src="js/idangerous.swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
 		<!--新增banner样式-->
 		<link rel="stylesheet" type="text/css" href="css/fonts.css" />
-		<link rel="stylesheet" type="text/css" href="css/banner.css?vhh" />
+		<link rel="stylesheet" type="text/css" href="css/banner.css" />
 		<meta http-equiv="Pragma" content="no-cache" />
 		<style type="text/css">
 			.swiper-container {
@@ -432,7 +432,7 @@
 					</div>
 					<!--滑动组件end-->
 				</div>
-				<div style="background-color:#E6E6E6; font-weight:bold; font-size:14PX; text-align:center; padding:5px 3px; margin-top:-1px;">
+				<div style="background-color:#E6E6E6; font-weight:bold; font-size:14PX; text-align:center; padding:5px 3px;">
 					<a href="http://wap.incake.net/ICake/List.aspx?dtype=&dname=%e5%8d%88%e5%90%8e%e8%8c%b6%e7%82%b9&dc=%e7%94%9c%e5%93%81" rel="external" style=" color:#727171;" class="ui-link">更多选择 MORE</a>
 				</div>
 
@@ -519,7 +519,7 @@
 						loop: true,
 						centeredSlides: true,
 						autoplay: 5000,
-						speed: 1000,
+						speed: 500,
 						autoplayDisableOnInteraction: false
 					})
 				} else {
@@ -530,9 +530,8 @@
 			$('.thumbs-cotnainer').each(function() {
 				$(this).swiper({
 					slidesPerView: 'auto',
-					offsetPxBefore: 5,
-					offsetPxAfter: 5,
-					calculateHeight: true
+					calculateHeight: true,
+					spaceBetween:10
 				})
 			});
 		})

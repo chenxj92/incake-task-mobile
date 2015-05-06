@@ -12,25 +12,22 @@
   width: 100%;
   text-align: center;
 }
-.new_banner .pagination_a .swiper-pagination-switch {
+.new_banner .pagination_a .swiper-pagination-bullet {
   width: 8px;
   height: 8px;
   display: inline-block;
   margin: 2px;
   border: 1px solid #0160C0;
   border-radius: 50%;
+  opacity: 1;
+  background: none;
 }
-.new_banner .pagination_a .swiper-active-switch {
+.new_banner .pagination_a .swiper-pagination-bullet-active {
   background: #0160C0;
 }
 .thumbs-cotnainer .swiper-slide {
   float: left;
-  padding: 0 5px;
   width: 150px;
-  height: 190px;
-}
-.thumbs-cotnainer .swiper-slide a {
-  display: block;
 }
 .thumbs-cotnainer .swiper-slide img {
   width: 150px;
