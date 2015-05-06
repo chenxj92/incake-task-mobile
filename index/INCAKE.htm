@@ -3,10 +3,9 @@
 
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<!--<base href="http://wap.incake.net/ICake/index.aspx">-->
 		<base href=".">
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0;">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<!-- 针对WebApp的页头声明 -->
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -23,10 +22,11 @@
 		<script src="./INCAKE_files/script.js" type="text/javascript"></script>
 		<link rel="stylesheet" type="text/css" href="./INCAKE_files/swiper.min.css">
 		<script src="./INCAKE_files/lazyload.min.js" type="text/javascript"></script>
-		<!--<script type="text/javascript" src="./INCAKE_files/swiper.min.js"></script>-->
 		<script src="js/idangerous.swiper.min.js" type="text/javascript" charset="utf-8"></script>
 		<!--新增banner样式-->
-		<link rel="stylesheet" type="text/css" href="css/banner.css" />
+		<link rel="stylesheet" type="text/css" href="css/fonts.css" />
+		<link rel="stylesheet" type="text/css" href="css/banner.css?vhh" />
+		<meta http-equiv="Pragma" content="no-cache" />
 		<style type="text/css">
 			.swiper-container {
 				width: 100%;
@@ -36,13 +36,6 @@
 				text-align: center;
 				font-size: 18px;
 				background: #fff;
-				/* Center slide text vertically */
-				
-				display: -webkit-box;
-				display: -ms-flexbox;
-				display: -webkit-flex;
-				display: flex;
-			}
 		</style>
 		<!-- 针对webapp的设置 -->
 		<title>INCAKE</title>
@@ -52,7 +45,7 @@
 		<section data-role="page" data-url="/ICake/index.aspx" tabindex="0" class="ui-page ui-body-c ui-page-active" style="min-height: 548px;">
 			<header>
 				<a href="javascript:;" class="logo fn_left ui-link">
-					<img src="./INCAKE_files/logo.png" alt="">
+					<i class="imooc-icon" style="font-size: 2.2em;color: #1D2669;">&#xe61b;</i>
 				</a>
 				<a href="javascript:;" class="fn_right ui-link">
 					<div class="select_city">
@@ -102,7 +95,7 @@
 						if ($(".diweizhi02 span.checked").attr("cityId") == undefined) {
 							alert("请选择配送城市");
 							return;
-						}
+						};
 						//清空购物车
 						$.ajax({
 							url: "/Icake/cookie/CookieManage.aspx",
@@ -139,9 +132,9 @@
 			<div class="mark_ceng" style="display:none;">
 				<!--地理位置start-->
 				<section class="diweizhi01">
-					<i class="imooc-icon close" style=" display:none;"></i>
+					<i class="imooc-icon close" style=" display:none;">&#xe600;</i>
 					<div class="header">
-						<i class="imooc-icon"></i>位置获取
+						<i class="imooc-icon">&#xe60b;</i>位置获取
 					</div>
 					<div class="content">
 						<p>您当前的所在位置：<span id="city_Name">上海市</span>
@@ -155,9 +148,9 @@
 				<!--地理位置end-->
 				<!--地理位置start-->
 				<section class="diweizhi02">
-					<i class="imooc-icon close"></i>
+					<i class="imooc-icon close">&#xe600;</i>
 					<div class="header">
-						<i class="imooc-icon"></i>位置获取
+						<i class="imooc-icon">&#xe60b;</i>位置获取
 					</div>
 					<div class="content">
 						<span cityid="021" cityname="上海市">上海市</span>
@@ -234,51 +227,6 @@
 				</div>
 			</menu>
 
-			<!---Banner开始--->
-			<!--<section class="play_banner index_play_banner" id="sl_img_play" style="overflow: hidden; height: 298px; width: 596px;">
-				<ul class="con fn-clear" style="width: 2980px; transition: -webkit-transform 0ms; -webkit-transition: -webkit-transform 0ms; -webkit-transform-origin: 0px 0px; -webkit-transform: translate(-1192px, 0);">
-
-					<li class="" style="height: 298px; width: 596px;">
-						<a href="http://wap.incake.net/icake/NewActivityXM.aspx" target="_blank" class="ui-link" rel="external">
-							<img src="./INCAKE_files/2015041418360685457.jpg" width="340" height="auto" style="height: 298px; width: 596px;">
-						</a>
-					</li>
-
-					<li style="height: 298px; width: 596px;" class="">
-						<a href="http://wap.incake.net/ICake/Detail.aspx?CommodityId=409" target="_blank" class="ui-link" rel="external">
-							<img src="./INCAKE_files/2015032017120519877.jpg" width="340" height="auto" style="height: 298px; width: 596px;">
-						</a>
-					</li>
-
-					<li style="height: 298px; width: 596px;" class="on">
-						<a href="http://wap.incake.net/icake/flashsale.aspx" target="_blank" class="ui-link" rel="external">
-							<img src="./INCAKE_files/2015041011320783654.jpg" width="340" height="auto" style="height: 298px; width: 596px;">
-						</a>
-					</li>
-
-					<li style="height: 298px; width: 596px;">
-						<a href="http://wap.incake.net/ICake/Detail.aspx?CommodityId=221" target="_blank" class="ui-link" rel="external">
-							<img src="./INCAKE_files/2015041609470357982.jpg" width="340" height="auto" style="height: 298px; width: 596px;">
-						</a>
-					</li>
-
-					<li style="height: 298px; width: 596px;">
-						<a href="http://wap.incake.net/ICake/Detail.aspx?CommodityId=183" target="_blank" class="ui-link" rel="external">
-							<img src="./INCAKE_files/n-1.jpg" width="340" height="auto" style="height: 298px; width: 596px;">
-						</a>
-					</li>
-
-				</ul>
-				<ul class="pagination fn-clear" id="indicator">
-
-					<li class="li_first"></li>
-					<li class=""></li>
-					<li class="on"></li>
-					<li></li>
-					<li class="li_last"></li>
-				</ul>
-			</section>-->
-			<!---Banner结束--->
 			<!--新banner开始-->
 			<div class="swiper-container new_banner">
 				<div class="swiper-wrapper">
@@ -312,9 +260,10 @@
 				<div class="pagination pagination_a"></div>
 			</div>
 			<!--新banner结束-->
+
 			<!---产品展示区--->
 			<div class="index_goods">
-				<!---主题蛋糕开始--->
+				<!---皇室推荐蛋糕开始--->
 				<div class="index_tui_goods index_h2_01">
 					<a href="http://wap.incake.net/Icake/List.aspx?dtype=&dname=%E8%9B%8B%E7%B3%95%E9%A6%86&dc=%E8%9B%8B%E7%B3%95%E9%A6%86" rel="external" class="ui-link">
 						<h2>
@@ -434,7 +383,6 @@
 				<!---主题蛋糕结束--->
 
 				<!---午后茶点开始--->
-
 				<div class="index_tui_goods index_h2_02">
 					<a href="http://wap.incake.net/ICake/List.aspx?dtype=&dname=%e5%8d%88%e5%90%8e%e8%8c%b6%e7%82%b9&dc=%e7%94%9c%e5%93%81" rel="external" class="ui-link">
 						<h2>
@@ -443,195 +391,65 @@
 						</h2>
 					</a>
 					<!--滑动组件start-->
-					<!--<div class="swiper-container swiper-container-horizontal">
-						<div class="swiper-wrapper" style="transition: 0ms; -webkit-transition: 0ms; -webkit-transform: translate3d(-2316px, 0px, 0px);">
-							<div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="4" style="width: 579px;">
-								<div class="two_goods_box fn_clear">
-									<div class="goods_box w50  fn_left">
-										<a href="http://wap.incake.net/Icake/Detail.aspx?CommodityID=385" rel="external" class="ui-link">
-											<img class="img320" src="./INCAKE_files/1503090103463.jpg">
-										</a>
-										<h3>
-											草莓杏仁塔<br>
-											Stawberry almond tart
-										</h3>
-									</div>
-								</div>
-							</div>
-
-							<div class="swiper-slide" data-swiper-slide-index="0" style="width: 579px;">
-								<div class="two_goods_box fn_clear">
-									<div class="goods_box w50  fn_left">
-										<a href="http://wap.incake.net/Icake/Detail.aspx?CommodityID=410" rel="external" class="ui-link">
-											<img class="img320" src="./INCAKE_files/2015040410074960333.jpg">
-										</a>
-										<h3>
-											闪电泡芙<br>
-											Lightning puffs
-										</h3>
-									</div>
-									<div class="goods_box w50  fn_left">
-										<a href="http://wap.incake.net/Icake/Detail.aspx?CommodityID=408" rel="external" class="ui-link">
-											<img class="img320" src="./INCAKE_files/2015031918021780730.jpg">
-										</a>
-										<h3>
-											草莓慕斯杯<br>
-											strawberry mousse cup
-										</h3>
-									</div>
-								</div>
-							</div>
-
-							<div class="swiper-slide" data-swiper-slide-index="1" style="width: 579px;">
-								<div class="two_goods_box fn_clear">
-									<div class="goods_box w50  fn_left">
-										<a href="http://wap.incake.net/Icake/Detail.aspx?CommodityID=407" rel="external" class="ui-link">
-											<img class="img320" src="./INCAKE_files/2015032617102311533.jpg">
-										</a>
-										<h3>
-											香草瑞士卷<br>
-											Vanilla Swiss Roll
-										</h3>
-									</div>
-									<div class="goods_box w50  fn_left">
-										<a href="http://wap.incake.net/Icake/Detail.aspx?CommodityID=404" rel="external" class="ui-link">
-											<img class="img320" src="./INCAKE_files/2015032617044433541.jpg">
-										</a>
-										<h3>
-											百利豆豆瑞士卷<br>
-											Baileys Swiss Roll
-										</h3>
-									</div>
-								</div>
-							</div>
-
-							<div class="swiper-slide swiper-slide-prev" data-swiper-slide-index="2" style="width: 579px;">
-								<div class="two_goods_box fn_clear">
-									<div class="goods_box w50  fn_left">
-										<a href="http://wap.incake.net/Icake/Detail.aspx?CommodityID=398" rel="external" class="ui-link">
-											<img class="img320" src="./INCAKE_files/2015032617171557598.png">
-										</a>
-										<h3>
-											克拉情人杯<br>
-											Carat Lover
-										</h3>
-									</div>
-									<div class="goods_box w50  fn_left">
-										<a href="http://wap.incake.net/Icake/Detail.aspx?CommodityID=382" rel="external" class="ui-link">
-											<img class="img320" src="./INCAKE_files/1501090101553.jpg">
-										</a>
-										<h3>
-											天鹅舞泡芙<br>
-											Swan dance
-										</h3>
-									</div>
-								</div>
-							</div>
-
-							<div class="swiper-slide swiper-slide-active" data-swiper-slide-index="3" style="width: 579px;">
-								<div class="two_goods_box fn_clear">
-									<div class="goods_box w50  fn_left">
-										<a href="http://wap.incake.net/Icake/Detail.aspx?CommodityID=383" rel="external" class="ui-link">
-											<img class="img320" src="./INCAKE_files/1512090112173.jpg">
-										</a>
-										<h3>
-											晴天杯<br>
-											Cup cake
-										</h3>
-									</div>
-									<div class="goods_box w50  fn_left">
-										<a href="http://wap.incake.net/Icake/Detail.aspx?CommodityID=384" rel="external" class="ui-link">
-											<img class="img320" src="./INCAKE_files/1512090112523.jpg">
-										</a>
-										<h3>
-											经典小方<br>
-											Classic slices
-										</h3>
-									</div>
-								</div>
-							</div>
-
-							<div class="swiper-slide swiper-slide-next" data-swiper-slide-index="4" style="width: 579px;">
-								<div class="two_goods_box fn_clear">
-									<div class="goods_box w50  fn_left">
-										<a href="http://wap.incake.net/Icake/Detail.aspx?CommodityID=385" rel="external" class="ui-link">
-											<img class="img320" src="./INCAKE_files/1503090103463.jpg">
-										</a>
-										<h3>
-											草莓杏仁塔<br>
-											Stawberry almond tart
-										</h3>
-									</div>
-								</div>
-							</div>
-
-							
-					<div class="swiper-slide swiper-slide-duplicate" data-swiper-slide-index="0" style="width: 579px;">
-						<div class="two_goods_box fn_clear">
-							<div class="goods_box w50  fn_left">
-								<a href="http://wap.incake.net/Icake/Detail.aspx?CommodityID=410" rel="external" class="ui-link">
-									<img class="img320" src="./INCAKE_files/2015040410074960333.jpg">
+					<div class="swiper-container thumbs-cotnainer">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<a href="#">
+									<img src="./INCAKE_files/2015031918021780730.jpg" style="width: 150px;height: 150px;">
+									<h3>草莓杏仁塔11
+									<br>Stawberry almond tart</h3>
 								</a>
-								<h3>
-
-											闪电泡芙<br>
-
-											Lightning puffs
-
-										</h3>
 							</div>
-							<div class="goods_box w50  fn_left">
-								<a href="http://wap.incake.net/Icake/Detail.aspx?CommodityID=408" rel="external" class="ui-link">
-									<img class="img320" src="./INCAKE_files/2015031918021780730.jpg">
+							<div class="swiper-slide">
+								<a href="#">
+									<img src="./INCAKE_files/2015031918021780730.jpg" style="width: 150px;height: 150px;">
+									<h3>草莓杏仁塔11
+									<br>Stawberry almond tart</h3>
 								</a>
-								<h3>
-
-											草莓慕斯杯<br>
-
-											strawberry mousse cup
-
-										</h3>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<img src="./INCAKE_files/2015031918021780730.jpg" style="width: 150px;height: 150px;">
+									<h3>草莓杏仁塔11
+									<br>Stawberry almond tart</h3>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<img src="./INCAKE_files/2015031918021780730.jpg" style="width: 150px;height: 150px;">
+									<h3>草莓杏仁塔11
+									<br>Stawberry almond tart</h3>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#">
+									<img src="./INCAKE_files/2015031918021780730.jpg" style="width: 150px;height: 150px;">
+									<h3>草莓杏仁塔11
+									<br>Stawberry almond tart</h3>
+								</a>
 							</div>
 						</div>
 					</div>
-				</div>
-			</div>-->
 					<!--滑动组件end-->
 				</div>
 				<div style="background-color:#E6E6E6; font-weight:bold; font-size:14PX; text-align:center; padding:5px 3px; margin-top:-1px;">
-					<a href="http://wap.incake.net/ICake/List.aspx?dtype=&dname=%e5%8d%88%e5%90%8e%e8%8c%b6%e7%82%b9&dc=%e7%94%9c%e5%93%81" rel="external" style=" color:#727171;" class="ui-link">
-                更多选择 MORE</a>
+					<a href="http://wap.incake.net/ICake/List.aspx?dtype=&dname=%e5%8d%88%e5%90%8e%e8%8c%b6%e7%82%b9&dc=%e7%94%9c%e5%93%81" rel="external" style=" color:#727171;" class="ui-link">更多选择 MORE</a>
 				</div>
 
-				<!---限时抢购结束--->
 			</div>
-			<!--滑动组件js-->
-
-			<script>
-				$(function() {
-					//										var swiper = new Swiper('.swiper-container', {
-					//											loop: true,
-					//											centeredSlides: true,
-					//											autoplay: 3000,
-					//											autoplayDisableOnInteraction: false
-					//										});
-				});
-				$(function() {
-					$("img.lazy").lazyload();
-				});
-			</script>
-			<!---产品展示区--->
+			<!---产品展示区结束--->
 
 			<footer>
 				<section class="gray_footer fn_clear">
 					<i class="fn_left time">
-				(周一至周日)<br>8:30 ~ 21:00
-			</i>
+						(周一至周日)<br>8:30 ~ 21:00
+					</i>
 					<i class="fn_left other">
-				客服热线:<b>
-					<a href="tel:400-921-5757" class="ui-link">400-921-5757</a>
-				</b> 
-			</i>
+						客服热线:
+						<b>
+							<a href="tel:400-921-5757" class="ui-link">400-921-5757</a>
+						</b> 
+					</i>
 					<a href="http://wap.incake.net/ICake/index.aspx#" class="fn_right go_top other ui-link">返回顶部</a>
 				</section>
 
@@ -690,21 +508,33 @@
 	</body>
 	<script type="text/javascript">
 		$(function() {
+			//延迟加载
+			$("img.lazy").lazyload();
+			//轮播banner配置
 			$('.new_banner').each(function() {
 				var count = $(this).find(".swiper-slide").length;
 				if (count > 1) {
-					$(this).swiper({
+					$this = $(this).swiper({
 						pagination: '.pagination_a',
 						loop: true,
 						centeredSlides: true,
 						autoplay: 5000,
-						speed:1000,
+						speed: 1000,
 						autoplayDisableOnInteraction: false
 					})
 				} else {
-					$(this).swiper()
+					$this = $(this).swiper()
 				}
-			})
+			});
+			//午后茶点配置
+			$('.thumbs-cotnainer').each(function() {
+				$(this).swiper({
+					slidesPerView: 'auto',
+					offsetPxBefore: 5,
+					offsetPxAfter: 5,
+					calculateHeight: true
+				})
+			});
 		})
 	</script>
 

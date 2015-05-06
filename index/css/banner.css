@@ -23,4 +23,21 @@
 .new_banner .pagination_a .swiper-active-switch {
   background: #0160C0;
 }
+.thumbs-cotnainer .swiper-slide {
+  float: left;
+  padding: 0 5px;
+  width: 150px;
+  height: 190px;
+}
+.thumbs-cotnainer .swiper-slide a {
+  display: block;
+}
+.thumbs-cotnainer .swiper-slide img {
+  width: 150px;
+  height: 150px;
+}
+.thumbs-cotnainer .swiper-slide h3 {
+  margin-bottom: 10px;
+  color: #595757;
+}
 /*# sourceMappingURL=banner.css.map */
