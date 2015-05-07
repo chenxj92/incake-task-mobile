@@ -2,8 +2,8 @@
 <html>
 
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<!-- 针对WebApp的页头声明 -->
 		<meta name="apple-mobile-web-app-capable" content="yes">
@@ -12,20 +12,18 @@
 		<meta name="format-detection" content="email=no">
 		<!-- 加载jquery库 -->
 		<link rel="stylesheet" href="http://wap.incake.net/ICake/js/jq.mobile/1.2.0/jquery.mobile-1.2.0.css">
-		<script src="./INCAKE_files/jquery-1.8.2.min.js"></script>
-		<script src="./INCAKE_files/jquery.mobile-1.2.0.min.js"></script>
-		<!-- 加载iscroll库 -->
-		<script src="./INCAKE_files/iscroll.min.js" type="text/javascript"></script>
+		<script src="./js/jquery-1.8.2.min.js"></script>
+		<script src="./js/jquery.mobile-1.2.0.min.js"></script>
 		<!-- 本站引用 -->
 		<link rel="stylesheet" href="http://wap.incake.net/ICake/css/style.css">
-		<script src="./INCAKE_files/script.js" type="text/javascript"></script>
-		<link rel="stylesheet" type="text/css" href="./INCAKE_files/swiper.min.css">
-		<script src="./INCAKE_files/lazyload.min.js" type="text/javascript"></script>
-		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="./js/script.js" type="text/javascript"></script>
+		<script src="./js/lazyload.min.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="./css/swiper.min.css">
+		<script src="./js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
 		<!--新增banner样式-->
+		<link rel="stylesheet" type="text/css" href="./css/arrival_notice.css">
 		<link rel="stylesheet" type="text/css" href="css/fonts.css" />
 		<link rel="stylesheet" type="text/css" href="css/banner.css" />
-		<meta http-equiv="Pragma" content="no-cache" />
 		<style type="text/css">
 			.swiper-container {
 				width: 100%;
@@ -40,7 +38,7 @@
 		<title>INCAKE</title>
 	</head>
 
-	<body class="ui-mobile-viewport ui-overlay-c">
+	<body>
 		<section data-role="page" data-url="/ICake/index.aspx" tabindex="0" class="ui-page ui-body-c ui-page-active" style="min-height: 548px;">
 			<header>
 				<a href="javascript:;" class="logo fn_left ui-link">
@@ -62,7 +60,7 @@
 			</header>
 
 			<script type="text/javascript" src="./INCAKE_files/iplookup.php"></script>
-			<link rel="stylesheet" type="text/css" href="./INCAKE_files/arrival_notice.css">
+			
 			<script type="text/javascript">
 				var city = remote_ip_info["city"];
 				$(function() {
@@ -164,7 +162,6 @@
 			<!--弹出层end-->
 
 			<nav class="site_nav">
-
 				<div class="btn_list">
 					<div class="btn nav_line">
 						<div class="menu_ul cake_ul" style="display:none;">
@@ -211,7 +208,6 @@
 									<a href="http://wap.incake.net/user/userinfo.aspx" rel="external" class="li ui-link"><i class="arr">▶</i>订购信息</a>
 									<a href="http://wap.incake.net/user/myinfo.aspx" rel="external" class="li ui-link"><i class="arr">▶</i>我的信息</a>
 								</div>
-
 								<a href="javascript:;" rel="external" class="link cake ui-link">蛋糕馆</a>
 							</div>
 							<div class="btn nav_line">
@@ -451,15 +447,12 @@
 					</i>
 					<a href="http://wap.incake.net/ICake/index.aspx#" class="fn_right go_top other ui-link">返回顶部</a>
 				</section>
-
 				<p class="p" style=" font-size:14px; padding:10px 0px 2px 0px;">
 					<a href="http://wap.incake.net/login.aspx" rel="external" class="ui-link">立即登录</a>&nbsp;&nbsp;<span style=" border-left:0px solid #ccc;"></span>&nbsp;&nbsp;<a href="http://wap.incake.net/Register.aspx" rel="external" class="ui-link">立即注册</a>
 				</p>
-
 				<p class="p" style=" font-size:14px; padding:8px 0px 2px 0px;">
 					<a href="http://www.incake.net/?source=mobile" rel="external" class="ui-link">电脑版</a>&nbsp;&nbsp;<span style=" border-left:2px solid #ccc;"></span>&nbsp;&nbsp;<a href="http://wap.incake.net/" rel="external" class="ui-link">触屏版</a>
 				</p>
-
 				<ul style=" width:100%; margin-top:20px; display:inline-block; border-top:1px solid #ccc;border-bottom:1px solid #ccc; padding:5px 0px;">
 					<li style=" width:33.33%; float:left; text-align:center; "> <a href="http://wap.incake.net/user/AboutIncake.aspx?id=1" rel="external" class="ui-link">配送服务</a>
 					</li>
@@ -468,7 +461,6 @@
 					<li style=" width:33.33%;float:left;text-align:center;"><a href="http://wap.incake.net/user/HelpCenter.aspx" rel="external" class="ui-link">购买流程</a>
 					</li>
 				</ul>
-
 				<p class="p">
 					沪ICP备12045835号
 					<br> Copyright © 2014 INCAKE Company All Right Reserved
@@ -505,35 +497,6 @@
 			<h1>loading</h1>
 		</div>
 	</body>
-	<script type="text/javascript">
-		$(function() {
-			//延迟加载
-			$("img.lazy").lazyload();
-			//轮播banner配置
-			$('.new_banner').each(function() {
-				var count = $(this).find(".swiper-slide").length;
-				if (count > 1) {
-					$this = $(this).swiper({
-						pagination: '.pagination_a',
-						loop: true,
-						centeredSlides: true,
-						autoplay: 5000,
-						speed: 500,
-						autoplayDisableOnInteraction: false
-					})
-				} else {
-					$this = $(this).swiper()
-				}
-			});
-			//午后茶点配置
-			$('.thumbs-cotnainer').each(function() {
-				$(this).swiper({
-					slidesPerView: 'auto',
-					calculateHeight: true,
-					spaceBetween:10
-				})
-			});
-		})
-	</script>
+	<script src="js/control.js" type="text/javascript" charset="utf-8"></script>
 
 </html>

@@ -169,11 +169,13 @@ $(document).live("pageinit", function() {
 	//点开菜单
 	$("menu .menu_btn").bind("click", function() {
 		$("menu .menu_btn").hide();
+		$('menu').css('right','0');
 		$("menu .menu_content").show();
 	});
 	//收起菜单
 	$("menu .menu_content .arrow").bind("click", function() {
 		$("menu .menu_btn").show();
+		$('menu').css('right','auto');
 		$("menu .menu_content").hide();
 	});
 

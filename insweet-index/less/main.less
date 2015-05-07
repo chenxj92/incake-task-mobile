@@ -1,0 +1,194 @@
+@import url("fangfa");
+//页面主体内容居
+.main_content{
+    min-width: 320px;
+    max-width: 360px;
+    margin: 0 auto;
+    position: static !important;
+}
+//顶部导航栏样式
+.btn_list{
+    &:after{
+        clear: both;
+        display: block;
+        content: '';
+    }
+    .nav_line{
+        float: left;
+        &:last-child{
+            background: none;
+        }
+    }
+}
+//产品展示列表
+.index_tui_goods{
+    h2{
+        letter-spacing: 0.3em;
+    }
+}
+//开关
+.theme{
+    line-height: 25px;
+    float: left;
+    span{
+        font-weight: bold;
+        color: #949494;
+        &.active{
+            color: #1c256a;
+        }
+        .imooc-icon{
+            font-size: 1.5em;
+            position: relative;
+            top: -2px;
+            vertical-align: middle;
+        }
+    }
+    .switch{
+        position: relative;
+        display: inline-block;
+        width: 30px;
+        height: 16px;
+        margin: 0 5px;
+        vertical-align: text-bottom;
+        border: 1px solid #1c256a;
+        border-radius: 15px;
+        box-sizing: border-box;
+        s{
+           display: block; 
+           position: absolute;
+           height: 18px;
+           width: 18px;
+           margin-top: -9px;
+           border-radius: 50%;
+           background: #1c256a;
+           top: 50%;
+           box-shadow: -1px 1px 2px rgba(0,0,0,0.5);
+        }
+        &.off{
+            s{
+                left: auto;
+                right: 0;
+            }
+        }
+        &.on{
+            s{
+                left: 0;
+                right: auto;
+            }
+        }
+    }
+}
+//急速配送、套餐预定、优惠券
+.tabs{
+    ul{
+        display: table;
+        background: #fff;
+        li{
+            display: table-cell;
+            width: 1%;
+            height: 80px;
+            text-align: center;
+            vertical-align: middle;
+            padding-top:5px;
+            .imooc-icon{
+                display: inline-block;
+                color: #fff;
+                text-align: center;
+                .v-gradient(#5db7e9,#2790d1,#5db7e9);
+                .circular(40px);
+                vertical-align: middle;
+                line-height: 40px;
+                font-size: 1.5em;
+                margin-bottom: 10px;
+            }
+            a{
+                color: @_blue;
+            }
+        }
+    }
+}
+
+//位置、商圈
+.landmark{
+    height: 40px;
+    .v-gradient(#5db7e9,#2790d1,#5db7e9);
+    label{
+        float: left;
+        color: #fff;
+        line-height: 40px;
+        margin: 0 10px;
+        .imooc-icon{
+            font-size: 1.5em;
+            position: relative;
+            top:3px;
+        }
+    }
+    span{
+        float: right;
+    }
+    >div{
+        line-height: 40px;
+        overflow: hidden;
+        margin-right: 50px;
+        input{
+            text-align: center;
+            border: none;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+            height: 25px;
+            width: 80%;
+            &:active{
+                outline: none;
+                box-shadow: none;
+            }
+            &:focus{
+                box-shadow: none;
+                outline: none;
+            }
+        }
+        a{
+            background: #155EB3;
+            line-height: 25px;
+            display: inline-block;
+            margin-left: -4px;
+            padding: 0 5px;
+            color: #fff;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            &:active{
+                background: darken(#155EB3,20%)
+            }
+        }
+    }
+    >p{
+       line-height: 40px;
+        overflow: hidden;
+        margin-right: 50px; 
+        color: #f4e4dc;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
