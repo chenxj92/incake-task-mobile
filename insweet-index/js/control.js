@@ -43,9 +43,20 @@ $(function() {
 	$('.landmark>p').click(function(){
 		$(this).hide();
 		$('.landmark>div').show();
+		$('.landmark input')[0].focus();
 	});
 	$('.landmark').find('.btn').click(function(){
-		console.log($(this).siblings('input').val)
+		var txt=$('.landmark input').val();
+		if (txt=='') {
+			$('.landmark>div').hide();
+		$('.landmark>p').show();
+		} else{
+			$('.landmark>div').hide();
+		$('.landmark>p').show();
+		$('.landmark>p')[0].innerHTML=txt;
+		$('.landmark input')[0].value='';
+		}
+		
 	})
 });
 

@@ -160,6 +160,7 @@
 }
 .landmark > p {
   line-height: 40px;
+  height: 40px;
   overflow: hidden;
   margin-right: 50px;
   color: #f4e4dc;
