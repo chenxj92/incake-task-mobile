@@ -2,86 +2,86 @@
 var $scroll_index = $(".play_banner ul.con li.on").index() + 1; //拿序
 var $mov; //自动滚动
 // console.log("现在顺序", $scroll_index);
-var Scroll_left = function() { //左边
-	var $li_length = $(".play_banner ul.con li").length;
-	$scroll_index = $scroll_index + 1;
+//var Scroll_left = function() { //左边
+//	var $li_length = $(".play_banner ul.con li").length;
+//	$scroll_index = $scroll_index + 1;
+//
+//	if ($scroll_index < $li_length) {
+//		//给on
+//		$(".play_banner .pagination li").eq($scroll_index).addClass("on").siblings("li").removeClass("on");
+//
+//		$("#sl_img_play ul.con").css({
+//			"transform": "translate(-" + $scroll_index * $newW + "px,0)"
+//		});
+//		$(".play_banner ul.con li").eq($scroll_index).addClass("on").siblings("li").removeClass("on");
+//
+//		// console.log("现在顺序", $scroll_index);
+//	} else {
+//		$scroll_index = 0;
+//
+//		$("#sl_img_play ul.con").css({
+//			"transform": "translate(0,0)"
+//		});
+//		$(".play_banner .pagination li").eq(0).addClass("on").siblings("li").removeClass("on");
+//
+//		// console.log("现在顺序", $scroll_index);
+//	}
+//};
 
-	if ($scroll_index < $li_length) {
-		//给on
-		$(".play_banner .pagination li").eq($scroll_index).addClass("on").siblings("li").removeClass("on");
+//var Scroll_right = function() { //右边
+//	var $li_length = $(".play_banner ul.con li").length;
+//	$scroll_index = $scroll_index - 1;
+//
+//	//给on
+//	$(".play_banner .pagination li").eq($scroll_index).addClass("on").siblings("li").removeClass("on");
+//
+//	$("#sl_img_play ul.con").css({
+//		"transform": "translate(-" + $scroll_index * $newW + "px,0)"
+//	});
+//	$(".play_banner ul.con li").eq($scroll_index).addClass("on").siblings("li").removeClass("on");
+//};
 
-		$("#sl_img_play ul.con").css({
-			"transform": "translate(-" + $scroll_index * $newW + "px,0)"
-		});
-		$(".play_banner ul.con li").eq($scroll_index).addClass("on").siblings("li").removeClass("on");
+//var loaded = function() {
+//	imgPlay = new iScroll("sl_img_play", {
+//		vScroll: false,
+//		//不允许垂直滚动  
+//		// snap: true,
+//		momentum: false,
+//		hScrollbar: false,
+//		onScrollStart: function() {
+//			$startX = this.x;
+//		},
+//		onScrollMove: function() {
+//			clearInterval($mov);
+//		},
+//		onScrollEnd: function() {
+//			$endX = this.x;
+//			$newW = $(".play_banner ul.con li").width();
+//
+//			if ($startX > $endX) {
+//				//左边动作
+//				Scroll_left();
+//
+//			}
+//			if ($startX < $endX) {
+//				// console.log($scroll_index)
+//				if ($scroll_index > 0) {
+//					//右边动作
+//					Scroll_right();
+//				}
+//			}
+//
+//			$mov = setInterval(function() {
+//				$newW = $(".play_banner ul.con li").width();
+//				Scroll_left();
+//			}, 5000);
+//		}
+//	});
+//};
 
-		// console.log("现在顺序", $scroll_index);
-	} else {
-		$scroll_index = 0;
-
-		$("#sl_img_play ul.con").css({
-			"transform": "translate(0,0)"
-		});
-		$(".play_banner .pagination li").eq(0).addClass("on").siblings("li").removeClass("on");
-
-		// console.log("现在顺序", $scroll_index);
-	}
-};
-
-var Scroll_right = function() { //右边
-	var $li_length = $(".play_banner ul.con li").length;
-	$scroll_index = $scroll_index - 1;
-
-	//给on
-	$(".play_banner .pagination li").eq($scroll_index).addClass("on").siblings("li").removeClass("on");
-
-	$("#sl_img_play ul.con").css({
-		"transform": "translate(-" + $scroll_index * $newW + "px,0)"
-	});
-	$(".play_banner ul.con li").eq($scroll_index).addClass("on").siblings("li").removeClass("on");
-};
-
-var loaded = function() {
-	imgPlay = new iScroll("sl_img_play", {
-		vScroll: false,
-		//不允许垂直滚动  
-		// snap: true,
-		momentum: false,
-		hScrollbar: false,
-		onScrollStart: function() {
-			$startX = this.x;
-		},
-		onScrollMove: function() {
-			clearInterval($mov);
-		},
-		onScrollEnd: function() {
-			$endX = this.x;
-			$newW = $(".play_banner ul.con li").width();
-
-			if ($startX > $endX) {
-				//左边动作
-				Scroll_left();
-
-			}
-			if ($startX < $endX) {
-				// console.log($scroll_index)
-				if ($scroll_index > 0) {
-					//右边动作
-					Scroll_right();
-				}
-			}
-
-			$mov = setInterval(function() {
-				$newW = $(".play_banner ul.con li").width();
-				Scroll_left();
-			}, 5000);
-		}
-	});
-};
-
-document.addEventListener('DOMContentLoaded', function() {
-	setTimeout(loaded, 200);
-}, false);
+//document.addEventListener('DOMContentLoaded', function() {
+//	setTimeout(loaded, 200);
+//}, false);
 //iScroll方法 end
 
 var focusImgPlay = function() {
@@ -102,10 +102,10 @@ var focusImgPlay = function() {
 $(document).live("pageinit", function() {
 
 	//滚动计时
-	$mov = setInterval(function() {
-		$newW = $(".play_banner ul.con li").width();
-		Scroll_left();
-	}, 5000);
+//	$mov = setInterval(function() {
+//		$newW = $(".play_banner ul.con li").width();
+//		Scroll_left();
+//	}, 5000);
 
 
 	focusImgPlay();
