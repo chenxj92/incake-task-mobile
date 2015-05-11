@@ -80,7 +80,7 @@
 				<h3 style="text-align: left; padding-left: 40px; text-align: center;" id="title">配送范围</h3>
 			</nav>
 			<section>
-				<div class="tabs"> <a href="#">关于我们</a> <a href="#" class="active">配送范围</a> <a href="#">联系我们</a>
+				<div class="tabs"> <a href="#">关于我们</a> <a href="#" class="">配送范围</a> <a href="#">联系我们</a>
 				</div>
 				<div class="swiper-container page_content" style="position: absolute; top:114px; bottom: 0;width: 100%;">
 					<div class="swiper-wrapper">
@@ -174,7 +174,11 @@
 				//初始化页面
 				var tabsSwiper = new Swiper('.page_content', {
 					speed: 500,
-					initialSlide: 1,
+					initialSlide: 2,
+					onInit:function(tabsSwiper){
+						$(".tabs .active").removeClass('active');
+						$(".tabs a").eq(tabsSwiper.activeIndex).addClass('active');
+					},
 					onSlideChangeStart: function(tabsSwiper) {
 						$(".tabs .active").removeClass('active');
 						$(".tabs a").eq(tabsSwiper.activeIndex).addClass('active');

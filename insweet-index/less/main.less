@@ -254,8 +254,67 @@
     }
 }
 
-
-
+//优惠券
+.coupons_list{
+    li{
+        margin: 0px 16px 16px;
+        &:last-child{
+            margin-bottom: 25px;
+        }
+        &:first-child{
+            margin-top: 16px;
+        }
+        padding: 20px 25px 15px;
+        border: 1px solid #EDEDED;
+        overflow: hidden;
+        .v-gradient(#fff,#f3f5f4,#f6f6f6);
+        .left{
+            h2,h3,h6{
+                color: @_blue;
+            }
+            h2{
+                font-size: 1.4em;
+            }
+            h3{
+                line-height: 1.6em;
+            }
+            h6{
+                font-size: 0.75em;
+                font-weight: normal;
+            }
+            p{
+                font-size: 1em;
+                color: #939192;
+                line-height: 1em;
+                margin-top: 15px;
+                del{
+                    margin-right: 5px;
+                }
+                s,span{
+                    color: @_blue;
+                }
+                span{
+                    font-size: 2.5em;
+                }
+            }
+        }
+        .right{
+            float: right;
+            img{
+                vertical-align: top;
+                width: 95px;
+            }
+            a{
+                display: block;
+                color: #fff;
+                margin-top: 8px;
+                text-align: center;
+                line-height: 2em;
+                background: #3fa2e5;
+            }
+        }
+    }
+}
 
 
 

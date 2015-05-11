@@ -248,3 +248,68 @@
   margin: 0 10px;
   font-weight: bold;
 }
+.coupons_list li {
+  margin: 0px 16px 16px;
+  padding: 20px 25px 15px;
+  border: 1px solid #EDEDED;
+  overflow: hidden;
+  background: #f6f6f6;
+  background-image: -webkit-gradient(linear, center top, center bottom, from(#ffffff), to(#f3f5f4));
+  background-image: -webkit-linear-gradient(top, #ffffff, #f3f5f4);
+  background-image: -moz-linear-gradient(top, #ffffff, #f3f5f4);
+  background-image: -o-linear-gradient(top, #ffffff, #f3f5f4);
+  background-image: -ms-linear-gradient(top, #ffffff, #f3f5f4);
+  background-image: linear-gradient(to bottom, #ffffff, #f3f5f4);
+}
+.coupons_list li:last-child {
+  margin-bottom: 25px;
+}
+.coupons_list li:first-child {
+  margin-top: 16px;
+}
+.coupons_list li .left h2,
+.coupons_list li .left h3,
+.coupons_list li .left h6 {
+  color: #3280ca;
+}
+.coupons_list li .left h2 {
+  font-size: 1.4em;
+}
+.coupons_list li .left h3 {
+  line-height: 1.6em;
+}
+.coupons_list li .left h6 {
+  font-size: 0.75em;
+  font-weight: normal;
+}
+.coupons_list li .left p {
+  font-size: 1em;
+  color: #939192;
+  line-height: 1em;
+  margin-top: 15px;
+}
+.coupons_list li .left p del {
+  margin-right: 5px;
+}
+.coupons_list li .left p s,
+.coupons_list li .left p span {
+  color: #3280ca;
+}
+.coupons_list li .left p span {
+  font-size: 2.5em;
+}
+.coupons_list li .right {
+  float: right;
+}
+.coupons_list li .right img {
+  vertical-align: top;
+  width: 95px;
+}
+.coupons_list li .right a {
+  display: block;
+  color: #fff;
+  margin-top: 8px;
+  text-align: center;
+  line-height: 2em;
+  background: #3fa2e5;
+}
