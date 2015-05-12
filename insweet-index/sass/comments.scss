@@ -1,0 +1,45 @@
+.comments{
+    h4{
+       color: #aaaaaa;
+       background: #f0f0f0; 
+       line-height: 40px;
+       font-size: 1em;
+       font-weight: normal;
+       padding-left: 12px;
+    }
+    li{
+        padding: 12px 12px 12px 0;
+        margin-left: 10px;
+        border-bottom: 1px solid #f3f3f3;
+        &:last-child{
+            border: none;
+        }
+        .star{
+            float: right;
+            span{
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                background: url(../img/smile-01.png) no-repeat;
+                background-size: 15px auto;
+                background-position: 0 -19px;
+                &.on{
+                  background-position: 0 0;  
+                }
+            }
+        }
+        h6{
+            font-size: 1em;
+            font-weight: normal;
+            color: #aaaaaa;
+            label{
+                color: #242424;
+                margin-right: 18px;
+            }
+        }
+        p{
+            line-height: 1.5em;
+            padding-top: 10px;
+        }
+    }
+}

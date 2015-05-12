@@ -1,6 +1,45 @@
 .comments h4 {
+  color: #aaaaaa;
   background: #f0f0f0;
   line-height: 40px;
   font-size: 1em;
   font-weight: normal;
+  padding-left: 12px;
 }
+.comments li {
+  padding: 12px 12px 12px 0;
+  margin-left: 10px;
+  border-bottom: 1px solid #f3f3f3;
+}
+.comments li:last-child {
+  border: none;
+}
+.comments li .star {
+  float: right;
+}
+.comments li .star span {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url(../img/smile-01.png) no-repeat;
+  background-size: 15px auto;
+  background-position: 0 -19px;
+}
+.comments li .star span.on {
+  background-position: 0 0;
+}
+.comments li h6 {
+  font-size: 1em;
+  font-weight: normal;
+  color: #aaaaaa;
+}
+.comments li h6 label {
+  color: #242424;
+  margin-right: 18px;
+}
+.comments li p {
+  line-height: 1.5em;
+  padding-top: 10px;
+}
+
+/*# sourceMappingURL=comments.css.map */
