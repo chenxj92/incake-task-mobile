@@ -16,9 +16,6 @@
 .btn_list .nav_line:last-child {
   background: none;
 }
-.index_tui_goods h2 {
-  letter-spacing: 0.3em;
-}
 .index_tui_goods h2 .imooc-icon {
   font-size: 1.75em;
   position: relative;
