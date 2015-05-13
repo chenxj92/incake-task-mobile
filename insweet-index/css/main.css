@@ -310,3 +310,17 @@
   line-height: 2em;
   background: #3fa2e5;
 }
+.bang strong {
+  color: red;
+  font-size: 1.4em;
+  font-weight: normal;
+  margin-right: 4px;
+}
+.bang strong s {
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+.bang .bang_con {
+  font-size: 1.2em;
+}
