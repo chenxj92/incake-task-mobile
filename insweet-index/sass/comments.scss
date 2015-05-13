@@ -17,6 +17,8 @@
         .star{
             float: right;
             span{
+                float: left;
+                margin-left: 4px;
                 display: inline-block;
                 width: 15px;
                 height: 15px;
@@ -42,4 +44,18 @@
             padding-top: 10px;
         }
     }
+}
+.pagination_details{
+    line-height: 40px;
+    text-align: center;
+    background: #f0f0f0;
+   li{
+       color: #aaaaaa;
+       font-size: 1.2em;
+       display: inline-block;
+       padding: 0 10px;
+       &.active{
+           color: #0160AF;
+       }
+   } 
 }
