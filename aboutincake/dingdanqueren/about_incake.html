@@ -7,7 +7,7 @@
 		<!--<base href="http://wap.incake.net/Login.aspx?url=C1x8RvwCqrdNwCc72CvKCS5WQwaXZEvU5d%2bdE3ZeqKyiK64QS1y0%2fQAtjgGT8dK9">-->
 		<base href=".">
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0;">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes;">
 		<!-- 针对WebApp的页头声明 -->
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -30,7 +30,32 @@
 		<!--自定义样式-->
 		<link rel="stylesheet" type="text/css" href="css/dingdanqueren.css" />
 		<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
-		<meta http-equiv="Pragma" content="no-cache" />
+		<style type="text/css">
+			.img_box{
+				display: none;
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				overflow: auto;
+				z-index: 2;
+			}
+			.img_box img{
+				width: auto;
+				height: auto;
+				max-width: 200%;
+			}
+			.img_box button{
+				color: #fff;
+				border-radius: 4px;
+				background: rgba(0,0,0,.5);
+				position: fixed;
+				bottom: 10px;
+				right: 10px;
+				padding: 10px;
+			}
+		</style>
 		<title>INCAKE</title>
 	</head>
 
@@ -163,6 +188,10 @@
 			</section>
 			<!--遮罩层-->
 		</section>
+		<div class="img_box">
+			<button>关闭</button>
+			<img src="img/ditu.jpg"/>
+		</div>
 
 		<div class="ui-loader ui-corner-all ui-body-a ui-loader-default"><span class="ui-icon ui-icon-loading"></span>
 			<h1>loading</h1>
@@ -174,10 +203,15 @@
 				//初始化页面
 				var tabsSwiper = new Swiper('.page_content', {
 					speed: 500,
-					initialSlide: 2,
+					initialSlide: 1,
 					onInit:function(tabsSwiper){
 						$(".tabs .active").removeClass('active');
 						$(".tabs a").eq(tabsSwiper.activeIndex).addClass('active');
+					},
+					onDoubleTap:function(tabsSwiper){
+						if(tabsSwiper.activeIndex==1){
+							$('.img_box').show();
+						}
 					},
 					onSlideChangeStart: function(tabsSwiper) {
 						$(".tabs .active").removeClass('active');
@@ -216,6 +250,9 @@
 						mousewheelControl: true,
 						freeMode: true
 					})
+				});
+				$('.img_box button').tap(function(){
+					$('.img_box').hide()
 				});
 			})
 		</script>
