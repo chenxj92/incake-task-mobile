@@ -37,3 +37,10 @@
   margin-bottom: 25px;
   color: #727171;
 }
+.theme-cotnainer .swiper-slide {
+  float: left;
+  width: 290px;
+}
+.theme-cotnainer .swiper-slide img {
+  width: 290px;
+}

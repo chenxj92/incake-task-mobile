@@ -25,6 +25,15 @@ $(function() {
 			spaceBetween: 10
 		})
 	});
+	//主题蛋糕配置
+	$('.theme-cotnainer').each(function() {
+		$(this).swiper({
+			slidesPerView: 'auto',
+			calculateHeight: true,
+			spaceBetween: 10
+		})
+	});
+	
 	//开关
 	$('.switch').bind('click', function() {
 		if ($(this).hasClass('on')) {
