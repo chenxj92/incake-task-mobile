@@ -37,4 +37,10 @@
   -o-transform: rotate(90deg);
   transform: rotate(90deg); }
 
+.add_address {
+  display: none; }
+
+.select_pay ul {
+  display: none; }
+
 /*# sourceMappingURL=dingdantijiao.css.map */
