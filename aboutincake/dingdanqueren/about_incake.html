@@ -7,7 +7,7 @@
 		<!--<base href="http://wap.incake.net/Login.aspx?url=C1x8RvwCqrdNwCc72CvKCS5WQwaXZEvU5d%2bdE3ZeqKyiK64QS1y0%2fQAtjgGT8dK9">-->
 		<base href=".">
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes;">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
 		<!-- 针对WebApp的页头声明 -->
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -18,7 +18,7 @@
 		<script src="./INCAKE_files/jquery-1.8.2.min.js"></script>
 		<script src="./INCAKE_files/jquery.mobile-1.2.0.min.js"></script>
 		<!-- 加载iscroll库 -->
-		<script src="./INCAKE_files/iscroll.min.js" type="text/javascript"></script>
+		<!--<script src="./INCAKE_files/iscroll.min.js" type="text/javascript"></script>-->
 		<!-- 本站引用 -->
 		<link rel="stylesheet" href="http://wap.incake.net/Icake/css/style.css">
 		<script src="./INCAKE_files/script.js" type="text/javascript"></script>
@@ -31,32 +31,6 @@
 		<!--自定义样式-->
 		<link rel="stylesheet" type="text/css" href="css/dingdanqueren.css" />
 		<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
-		<style type="text/css">
-			.img_box{
-				display: none;
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				left: 0;
-				right:0;
-				overflow: auto;
-				z-index: 2;
-			}
-			.img_box img{
-				width: auto;
-				height: auto;
-				max-width: 200%;
-			}
-			.img_box button{
-				color: #fff;
-				border-radius: 4px;
-				background: rgba(0,0,0,.5);
-				position: fixed;
-				bottom: 10px;
-				right: 10px;
-				padding: 10px;
-			}
-		</style>
 		<title>INCAKE</title>
 	</head>
 
@@ -135,53 +109,85 @@
 											<h1 class="imooc-icon">&#xe613;</h1>
 											<hr />
 											<address>
+
 												为了给予您更优质贴心的服务,
+
 												<br />请拨打INCAKE 400-921-5757服务热线提出
+
 												<br />您的宝贵建议与任何疑问，
+
 												<br />INCAKE在此感谢您的支持。
+
 											</address>
 											<hr />
 											<address>
+
 												上海印克电子商务有限公司
+
 												<br />电话：021-26063569
+
 												<br />招商热线：021-26063569-8051
+
 												<br />传真：021-26063570
+
 												<br />地址：上海闸北区广中西路777弄江裕大厦506室
+
 											</address>
 											<address>
+
 												上海印克电子商务有限公司福州分公司
+
 												<br />电话：0591-86397901
+
 												<br />传真：0591-86395502
+
 												<br />地址“福州市鼓楼区五一中路18号正大广场帝景台1205
+
 											</address>
 										</div>
 										<div class="link_wo">
 											<h1 class="imooc-icon">&#xe613;</h1>
 											<hr />
 											<address>
+
 												为了给予您更优质贴心的服务,
+
 												<br />请拨打INCAKE 400-921-5757服务热线提出
+
 												<br />您的宝贵建议与任何疑问，
+
 												<br />INCAKE在此感谢您的支持。
+
 											</address>
 											<hr />
 											<address>
+
 												上海印克电子商务有限公司
+
 												<br />电话：021-26063569
+
 												<br />招商热线：021-26063569-8051
+
 												<br />传真：021-26063570
+
 												<br />地址：上海闸北区广中西路777弄江裕大厦506室
+
 											</address>
 											<address>
+
 												上海印克电子商务有限公司福州分公司
+
 												<br />电话：0591-86397901
+
 												<br />传真：0591-86395502
+
 												<br />地址“福州市鼓楼区五一中路18号正大广场帝景台1205
+
 											</address>
 										</div>
 									</div>
 								</div>
-									<div class="swiper-scrollbar"></div>
+								<div class="swiper-scrollbar"></div>
 							</div>
 						</div>
 					</div>
@@ -201,7 +207,7 @@
 				var tabsSwiper = new Swiper('.page_content', {
 					speed: 500,
 					initialSlide: 1,
-					onInit:function(tabsSwiper){
+					onInit: function(tabsSwiper) {
 						$(".tabs .active").removeClass('active');
 						$(".tabs a").eq(tabsSwiper.activeIndex).addClass('active');
 					},
@@ -243,9 +249,11 @@
 						freeMode: true
 					})
 				});
-				$('div.peisong_scope').each(function () {
-                new RTP.PinchZoom($(this), {});
-            });
+				$('div.peisong_scope').each(function() {
+					new RTP.PinchZoom($(this), {
+						minZoom:0.9
+					});
+				});
 			})
 		</script>
 		<!--活动组件end-->

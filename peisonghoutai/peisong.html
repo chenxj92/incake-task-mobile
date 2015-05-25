@@ -59,29 +59,37 @@
 				<tbody>
 					<tr>
 						<td>
-							<div><a href="javascript:;">123456789</a></div>
+							<div><a href="javascript:;">123456789</a>
+							</div>
 						</td>
 						<td>
-							<div>2015-05-30<br />12:30</div>
+							<div>2015-05-30
+								<br />12:30</div>
 						</td>
 						<td>
-							<div>2015-05-30<br />12:30</div>
+							<div>2015-05-30
+								<br />12:30</div>
 						</td>
 						<td>
 							<div>哆啦A梦</div>
 						</td>
 						<td>
-							<div>2015-05-30<br />12:30</div>
+							<div>2015-05-30
+								<br />12:30</div>
 						</td>
 					</tr>
 				</tbody>
 			</table>
 			<ul class="pagination">
 				<li>上一页</li>
-				<li><a href="#" class="active">1</a></li>
-				<li><a href="#">2</a></li>
-				<li><a href="#">3</a></li>
-				<li><a href="#">4</a></li>
+				<li><a href="#" class="active">1</a>
+				</li>
+				<li><a href="#">2</a>
+				</li>
+				<li><a href="#">3</a>
+				</li>
+				<li><a href="#">4</a>
+				</li>
 				<li>下一页</li>
 			</ul>
 		</div>
@@ -90,12 +98,13 @@
 			<h2>备注:</h2>
 			<p>我是备注内容我是备注内容我是备注内容我是备注内容我是备注内容我是备注内容我是备注内容</p>
 			<div class="img_box">
-				<img src="img/2015020911551042057.jpg"/>
+				<img src="img/2015020911551042057.jpg" />
 			</div>
 			<button>关闭</button>
 		</div>
 	</body>
 	<script src="js/jquery-1.8.2.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/pinchzoom.min.js" type="text/javascript" charset="utf-8"></script>
 	<script type="text/javascript">
 		$(function(){
 			//页码
@@ -113,6 +122,11 @@
 					$('.order_details').hide();
 				})
 			});
+			$('div.img_box').each(function() {
+					new RTP.PinchZoom($(this), {
+						minZoom:0.9
+					});
+				});
 		})
 	</script>
 

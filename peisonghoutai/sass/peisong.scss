@@ -156,12 +156,17 @@ $color: #2c79c7;
         margin: 10px 0;
         padding: 0 10px;
     }
+    .pinch-zoom-container{
+        height: 200px;
+        margin: 0 10px;
+    }
     .img_box{
         width: 100%;
-        height: 300px;
+        height: 100%;
         overflow: auto;
         img{
             vertical-align: top;
+            width: 100%;
         }
     }
     button{

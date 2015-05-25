@@ -31,5 +31,14 @@ $(function() {
 			$(this).addClass('open');
 			$('.select_pay ul').show()
 		}
+	});
+	$('.yhxx h5,.djkq h5').click(function(){
+		if ($(this).hasClass('open')) {
+			$(this).removeClass('open');
+			$(this).parents('.box').find('.tab_content').hide()
+		} else{
+			$(this).addClass('open');
+			$(this).parents('.box').find('.tab_content').show()
+		}
 	})
 });
