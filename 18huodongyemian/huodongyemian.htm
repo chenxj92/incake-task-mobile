@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html class="ui-mobile">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<!-- 针对WebApp的页头声明 -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=yes">
+		<meta name="format-detection" content="email=no">
+		<!-- 加载jquery库 -->
+		<link rel="stylesheet" href="http://wap.incake.net/Icake/js/jq.mobile/1.2.0/jquery.mobile-1.2.0.css">
+		<script src="./js/jquery-1.8.2.min.js"></script>
+		<script src="./js/jquery.mobile-1.2.0.min.js"></script>
+		<!-- 本站引用 -->
+		<link rel="stylesheet" href="http://wap.incake.net/Icake/css/style.css">
+		<!--自定义样式-->
+		<link rel="stylesheet" type="text/css" href="css/huodongyemian.css" />
+		<title>INCAKE</title>
+	</head>
+
+	<body class="ui-mobile-viewport ui-overlay-c">
+		<section data-role="page" data-url="/Login.aspx" tabindex="0" class="ui-page ui-body-c ui-page-active" style="min-height: 593px;">
+			<nav class="navigation" style="position: fixed; z-index: 1; top: 0;">
+				<div class="drop_down">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+				<ul class="drop_down_list">
+					<li><a href="javascript:;">母亲节生磅活动</a>
+					</li>
+					<li><a href="javascript:;">欢庆蜕变举杯共享</a>
+					</li>
+				</ul>
+				<h1>Mother's Day 爱就要升级</h1>
+
+			</nav>
+			<section>
+				<div class="huodong_container" style="position: relative; margin-top: 60px;">
+					<img style="width: 100%;" src="img/wxdh.jpg" />
+					<input type="text" name="" id="" placeholder="输入券码" style="top: 57.4%;left: 47.6%;width: 41.8%;height: 5.2%;" />
+					<a href="javascript:;" style="top: 57.4%;left: 82.8%;width: 20%;height: 5.2%;"></a>
+				</div>
+			</section>
+
+			<!--遮罩层-->
+			<div class="ui_mask">
+			</div>
+
+		</section>
+
+		<div class="ui-loader ui-corner-all ui-body-a ui-loader-default"><span class="ui-icon ui-icon-loading"></span>
+			<h1>loading</h1>
+		</div>
+		<script type="text/javascript">
+			$(function() {
+				$('.drop_down').click(function() {
+					$('.drop_down_list').toggle();
+					$('.drop_down_list li').click(function() {
+						var that = $(this),
+							Txt = that.find('a').html();
+						$('.navigation h1').html(Txt);
+						$('.drop_down_list').hide()
+					})
+				})
+			})
+		</script>
+	</body>
+
+</html>
