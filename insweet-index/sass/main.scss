@@ -1,0 +1,324 @@
+@charset "utf-8";
+@import "bianliang";
+/*我的信息页面列表样式*/
+
+.main_content {
+  min-width: 320px;
+  max-width: 360px;
+  margin: 0 auto;
+  position: static !important;
+}
+
+.btn_list {
+  &:after {
+    clear: both;
+    display: block;
+    content: '';
+  }
+  .nav_line {
+    float: left;
+    &:last-child {
+      background: none;
+    }
+  }
+}
+
+.index_tui_goods h2 .imooc-icon {
+  font-size: 1.75em;
+  position: relative;
+  top: 4px;
+}
+
+.theme {
+  line-height: 25px;
+  float: left;
+  span {
+    font-weight: bold;
+    color: #949494;
+    &.active {
+      color: #1c256a;
+    }
+    .imooc-icon {
+      font-size: 1.5em;
+      position: relative;
+      top: -2px;
+      vertical-align: middle;
+    }
+  }
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 16px;
+    margin: 0 5px;
+    vertical-align: text-bottom;
+    border: 1px solid #1c256a;
+    border-radius: 15px;
+    box-sizing: border-box;
+    s {
+      display: block;
+      position: absolute;
+      height: 18px;
+      width: 18px;
+      margin-top: -9px;
+      border-radius: 50%;
+      background: #1c256a;
+      top: 50%;
+      box-shadow: -1px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+    &.off s {
+      left: auto;
+      right: 0;
+    }
+    &.on s {
+      left: 0;
+      right: auto;
+    }
+  }
+}
+
+.tabs > ul {
+  display: table;
+  background: #fff;
+  > li {
+    display: table-cell;
+    width: 1%;
+    height: 80px;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 5px;
+    .imooc-icon {
+      display: inline-block;
+      color: #fff;
+      text-align: center;
+      @inculde v-gradient(#5db7e9,#2790d1,#5db7e9);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      vertical-align: middle;
+      line-height: 40px;
+      font-size: 2.2em;
+      margin-bottom: 10px;
+    }
+    a {
+      color: #3280ca;
+    }
+  }
+}
+
+.landmark {
+  height: 40px;
+  @inculde v-gradient(#5db7e9,#2790d1,#5db7e9);
+  label {
+    float: left;
+    color: #fff;
+    line-height: 40px;
+    margin: 0 10px;
+    .imooc-icon {
+      font-size: 1.5em;
+      position: relative;
+      top: 3px;
+    }
+  }
+  span {
+    float: right;
+    padding-right: 20px;
+    cursor: pointer;
+    .imooc-icon {
+      color: #fff;
+      font-size: 1.5em;
+      line-height: 40px;
+    }
+  }
+  .search {
+    line-height: 40px;
+    overflow: hidden;
+    margin-right: 50px;
+    input {
+      text-align: center;
+      border: none;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+      height: 25px;
+      width: 80%;
+      &:active {
+        outline: none;
+        box-shadow: none;
+      }
+      &:focus {
+        box-shadow: none;
+        outline: none;
+      }
+    }
+    a {
+      background: #155EB3;
+      line-height: 25px;
+      display: inline-block;
+      margin-left: -4px;
+      padding: 0 5px;
+      color: #fff;
+      border-top-right-radius: 3px;
+      border-bottom-right-radius: 3px;
+      &:active {
+        background: #0a2e58;
+      }
+    }
+  }
+  > p {
+    line-height: 40px;
+    height: 40px;
+    overflow: hidden;
+    margin-right: 50px;
+    color: #f4e4dc;
+  }
+}
+
+.business_circle {
+  position: relative;
+  background: rgba(255, 255, 255, 0.95);
+  z-index: 2;
+  display: table;
+  width: 100%;
+  dd {
+    display: table-cell;
+    width: 50%;
+    ul {
+      height: 250px;
+      overflow-y: auto;
+      li {
+        line-height: 40px;
+      }
+    }
+    &.left {
+      background: #efefef;
+      li {
+        padding-left: 20px;
+        &.active {
+          color: #3280ca;
+          background: #fff;
+        }
+      }
+    }
+    &.right ul {
+      display: none;
+      &.present {
+        display: block;
+      }
+      li {
+        border-bottom: 1px solid #e5e5e5;
+        margin-left: 10px;
+        margin-right: 5px;
+        padding-left: 5px;
+        &:active {
+          color: #3280ca;
+          border-bottom-color: #3280ca;
+        }
+      }
+    }
+  }
+}
+
+.business_error {
+  display: none;
+  text-align: center;
+  background: #f1f1f1;
+  padding: 15px 0;
+  p {
+    color: #808080;
+    a {
+      color: #3280ca;
+      line-height: 1.8em;
+      font-size: 1.4em;
+      strong {
+        font-size: 1em;
+      }
+    }
+  }
+  > a {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #3280ca;
+    i {
+      margin: 0 10px;
+      font-weight: bold;
+    }
+  }
+}
+
+.coupons_list li {
+  margin: 0px 16px 16px;
+  padding: 20px 25px 15px;
+  border: 1px solid #EDEDED;
+  overflow: hidden;
+  @inculde v-gradient(#ffffff,#f3f5f4,#f6f6f6);
+  &:last-child {
+    margin-bottom: 25px;
+  }
+  &:first-child {
+    margin-top: 16px;
+  }
+  .left {
+    h2, h3, h6 {
+      color: #3280ca;
+    }
+    h2 {
+      font-size: 1.4em;
+    }
+    h3 {
+      line-height: 1.6em;
+    }
+    h6 {
+      font-size: 0.75em;
+      font-weight: normal;
+    }
+    p {
+      font-size: 1em;
+      color: #939192;
+      line-height: 1em;
+      margin-top: 15px;
+      del {
+        margin-right: 5px;
+      }
+      s {
+        color: #3280ca;
+      }
+      span {
+        color: #3280ca;
+        font-size: 2.5em;
+      }
+    }
+  }
+  .right {
+    float: right;
+    img {
+      vertical-align: top;
+      width: 95px;
+    }
+    a {
+      display: block;
+      color: #fff;
+      margin-top: 8px;
+      text-align: center;
+      line-height: 2em;
+      background: #3fa2e5;
+    }
+  }
+}
+
+.bang {
+  strong {
+    color: red;
+    font-size: 1.4em;
+    font-weight: normal;
+    margin-right: 4px;
+    s {
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 1.2em;
+    }
+  }
+  .bang_con {
+    font-size: 1.2em;
+  }
+}
