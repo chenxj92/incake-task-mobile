@@ -25,16 +25,6 @@
 		<link rel="stylesheet" type="text/css" href="css/fonts.css" />
 		<link rel="stylesheet" type="text/css" href="css/banner.css" />
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
-		<style type="text/css">
-			.swiper-container {
-				width: 100%;
-				/*height: 352px;*/
-			}
-			.swiper-slide {
-				text-align: center;
-				font-size: 18px;
-				background: #fff;
-		</style>
 		<!-- 针对webapp的设置 -->
 		<title>INCAKE</title>
 	</head>
@@ -50,10 +40,10 @@
 					<span class="insweet active"><i class="imooc-icon">&#xe625;</i>INSWEET</span>
 				</div>
 				<a href="javascript:;" class="fn_right ui-link">
-					<div class="select_city">上 海</div>
+					<div class="select_city"><i class="imooc-icon">&#xe60b;</i>上 海</div>
 				</a>
 				<a href="javascript:;" class="fn_right ui-link">
-					<div class="select_weixin"></div>
+					<div class="select_weixin imooc-icon">&#xe603;</div>
 				</a>
 				<div id="showerweima" style="width:100%;display:none;">
 					<img src="./INCAKE_files/weixincode.jpg" style="position:absolute; z-index:99998; width:200px;top:45px;right:10px;">
@@ -206,11 +196,6 @@
 									<a href="http://wap.incake.net/ICake/List.aspx?dtype=xianping&dname=%e9%80%89%e6%8b%bc%e7%b3%bb%e5%88%97&dc=%e8%9b%8b%e7%b3%95%e9%a6%86" class="li ui-link" rel="external"><i class="arr">▶</i>选拼系列</a>
 									<a href="http://wap.incake.net/ICake/List.aspx?dtype=&dname=%E8%9B%8B%E7%B3%95%E9%A6%86&dc=%E8%9B%8B%E7%B3%95%E9%A6%86" class="li ui-link" rel="external"><i class="arr">▶</i>所有系列</a>
 								</div>
-								<div class="menu_ul user_ul" style="display:none;">
-									<a href="http://wap.incake.net/user/userinfo.aspx" rel="external" class="li ui-link"><i class="arr">▶</i>订购信息</a>
-									<a href="http://wap.incake.net/user/myinfo.aspx" rel="external" class="li ui-link"><i class="arr">▶</i>我的信息</a>
-								</div>
-
 								<a href="javascript:;" rel="external" class="link cake ui-link">蛋糕馆</a>
 							</div>
 							<div class="btn nav_line">
@@ -363,7 +348,7 @@
 				<div class="index_tui_goods index_h2_01">
 					<a href="http://wap.incake.net/Icake/List.aspx?dtype=&dname=%E8%9B%8B%E7%B3%95%E9%A6%86&dc=%E8%9B%8B%E7%B3%95%E9%A6%86" rel="external" class="ui-link">
 						<h2 style="position: relative;">
-							<img src="img/hudiejie.png"/ style="width: 100px; height: auto; position: absolute; left: 0; top: -8px;">
+							<img src="img/hudiejie.png"/ style="width: 100px; height: auto; position: absolute; left: 0; top: -8px;z-index: 2;">
 							<img src="img/gift.png">
 							主题蛋糕
 						</h2>
@@ -408,24 +393,24 @@
 					<a href="http://wap.incake.net/ICake/index.aspx#" class="fn_right go_top other ui-link">返回顶部</a>
 				</section>
 
-				<p class="p" style=" font-size:14px; padding:10px 0px 2px 0px;">
-					<a href="http://wap.incake.net/login.aspx" rel="external" class="ui-link">立即登录</a>&nbsp;&nbsp;<span style=" border-left:0px solid #ccc;"></span>&nbsp;&nbsp;<a href="http://wap.incake.net/Register.aspx" rel="external" class="ui-link">立即注册</a>
+				<p class="p">
+					<a href="http://wap.incake.net/login.aspx" rel="external" class="ui-link">立即登录</a><a href="http://wap.incake.net/Register.aspx" rel="external" class="ui-link">立即注册</a>
 				</p>
 
-				<p class="p" style=" font-size:14px; padding:8px 0px 2px 0px;">
-					<a href="http://www.incake.net/?source=mobile" rel="external" class="ui-link">电脑版</a>&nbsp;&nbsp;<span style=" border-left:2px solid #ccc;"></span>&nbsp;&nbsp;<a href="http://wap.incake.net/" rel="external" class="ui-link">触屏版</a>
+				<p class="p">
+					<a href="http://www.incake.net/?source=mobile" rel="external" class="ui-link">电脑版</a><span style=" border-left:2px solid #ccc;"></span><a href="http://wap.incake.net/" rel="external" class="ui-link">触屏版</a>
 				</p>
 
-				<ul style=" width:100%; margin-top:20px; display:inline-block; border-top:1px solid #ccc;border-bottom:1px solid #ccc; padding:5px 0px;">
-					<li style=" width:33.33%; float:left; text-align:center; "> <a href="http://wap.incake.net/user/AboutIncake.aspx?id=1" rel="external" class="ui-link">配送服务</a>
+				<ul class="foot-nav">
+					<li> <a href="http://wap.incake.net/user/AboutIncake.aspx?id=1" rel="external" class="ui-link">配送服务</a>
 					</li>
-					<li style=" width:33.33%;float:left;text-align:center;"> <a href="http://wap.incake.net/user/AboutIncake.aspx?id=2" rel="external" class="ui-link">关于我们</a>
+					<li> <a href="http://wap.incake.net/user/AboutIncake.aspx?id=2" rel="external" class="ui-link">关于我们</a>
 					</li>
-					<li style=" width:33.33%;float:left;text-align:center;"><a href="http://wap.incake.net/user/HelpCenter.aspx" rel="external" class="ui-link">购买流程</a>
+					<li><a href="http://wap.incake.net/user/HelpCenter.aspx" rel="external" class="ui-link">购买流程</a>
 					</li>
 				</ul>
 
-				<p class="p">
+				<p class="copyright">
 					沪ICP备12045835号
 					<br> Copyright © 2014 INCAKE Company All Right Reserved
 				</p>

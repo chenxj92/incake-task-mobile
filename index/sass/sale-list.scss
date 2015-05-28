@@ -1,5 +1,13 @@
 .index_tui_goods h2{
+    position: relative;
+    height: 60px;
     color: #000;
+    background: #f6f6f6;
+    hr{
+        margin: 0 10px;
+        border: 1px solid #e5e4e9;
+        border-top: none;
+    }
 }
 .two_goods_box .goods_box{
     position: relative;

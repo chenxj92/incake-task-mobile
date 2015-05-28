@@ -1,15 +1,12 @@
 @charset "utf-8";
+@import "bianliang";
 * {
   margin: 0px;
   padding: 0px;
   font-size: 14px;
 }
-
 body {
   min-width: 320px;
-  margin: 0px;
-  padding: 0px;
-  font-family: Helvetica, Arial,\5b8b\4f53;
   font-size: 16px;
   background-color: #fff;
   color: #595757;
@@ -40,8 +37,8 @@ ol {
 select {
   position: absolute;
   left: 0;
-  border: 1px solid #d5d5d5;
   height: 28px;
+  border: 1px solid #d5d5d5;
   line-height: 28px;
   border-radius: 0 !important;
   background-color: #fefefe;
@@ -53,14 +50,14 @@ select {
 .ui-select {
   position: relative;
   .ui-icon-arrow-d {
-    width: 30px;
-    height: 32px;
-    background: url(../images/c.png) no-repeat center center;
-    background-size: 27px auto;
     position: absolute;
     right: -1px;
     top: 8px !important;
     z-index: 1;
+    width: 30px;
+    height: 32px;
+    background: url(../images/c.png) no-repeat center center;
+    background-size: 27px auto;
   }
   .ui-btn-inner {
     text-indent: 10px;
@@ -70,18 +67,16 @@ select {
     background: -webkit-gradient(linear, left top, left bottom, from(#fdfdfd), to(#efefef));
   }
   .ui-btn select {
-    cursor: pointer;
-    -webkit-appearance: none;
     left: 0;
     top: 0;
-    width: 100%;
-    min-height: 1.5em;
-    min-height: 100%;
-    height: 3em;
-    max-height: 100%;
-    filter: alpha(opacity = 0);
-    opacity: 0;
     z-index: 2;
+    cursor: pointer;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 3em;
+    min-height: 100%;
+    max-height: 100%;
+    @include opacity(0);
   }
 }
 
@@ -117,11 +112,9 @@ img {
 
 .fn_left {
   float: left;
-  display: inline;
 }
 
 .fn_right {
-  display: inline;
   float: right;
 }
 
@@ -140,12 +133,12 @@ img {
 }
 
 .ui_input_text {
-  border: 1px solid #d5d5d5;
-  border-radius: 0;
-  color: #666;
   height: 26px;
   padding: 0 5px;
   line-height: 28px;
+  border: 1px solid #d5d5d5;
+  border-radius: 0;
+  color: #666;
 }
 
 .c-black, a {
@@ -177,14 +170,14 @@ p.c-gray {
 }
 
 input.text {
-  border: 1px solid #999999;
-  background: #ffffff;
+  padding: 0 3px;
   height: 24px;
+  border: 1px solid #999999;
+  border-radius: 0;
+  background: #ffffff;
   line-height: 24px;
   vertical-align: middle;
   text-align: left;
-  border-radius: 0;
-  padding: 0 3px;
   font-size: 18px;
 }
 
@@ -219,13 +212,13 @@ button {
 }
 
 .ui-num-bubble {
+  position: absolute;
   width: 20px;
   height: 20px;
   line-height: 18px;
   border-radius: 20px;
   background: #ff7800;
   border: solid 3px #fff;
-  position: absolute;
   color: #fff;
   font-size: 18px;
   -webkit-transition-property: -webkit-transform;
@@ -276,9 +269,9 @@ button {
 }
 
 .rush_goods_box {
-  border-top: 1px solid #d5d5d5;
-  padding: 20px 0;
   width: 100%;
+  padding: 20px 0;
+  border-top: 1px solid #d5d5d5;
   .rush_time {
     zoom: 0.5;
     margin: 0 auto;
@@ -387,33 +380,12 @@ button {
   }
 }
 
-.gray_footer {
-  background-color: #EFEFEF;
-  padding: 5px 10px;
-  border-top: 1px solid #c9c9c9;
-  border-bottom: 1px solid #c9c9c9;
-  * {
-    font-size: 14px;
-  }
-  .time {
-    line-height: 14px;
-    font-size: 10px;
-    margin-top: 4px;
-  }
-  .other {
-    padding: 10px 0 10px 10px;
-  }
-  .go_top {
-    border-left: 1px solid #c9c9c9;
-    padding-left: 10px;
-  }
-}
-
 header {
   height: 25px;
   padding: 10px;
-  background: url(../images/header_nav_bg.png) repeat-x;
-  background-size: auto 100%;
+  @include v-gradient(#fff,#EFEFEF,#EFEFEF);
+  background: url(../images/header_nav_bg.png) repeat-x\9;
+  background-size: auto 100%\9;
   .logo img {
     height: 25px;
     width: auto;
@@ -421,41 +393,89 @@ header {
   .select_city {
     height: 25px;
     line-height: 28px;
-    padding-left: 20px;
     display: inline-block;
-    background: url(/Icake/images/select_city.png) no-repeat;
-    background-size: auto 100%;
+    .imooc-icon{
+        font-size: 2em;
+        color: #1C256A;
+        vertical-align: middle;
+    }
   }
   .select_weixin {
-    height: 28px;
-    line-height: 28px;
-    padding-right: 50px;
     display: inline-block;
-    background: url(../images/weixinicon.png) no-repeat;
-    background-size: auto 100%;
+    margin-right: 10px;
+    color: #1C256A;
+    font-size: 2em;
   }
 }
 
+//页脚样式
 footer {
-  border-bottom: 1px solid #c9c9c9;
-  .p {
-    padding: 10px 0;
-    font-size: 12px;
-    text-align: center;
+  @mixin foot-p{
+      padding:10px 0px 2px;
+      font-size: 14px;
+      text-align: center;
   }
+  .p {
+    @include foot-p;
+    a{
+        padding: 0 5px;
+    }
+  }
+  .copyright{
+      @include foot-p;
+  }
+  .foot-nav{
+      display: inline-block;
+      width: 100%;
+      margin-top: 20px;
+      padding:5px 0px;
+      border-top:1px solid #ccc;
+      border-bottom:1px solid #ccc;
+      li{
+          float: left;
+          width: 33.33%;
+          text-align: center;
+      }
+  }
+    @at-root .gray_footer {
+      background-color: #EFEFEF;
+      padding: 5px 10px;
+      border-top: 1px solid #c9c9c9;
+      border-bottom: 1px solid #c9c9c9;
+      .time {
+        line-height: 14px;
+        font-size: 10px;
+        margin-top: 4px;
+      }
+      .other {
+        padding: 10px 0 10px 10px;
+      }
+      .go_top {
+        border-left: 1px solid #c9c9c9;
+        padding-left: 10px;
+      }
+    }  
 }
 
+//顶部导航栏样式
 .site_nav {
   width: 100%;
-  background: url(../images/header_bg.png) repeat-x;
-  background-size: auto 100%;
+  @include v-gradient(#fff,#EFEFEF,#EFEFEF);
+  background: url(../images/header_bg.png) repeat-x\9;
+  background-size: auto 100%\9;
+  .btn_list{
+      &:after{
+          clear: both;
+          display: table;
+          content: '';
+      }
+  }
   .btn {
-    display: inline-block;
+    position: relative;
+    float: left;
     width: 25%;
     height: 74px;
-    position: relative;
     .link {
-      text-align: center;
       display: inline-block;
       width: 100%;
       height: 100%;
@@ -465,11 +485,15 @@ footer {
       background-position: center center;
       line-height: 125px;
       font-size: 11px;
+      text-align: center;
     }
   }
   .nav_line {
     background: url(../images/nav_line.png) no-repeat right center;
     background-size: 2px auto;
+    &:last-child{
+        background: none;
+    }
   }
   .home {
     background-image: url(/Icake/images/nav_btn_home.png);
@@ -494,21 +518,23 @@ footer {
     background-size: auto 135% !important;
   }
   .num {
+    position: absolute;
     color: #fff;
     top: 9px;
     left: 50%;
     text-indent: -3px;
-    position: absolute;
     font-size: 12px;
   }
 }
 
+//二级标题栏
 .navigation {
+  position: relative;
   height: 60px;
   width: 100%;
-  background: url(/Icake/images/back_nav.png) repeat-x;
-  background-size: auto 100%;
-  position: relative;
+  @include v-gradient(#fff,#EFEFEF,#EFEFEF);
+  background: url(../images/back_nav.png) repeat-x\9;
+  background-size: auto 100%\9;
   h3 {
     color: #0160af;
     text-align: center;
@@ -516,39 +542,39 @@ footer {
     line-height: 60px;
   }
   a.back_link {
-    display: inline-block;
-    height: 17.5px;
-    width: 23px;
-    background: url(/Icake/images/back_link.png) repeat-x;
-    background-size: auto 100%;
-    text-indent: -999em;
-    overflow: hidden;
     position: absolute;
     left: 10px;
     top: 22px;
+    display: inline-block;
+    height: 17.5px;
+    width: 23px;
+    overflow: hidden;
+    background: url(../images/back_link.png) repeat-x;
+    background-size: auto 100%;
+    text-indent: -999em;
   }
 }
 
 .goods_page {
   padding: 0 20px;
   h1 {
+    position: relative;
+    z-index: 2;
     color: #0160af;
     text-align: center;
     font-size: 16px;
-    position: relative;
-    z-index: 2;
-    padding: 20px 0 0 0;
+    padding: 20px 0 0;
     font-weight: normal;
   }
   h3 {
+    position: relative;
+    z-index: 2;
     color: #0160af;
     text-align: center;
     font-size: 16px;
-    position: relative;
-    z-index: 2;
-    padding: 20px 0 0 0;
+    padding: 20px 0 0;
     font-weight: normal;
-    padding: 10px 0 20px 0;
+    padding: 10px 0 20px;
   }
   .goods_img {
     position: relative;
@@ -579,44 +605,44 @@ footer {
       border-color: #bfd7ea;
       position: relative;
       s {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        display: inline-block;
         width: 10px;
         height: 10px;
         background: url(/Icake/images/price_on.png) no-repeat;
         background-size: auto 100%;
-        display: inline-block;
-        position: absolute;
-        right: 0;
-        bottom: 0;
       }
     }
   }
   .shan_ico {
+    position: relative;
+    top: -2px;
+    display: inline-block;
     width: 9px;
     height: 18px;
-    display: inline-block;
     background: url(/Icake/images/shan_ico.png) no-repeat;
     vertical-align: middle;
     background-size: auto 100%;
-    position: relative;
-    top: -2px;
   }
   .shan_gou {
     width: 100%;
     display: inline-block;
-    text-align: center;
     height: 35px;
     line-height: 35px;
     border: 1px solid #d5d5d5;
     background: url(/Icake/images/shan_gou.png) repeat-x;
+    text-align: center;
+    font-size: 18px;
     color: #fff;
     background-size: auto 100%;
-    font-size: 18px;
   }
   .go_buy, .buy_now {
-    width: 100%;
     display: inline-block;
-    text-align: center;
+    width: 100%;
     height: 35px;
+    text-align: center;
     line-height: 35px;
     border: 1px solid #d5d5d5;
     background: url(/Icake/images/go_buy.png) repeat-x;
@@ -626,9 +652,9 @@ footer {
   }
   .no_buy {
     width: 100%;
+    height: 35px;
     display: inline-block;
     text-align: center;
-    height: 35px;
     line-height: 35px;
     border: 1px solid #d5d5d5;
     background: url(/Icake/images/no_buy.png) repeat-x;
@@ -643,13 +669,12 @@ footer {
 }
 
 .play_banner {
-  margin-top: 10px;
-  width: 320px;
-  height: 320px;
   position: relative;
   z-index: 1;
+  width: 320px;
+  height: 320px;
+  margin-top: 10px;
   overflow: hidden;
-  /*background: #000;*/
   text-align: center;
   margin: 0 auto;
   ul.con {
@@ -663,7 +688,6 @@ footer {
     li {
       height: 320px;
       width: 320px;
-      display: block;
       float: left;
     }
   }
@@ -725,15 +749,16 @@ footer {
   border-bottom: 1px solid #d5d5d5;
   display: none;
   .link {
-    border-left: 1px solid #d5d5d5;
-    height: 26px;
-    line-height: 26px;
     display: inline-block;
     width: 25%;
+    height: 26px;
+    border-left: 1px solid #d5d5d5;
+    line-height: 26px;
     text-align: center;
   }
 }
 
+//底部收缩导航栏样式
 menu {
   position: fixed;
   left: 0;
@@ -756,10 +781,11 @@ menu {
       float: left;
     }
     .btn {
+      position: relative;
       display: inline-block;
       width: 25%;
       height: 56px;
-      position: relative;
+      float: left;
       .link {
         text-align: center;
         display: inline-block;
@@ -776,19 +802,17 @@ menu {
     .arrow {
       width: 10%;
       height: 56px;
+      float: right;
       text-indent: -999em;
       overflow: hidden;
       _zoom: 1;
-      display: inline-block;
-      right: 0;
-      float: right;
       .link {
-        background: url(../images/menu_arrow.png) no-repeat;
-        text-align: center;
         display: block;
-        margin: 20px auto;
         width: 9px;
         height: 16px;
+        margin: 20px auto;
+        background: url(../images/menu_arrow.png) no-repeat;
+        text-align: center;
         color: #fff;
         vertical-align: middle;
         background-size: auto 100%;
@@ -797,7 +821,7 @@ menu {
       }
     }
     .nav_line {
-      background: url(/Icake/images/menu/nav_line.png) no-repeat right center;
+      background: url(../images/menu/nav_line.png) no-repeat right center;
       background-size: 2px 40px;
     }
     .home {
@@ -822,11 +846,11 @@ menu {
       background-image: url(../images/menu/nav_btn_di.png);
     }
     .num {
-      color: #000;
+      position: absolute;
       top: 2px;
       left: 50%;
       text-indent: -3px;
-      position: absolute;
+      color: #000;
       font-size: 12px;
     }
   }
@@ -906,10 +930,10 @@ menu {
     border-bottom: 1px solid #d5d5d5;
   }
   .bang_select {
-    border-bottom: 1px solid #d5d5d5;
     display: none;
     padding: 10px 0;
     margin: 0 20px;
+    border-bottom: 1px solid #d5d5d5;
     .link {
       width: 22%;
       display: inline-block;
@@ -945,13 +969,12 @@ menu {
 }
 
 .shop_car {
+  margin-bottom: 30px;
   border-top: 1px solid #d5d5d5;
-  margin-top: 10px;
-  margin-bottom: 30;
   .price_box {
     margin: 10px;
-    border: 1px solid #d5d5d5;
     padding: 10px;
+    border: 1px solid #d5d5d5;
     .fn_left {
       padding: 10px 0 0 0;
       font-size: 16px;
@@ -959,11 +982,11 @@ menu {
     }
     .go_buy {
       width: 50%;
-      display: inline-block;
-      text-align: center;
       height: 35px;
-      line-height: 35px;
+      display: inline-block;
       border: 1px solid #d5d5d5;
+      text-align: center;
+      line-height: 35px;
       background: url(/Icake/images/go_buy.png) repeat-x;
       background-size: auto 100%;
       font-size: 18px;
@@ -1016,10 +1039,10 @@ menu {
     }
     .right {
       float: right;
-      text-align: center;
       width: 25%;
       padding-top: 35px;
       margin-right: -1px;
+      text-align: center;
     }
     .kuai {
       border-top: 1px solid #d5d5d5;
@@ -1049,12 +1072,12 @@ menu {
 }
 
 .del_goods {
-  background: url(/Icake/images/del.png) no-repeat center center;
   width: 30px;
   height: 40px;
-  background-size: 80% auto;
   zoom: .8;
   display: inline-block;
+  background: url(/Icake/images/del.png) no-repeat center center;
+  background-size: 80% auto;
 }
 
 .a_num {
@@ -1064,9 +1087,9 @@ menu {
 
 .blue_btn {
   width: 100%;
+  height: 35px;
   display: inline-block;
   text-align: center;
-  height: 35px;
   line-height: 35px;
   border: 1px solid #d5d5d5;
   background: url(/Icake/images/go_buy.png) repeat-x;
@@ -1215,7 +1238,7 @@ menu {
 }
 
 .code_box {
-  padding: 20px 20px 0 20px;
+  padding: 20px 20px 0;
   .code_li {
     width: 100%;
     padding: 10px 0;
@@ -1259,7 +1282,7 @@ menu {
 
 .order_box {
   height: 10px;
-  margin: 10px 10px 0 10px;
+  margin: 10px 10px 0;
   .gary {
     line-height: 20px;
     h1 {
@@ -1300,9 +1323,8 @@ menu {
     line-height: 24px;
   }
   .right {
-    width: 25%;
-    display: inline-block;
     float: right;
+    width: 25%;
     padding-top: 30px;
     text-align: center;
     height: 62px;
@@ -1433,28 +1455,28 @@ menu {
 }
 
 .ui-radio-ios {
-  width: 55px;
-  height: 30px;
   position: relative;
   zoom: .8;
+  width: 55px;
+  height: 30px;
   .ui-radio-btn {
-    background-color: #fff;
-    width: 28px;
-    height: 28px;
-    border-radius: 14px;
     position: absolute;
     left: 2px;
     top: 1px;
+    width: 28px;
+    height: 28px;
+    border-radius: 14px;
+    background-color: #fff;
     -webkit-transition: all linear .2s;
     -moz-transition: all linear .2s;
     -ms-transition: all linear .2s;
     transition: all linear .2s;
   }
   .ui-radio-bg {
-    background-color: #e4e4e4;
-    border-radius: 30px;
     width: 55px;
     height: 30px;
+    background-color: #e4e4e4;
+    border-radius: 30px;
   }
   i {
     position: absolute;
@@ -1591,20 +1613,20 @@ menu {
 }
 
 .ui_mask {
-  background-color: #fff;
-  opacity: .8;
-  width: 100%;
-  height: 100%;
   position: fixed;
   z-index: 9999;
   top: 0;
   left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  @include opacity(.8);
   display: none;
 }
 
 .z9 {
-  z-index: 99999;
   position: relative;
+  z-index: 99999;
 }
 
 .index_tui_goods {
@@ -1612,15 +1634,16 @@ menu {
   h2 {
     color: #0160AF;
     font-size: 16px;
-    background: url(../images/h2_bg.png) repeat-x;
-    background-size: 100% 100%;
+    @include v-gradient(#fff,#EFEFEF,#EFEFEF);
+    background: url(../images/h2_bg.png) repeat-x\9;
+    background-size: 100% 100%\9;
     height: 45px;
     line-height: 45px;
     text-align: center;
     img {
-      height: 25px;
       position: relative;
       top: 5px;
+      height: 25px;
     }
   }
 }
@@ -1795,8 +1818,8 @@ menu {
 }
 
 .remeber_password .ui-checkbox {
-  cursor: pointer;
   position: relative;
+  cursor: pointer;
   padding: 0;
   input {
     position: absolute;

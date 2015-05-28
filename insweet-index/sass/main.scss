@@ -9,20 +9,6 @@
   position: static !important;
 }
 
-.btn_list {
-  &:after {
-    clear: both;
-    display: block;
-    content: '';
-  }
-  .nav_line {
-    float: left;
-    &:last-child {
-      background: none;
-    }
-  }
-}
-
 .index_tui_goods h2 .imooc-icon {
   font-size: 1.75em;
   position: relative;
@@ -30,7 +16,7 @@
 }
 
 .theme {
-  line-height: 25px;
+  line-height: 30px;
   float: left;
   span {
     font-weight: bold;
