@@ -10,7 +10,18 @@ $(function() {
 			}
 		});
 	}
+	function shh_zf () {
+		$('.select_pay li').each(function(){
+			var $this=$(this)
+			if ($this.find('input').attr('checked')) {
+				$this.show();
+			} else{
+				$this.hide();
+			}
+		})
+	}
 	shh_address();
+	shh_zf();
 	$('.shop_car .address').click(function() {
 		if ($(this).hasClass('open')) {
 			$(this).removeClass('open');
@@ -26,10 +37,10 @@ $(function() {
 	$('.zhifu').click(function(){
 		if ($(this).hasClass('open')) {
 			$(this).removeClass('open');
-			$('.select_pay ul').hide()
+			shh_zf();
 		} else{
 			$(this).addClass('open');
-			$('.select_pay ul').show()
+			$('.select_pay li').show();
 		}
 	});
 	$('.yhxx h5,.djkq h5').click(function(){

@@ -25,7 +25,8 @@
     background: #4BB0EA;
     color: #fff;
     border-radius: 4px;
-    padding: 10px 20px;
+    padding: 10px 30px;
+    font-size: 1.2em;
 }
 .shop_car .box h5{
     .imooc-icon{
@@ -34,7 +35,7 @@
         margin-right: 25px;
         margin-top: -5px;
         font-size: 1.8em;
-        color: #dddddd;
+        color: #0160AF;
     }
     &.open{
        .imooc-icon{
@@ -48,11 +49,6 @@
 }
 .add_address{
     display: none;
-}
-.select_pay{
-    ul{
-         display: none;
-    }
 }
 
 
