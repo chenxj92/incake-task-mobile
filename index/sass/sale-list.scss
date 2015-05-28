@@ -1,0 +1,18 @@
+.index_tui_goods h2{
+    color: #000;
+}
+.two_goods_box .goods_box{
+    position: relative;
+    span{
+        position: absolute;
+        top: 12px;
+        left: 22px;
+        width: 22px;
+        height: 30px;
+        background: url(../img/agl.png) no-repeat;
+        background-size: 100%;
+        color: #fff;
+        text-align: center;
+        line-height: 25px;
+    }
+}
