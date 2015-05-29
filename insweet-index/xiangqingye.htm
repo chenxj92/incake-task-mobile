@@ -4,14 +4,14 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0;">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
 		<!-- 针对WebApp的页头声明 -->
 		<meta name="apple-mobile-web-app-capable" content="yes">
 		<meta name="apple-mobile-web-app-status-bar-style" content="black">
 		<meta name="format-detection" content="telephone=yes">
 		<meta name="format-detection" content="email=no">
 		<!-- 加载jquery库 -->
-		<link rel="stylesheet" href="http://wap.incake.net/Icake/js/jq.mobile/1.2.0/jquery.mobile-1.2.0.css">
+		<link rel="stylesheet" href="css/jquery.mobile-1.2.0.css">
 		<script src="./js/jquery-1.8.2.min.js"></script>
 		<script src="./js/jquery.mobile-1.2.0.min.js"></script>
 		<!-- 加载iscroll库 -->
@@ -35,7 +35,7 @@
 
 	<body class="ui-mobile-viewport ui-overlay-c">
 		<section data-role="page" data-url="/Icake/Detail.aspx?CommodityID=411" tabindex="0" class="ui-page ui-body-c ui-page-active pbottom" style="min-height: 714px;">
-
+			<script type="text/javascript" src="./INCAKE_files/iplookup.php"></script>
 			<script type="text/javascript">
 				var city = remote_ip_info["city"];
 				$(function() {
@@ -280,13 +280,9 @@
 				});
 			</script>
 			<!--遮罩层-->
-			<div class="ui_mask"></div>
 
 		</section>
 
-		<div class="ui-loader ui-corner-all ui-body-a ui-loader-default"><span class="ui-icon ui-icon-loading"></span>
-			<h1>loading</h1>
-		</div>
 	</body>
 
 </html>

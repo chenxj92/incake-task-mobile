@@ -11,7 +11,7 @@
 		<meta name="format-detection" content="telephone=yes">
 		<meta name="format-detection" content="email=no">
 		<!-- 加载jquery库 -->
-		<link rel="stylesheet" href="http://wap.incake.net/ICake/js/jq.mobile/1.2.0/jquery.mobile-1.2.0.css">
+		<link rel="stylesheet" href="css/jquery.mobile-1.2.0.css">
 		<script src="./js/jquery-1.8.2.min.js"></script>
 		<script src="./js/jquery.mobile-1.2.0.min.js"></script>
 		<!-- 本站引用 -->
@@ -50,9 +50,7 @@
 					<img src="./INCAKE_files/popup_close.png" class="gb" style="position:absolute; z-index:99999; width:16px;top:50px;right:20px;">
 				</div>
 			</header>
-
 			<script type="text/javascript" src="./INCAKE_files/iplookup.php"></script>
-
 			<script type="text/javascript">
 				var city = remote_ip_info["city"];
 				$(function() {
@@ -541,8 +539,8 @@
 						if (confirm("确定退出?")) {
 							$.ajax({
 								url: "/Icake/cookie/cookiemanage.aspx",
-								dataType:"json",
-								type:"post",
+								dataType: "json",
+								type: "post",
 								data: {
 									"Action": "ZhuXiao"
 								},
@@ -557,13 +555,9 @@
 				});
 			</script>
 			<!--遮罩层-->
-			<div class="ui_mask"></div>
 
 		</section>
 
-		<div class="ui-loader ui-corner-all ui-body-a ui-loader-default"><span class="ui-icon ui-icon-loading"></span>
-			<h1>loading</h1>
-		</div>
 	</body>
 	<script src="js/control.js" type="text/javascript" charset="utf-8"></script>
 
