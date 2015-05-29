@@ -3,8 +3,6 @@
 
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<!--<base href="http://wap.incake.net/Icake/Detail.aspx?CommodityID=411">-->
-		<base href=".">
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0;">
 		<!-- 针对WebApp的页头声明 -->
@@ -19,7 +17,7 @@
 		<!-- 加载iscroll库 -->
 		<script src="./js/iscroll.min.js" type="text/javascript"></script>
 		<!-- 本站引用 -->
-		<link rel="stylesheet" href="http://wap.incake.net/Icake/css/style.css">
+		<link rel="stylesheet" href="css/style.css">
 		<script src="./js/script.js" type="text/javascript"></script>
 		<script src="./js/Detail.js" type="text/javascript"></script>
 		<!-- 针对webapp的设置 -->
@@ -27,6 +25,7 @@
 		<link rel="apple-touch-startup-image" href="http://wap.incake.net/Icake/images/startup.png">
 		<link rel="apple-touch-startup-image" sizes="640x920" href="http://wap.incake.net/Icake/images/startup@2x.png">
 		<!--新增评论样式-->
+		<link rel="stylesheet" type="text/css" href="css/arrival_notice.css" />
 		<link rel="stylesheet" type="text/css" href="css/comments.css" />
 		<link rel="stylesheet" type="text/css" href="css/fonts.css" />
 		<link rel="stylesheet" type="text/css" href="css/main.css" />
@@ -37,8 +36,6 @@
 	<body class="ui-mobile-viewport ui-overlay-c">
 		<section data-role="page" data-url="/Icake/Detail.aspx?CommodityID=411" tabindex="0" class="ui-page ui-body-c ui-page-active pbottom" style="min-height: 714px;">
 
-			<script type="text/javascript" src="./xiangqingye_files/iplookup.php"></script>
-			<link rel="stylesheet" type="text/css" href="./xiangqingye_files/arrival_notice.css">
 			<script type="text/javascript">
 				var city = remote_ip_info["city"];
 				$(function() {
@@ -101,13 +98,10 @@
 				});
 			</script>
 			<!--遮罩层-->
-			<div class="ui_mask" style="display:none;">
-			</div>
-			</div>
+			<div class="ui_mask" style="display:none;"></div>
 			<!--弹出层end-->
 
 			<nav class="site_nav">
-
 				<div class="btn_list">
 					<div class="btn nav_line">
 						<div class="menu_ul cake_ul" style="display:none;">
@@ -131,16 +125,13 @@
 						<a href="http://wap.incake.net/ICake/order/ShopCart.aspx" rel="external" class="link car ui-link">购物车</a>
 					</div>
 				</div>
-
 			</nav>
 
 			<nav class="navigation">
 				<a href="javascript:history.go(-1);" data-role="button" data-rel="back" class="back_link ui-btn ui-btn-up-c ui-shadow ui-btn-corner-all" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c">
 					<span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">返回</span></span>
 				</a>
-				<h3>
-					商品详情
-				</h3>
+				<h3>商品详情</h3>
 				<a class="imooc-icon homepage" href="http://wap.incake.net/">&#xe611;</a>
 			</nav>
 			<div class="goods_page">
@@ -149,17 +140,14 @@
 					<img src="./pic/2015041716562497033.jpg" alt="" class="">
 				</div>
 				<div class="goods_btn">
-
-					<div class="fn_clear box"><a href="javascript:;" class="price price_on fn_left ui-link" data-price="36" value="1"><s></s><i class="c_red">￥36</i> / 四只装</a>
+					<div class="fn_clear box">
+						<a href="javascript:;" class="price price_on fn_left ui-link" data-price="36" value="1"><s></s><i class="c_red">￥36</i> / 四只装</a>
 					</div>
-
 					<div class="box fix">
-
 						<a href="" id="addcart" class="go_buy ui-link" data-cid="411" data-pic="http://img.incake.net/UpImages/2015041716562497033.jpg" data-cname="甜心" data-quefen="0" data-danwei="四只装" data-cweight="四只装" data-showfive="0" rel="external">加&nbsp;入&nbsp;购&nbsp;物&nbsp;车</a>
 						<a href="javascript:;" data-float="left" data-cid="411" class="shan_gou ui-link" rel="external">
 							<i class="shan_ico"></i> &nbsp;&nbsp;闪&nbsp;&nbsp;电&nbsp;&nbsp;购
 						</a>
-
 					</div>
 				</div>
 				<h3>商品特色 Cake characteristics</h3>
@@ -240,7 +228,7 @@
 			<link rel="stylesheet" type="text/css" href="./css/dialog.css">
 			<div class="ui_mask"></div>
 			<div class="mask_ceng"></div>
-			<!--弹出框start|&#xe600;-->
+			<!--弹出框start-->
 			<section class="modal-dialog">
 				<i class="imooc-icon close"></i>
 				<div class="modal-header">
@@ -259,7 +247,7 @@
 			</section>
 			<!--弹出框end-->
 			<script type="text/javascript">
-				//模态框的显示隐藏
+				 //模态框的显示隐藏
 				function modal_dialog(show_hide) {
 					if (show_hide == "show") {
 						$('.mask_ceng').show();
@@ -292,8 +280,7 @@
 				});
 			</script>
 			<!--遮罩层-->
-			<div class="ui_mask">
-			</div>
+			<div class="ui_mask"></div>
 
 		</section>
 

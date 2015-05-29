@@ -56,7 +56,7 @@ select {
     z-index: 1;
     width: 30px;
     height: 32px;
-    background: url(../images/c.png) no-repeat center center;
+    background: url(../images/c.png) no-repeat center;
     background-size: 27px auto;
   }
   .ui-btn-inner {
@@ -172,7 +172,7 @@ p.c-gray {
 input.text {
   padding: 0 3px;
   height: 24px;
-  border: 1px solid #999999;
+  border: 1px solid #999;
   border-radius: 0;
   background: #ffffff;
   line-height: 24px;
@@ -290,7 +290,7 @@ button {
 .rush_time {
   width: 240px;
   height: 50px;
-  background: url(/Icake/images/rush_time.png) no-repeat center center;
+  background: url(/Icake/images/rush_time.png) no-repeat center;
   display: block;
   i {
     color: #fff;
@@ -317,7 +317,7 @@ button {
 }
 
 .goods_box_line {
-  background: url(/Icake/images/line.png) no-repeat right center;
+  background: url(../images/line.png) no-repeat right center;
   background-size: 2px 90%;
 }
 
@@ -410,19 +410,19 @@ header {
 
 //页脚样式
 footer {
-  @mixin foot-p{
+  %foot-p{
       padding:10px 0px 2px;
       font-size: 14px;
       text-align: center;
   }
   .p {
-    @include foot-p;
+    @extend %foot-p;
     a{
         padding: 0 5px;
     }
   }
   .copyright{
-      @include foot-p;
+      @extend %foot-p;
   }
   .foot-nav{
       display: inline-block;
@@ -496,7 +496,7 @@ footer {
     }
   }
   .home {
-    background-image: url(/Icake/images/nav_btn_home.png);
+    background-image: url(../images/nav_btn_home.png);
   }
   .cake {
     background-image: url(../images/nav_btn_cake.png);
@@ -505,13 +505,13 @@ footer {
     background-image: url(../images/nav_btn_in.png);
   }
   .bluehome {
-    background-image: url(/Icake/images/nav_btn_home_blue.png);
+    background-image: url(../images/nav_btn_home_blue.png);
   }
   .car {
     background-image: url(../images/nav_btn_car.png);
   }
   .new {
-    background-image: url(/Icake/images/nav_btn_news.png);
+    background-image: url(../images/nav_btn_news.png);
   }
   .user {
     background-image: url(../images/nav_btn_user.png);
@@ -590,8 +590,9 @@ footer {
       height: 35px;
       line-height: 38px;
       border: 1px solid #d5d5d5;
-      background: url(/Icake/images/price_bg.png) repeat-x;
-      background-size: auto 100%;
+      @include v-gradient(#FDFDFD,#EFEFEF,#FDFDFD);
+      background: url(../images/price_bg.png) repeat-x\9;
+      background-size: auto 100%\9;
       font-size: 18px;
       * {
         font-size: 18px;
@@ -611,7 +612,7 @@ footer {
         display: inline-block;
         width: 10px;
         height: 10px;
-        background: url(/Icake/images/price_on.png) no-repeat;
+        background: url(../images/price_on.png) no-repeat;
         background-size: auto 100%;
       }
     }
@@ -622,7 +623,7 @@ footer {
     display: inline-block;
     width: 9px;
     height: 18px;
-    background: url(/Icake/images/shan_ico.png) no-repeat;
+    background: url(../images/shan_ico.png) no-repeat;
     vertical-align: middle;
     background-size: auto 100%;
   }
@@ -632,7 +633,8 @@ footer {
     height: 35px;
     line-height: 35px;
     border: 1px solid #d5d5d5;
-    background: url(/Icake/images/shan_gou.png) repeat-x;
+    @include v-gradient(#FB0000,#840E17,#FB0000);
+    background: url(../images/shan_gou.png) repeat-x\9;
     text-align: center;
     font-size: 18px;
     color: #fff;
@@ -645,8 +647,9 @@ footer {
     text-align: center;
     line-height: 35px;
     border: 1px solid #d5d5d5;
-    background: url(/Icake/images/go_buy.png) repeat-x;
-    background-size: auto 100%;
+    @include v-gradient(#5CBEEF,#329BE3,#5CBEEF);
+    background: url(../images/go_buy.png) repeat-x\9;
+    background-size: auto 100%\9;
     font-size: 18px;
     color: #fff;
   }
@@ -657,8 +660,9 @@ footer {
     text-align: center;
     line-height: 35px;
     border: 1px solid #d5d5d5;
-    background: url(/Icake/images/no_buy.png) repeat-x;
-    background-size: auto 100%;
+    @include v-gradient(#b7b7b7,#a0a0a0,#b7b7b7);
+    background: url(../images/no_buy.png) repeat-x\9;
+    background-size: auto 100%\9;
     font-size: 18px;
     color: #fff;
   }
@@ -735,7 +739,7 @@ footer {
 .rob_buy {
   width: 50px;
   height: 50px;
-  background: url(/Icake/images/rob_buy.png) repeat-x;
+  background: url(../images/rob_buy.png) repeat-x;
   background-size: auto 100%;
   text-indent: -999em;
   overflow: hidden;
@@ -831,13 +835,13 @@ menu {
       background-image: url(../images/menu/nav_btn_cake2.png);
     }
     .in {
-      background-image: url(/Icake/images/menu/nav_btn_in.png);
+      background-image: url(../images/menu/nav_btn_in.png);
     }
     .car {
-      background-image: url(/Icake/images/menu/nav_btn_car.png);
+      background-image: url(../images/menu/nav_btn_car.png);
     }
     .user {
-      background-image: url(/Icake/images/menu/nav_btn_user.png);
+      background-image: url(../images/menu/nav_btn_user.png);
     }
     .incake {
       background-image: url(../images/menu/nav_btn_cafe.png);
@@ -987,8 +991,9 @@ menu {
       border: 1px solid #d5d5d5;
       text-align: center;
       line-height: 35px;
-      background: url(/Icake/images/go_buy.png) repeat-x;
-      background-size: auto 100%;
+      @include v-gradient(#5CBEEF,#329BE3,#5CBEEF);
+      background: url(/Icake/images/go_buy.png) repeat-x\9;
+      background-size: auto 100%\9;
       font-size: 18px;
       color: #fff;
     }
@@ -1076,7 +1081,7 @@ menu {
   height: 40px;
   zoom: .8;
   display: inline-block;
-  background: url(/Icake/images/del.png) no-repeat center center;
+  background: url(../images/del.png) no-repeat center center;
   background-size: 80% auto;
 }
 
@@ -1092,8 +1097,9 @@ menu {
   text-align: center;
   line-height: 35px;
   border: 1px solid #d5d5d5;
-  background: url(/Icake/images/go_buy.png) repeat-x;
-  background-size: auto 100%;
+  @include v-gradient(#5CBEEF,#329BE3,#5CBEEF);
+  background: url(../images/go_buy.png) repeat-x\9;
+  background-size: auto 100%\9;
   font-size: 18px;
   color: #fff;
 }
@@ -1711,6 +1717,7 @@ menu {
   }
 }
 
+//关注星星--未启用状态
 .ui_star {
   padding: 5px 7px;
   background-color: #f3f3f3;
@@ -1720,9 +1727,9 @@ menu {
     border: 1px solid #f0c25e;
   }
   li {
-    background: url(/Icake/images/commnet_star.gif) no-repeat;
+    background: url(../images/commnet_star.gif) no-repeat;
     &.on, &.hover {
-      background: url(/Icake/images/commnet_star_on.gif) no-repeat;
+      background: url(../images/commnet_star_on.gif) no-repeat;
     }
   }
 }
