@@ -1,18 +1,12 @@
-var saleList = new Swiper('.sale-list', {
-	direction: 'horizontal',
-	initialSlide: 0,
-	onSlideChangeEnd: function(saleList) {
-		var _pagenow = saleList.activeIndex,
-			title = document.getElementById('list-title-txt');
-		switch (_pagenow) {
-			case 0:
-				title.innerHTML = '蛋糕馆销售排行榜'
-				$('.fanye').show()
-				break;
-			case 1:
-				title.innerHTML = '午后茶点销售排行榜'
-				$('.fanye').hide()
-				break;
-		}
-	}
-});
+//查看更多排行榜
+$(function() {
+	$('.drop_down').click(function() {
+		$('.drop_down_list').toggle();
+		$('.drop_down_list li').click(function() {
+			var that = $(this),
+				Txt = that.find('a').html();
+			$('.navigation h1').html(Txt);
+			$('.drop_down_list').hide()
+		})
+	})
+})

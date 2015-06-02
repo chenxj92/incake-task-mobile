@@ -24,10 +24,11 @@ input {
 }
 .navigation .drop_down span {
   width: 25px;
-  height: 1px;
-  display: block;
-  background: #c5c5c5;
+  height: 2px;
+  border-radius: 2px;
   margin: 5px 0;
+  display: block;
+  background: #0B2D8F;
 }
 .navigation .drop_down_list {
   display: none;
