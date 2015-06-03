@@ -31,9 +31,12 @@
 .pbottom{
     padding-bottom: 50px;
 }
+
+//原材料样式
 .yuanliao_box{
-    overflow: hidden;
     width: 104%;
+    margin-left: -2%;
+    overflow: hidden;
     .left{
         float: left;
         img{
@@ -47,7 +50,6 @@
         }
     }
     .right{
-//      float: left;
         img{
             float: left;
             width: 60px;
@@ -64,6 +66,12 @@
     }
 }
 
+//产品展示样式
+.show-img-container{
+    img{
+        vertical-align: top;
+    }
+}
 
 
 
