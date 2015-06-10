@@ -1,0 +1,178 @@
+@charset "utf-8";
+@import "bianliang";
+//待支付、待发货、待评价
+.dai-tabs > ul {
+  display: table;
+  background: #fff;
+  > li {
+    display: table-cell;
+    width: 1%;
+    height: 80px;
+    padding-top: 5px;
+    text-align: center;
+    vertical-align: middle;
+    .imooc-icon {
+      display: inline-block;
+      width: 40px;
+      height: 40px;
+      margin-bottom: 10px;
+      border-radius: 50%;
+      line-height: 40px;
+      font-size: 2.2em;
+      color: #fff;
+      text-align: center;
+      vertical-align: middle;
+    }
+    a {
+      color: #7e7e7e;
+    }
+  }
+}
+
+//会员中心顶部广告
+.banner {
+  position: relative;
+  overflow: hidden;
+  .imooc-icon {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  img {
+    float: left;
+    width: 100%;
+  }
+}
+
+//会员中心头像区域样式
+.header_mes {
+  position: relative;
+  padding-left: 125px;
+  min-height: 130px;
+  background: url(../img/bg.jpg) no-repeat top left;
+  background-size: cover;
+  vertical-align: middle;
+  .jiantou {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    font-size: 1.5em;
+    margin-top: -0.5em;
+    padding-right: 15px;
+    cursor: pointer;
+  }
+  .touxiang {
+    position: absolute;
+    top: 50%;
+    width: 90px;
+    height: 90px;
+    margin-top: -45px;
+    margin-left: -100px;
+    border-radius: 50%;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+  h1 {
+    padding-top: 42px;
+    font-weight: normal;
+    color: #707070;
+  }
+  p {
+    margin-top: 12px;
+    color: #717171;
+  }
+}
+
+//会员中心列表
+.zh_content {
+  padding: 8px;
+  margin: 16px 0 22px;
+  li {
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    div {
+      line-height: 43px;
+      border-bottom: 1px solid #d9d9d9;
+      &:last-child {
+        border: none;
+      }
+      a {
+        display: inline-block;
+        width: 100%;
+        vertical-align: middle;
+        color: #707070;
+        font-size: 1em;
+      }
+      .imooc-icon:not(.jiantou) {
+        display: inline-block;
+        width: 30px;
+        color: #dadada;
+        font-size: 1.5em;
+        text-align: center;
+        vertical-align: middle;
+      }
+      .jiantou {
+        position: absolute;
+        right: 7px;
+        font-size: 1.5em;
+        line-height: 43px;
+        padding-right: 7px;
+      }
+    }
+    
+    //占位符
+    %span{
+        a{
+            color: #3197E0;
+        }
+        i{
+            color: #707070;
+        }
+        span{
+            display: inline-block;
+            float: right;
+            min-width: 20px;
+            padding-right: 25px;
+            text-align: right;
+            color: #707070;
+        }
+    }
+    
+    &.sub_list01 div {
+      padding-left: 20px;
+      @extend %span;
+    }
+    &.sub_list02 {
+      @extend %span;
+      div a i.imooc-icon:not(.jiantou) {
+        color: #3197E0;
+      }
+    }
+  }
+}
+
+//会员中心页脚样式
+.new_footer {
+  position: relative;
+  min-height: 65px;
+  text-align: center;
+  .imooc-icon {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    color: #715154;
+    font-size: 3em;
+    cursor: pointer;
+  }
+  span, a {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 1em;
+    color: #715154;
+  }
+}
