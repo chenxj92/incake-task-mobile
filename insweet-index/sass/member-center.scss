@@ -24,8 +24,24 @@
       vertical-align: middle;
     }
     a {
+      position: relative;
+      display: inline-block;
       color: #7e7e7e;
     }
+  }
+  span{
+      position: absolute;
+      display: block;
+      top: 0;
+      right: 0;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      line-height: 20px;
+      font-size: 10px;
+      color: #fff;
+      background: red;
+      border-radius: 50%;
   }
 }
 
