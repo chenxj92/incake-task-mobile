@@ -1,0 +1,114 @@
+@charset "utf-8";
+@import "../../insweet-index/sass/bianliang";
+@include reset-normalize;
+$color1:#d9b86b;
+$color2:#13328c;
+body{
+    position: relative;
+    background: url(../img/voicecake.jpg) no-repeat top center;
+    background-size: 100% auto;
+    @include font-fm;
+}
+.fn-hide{
+    width: 100%;
+    vertical-align: top;
+    visibility: hidden;
+}
+.container{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    @at-root .content{
+        padding-top: 20px;
+        background: rgba(255,255,255,.3);
+        ul{
+            margin: 0;
+            padding: 0 15px;
+            list-style: none;
+            li{
+                padding: 10px 0 5px;
+                clear: both;
+                &+li{
+                    border-top: 1px solid #75a8dd;
+                }
+            }
+            p{
+                margin: 0;
+                font-size: .75em;
+                line-height: 1.5em;
+                color: $color2;
+                overflow: hidden;
+            }
+            button{
+                float: right;
+                padding: 0;
+                margin-left: 5px;
+                outline: none;
+                border: none;
+            }
+            .start-btn{
+                width: 70px;
+                height: 70px;
+                margin-top: -20px;
+                margin-bottom: 10px;
+                border-radius: 50%;
+                box-shadow: 0 0 0 3px rgba(255,255,255,.5);
+                @include v-gradient(#fff,#dedede,#dedede);
+            }
+            .pure-musice-btn{
+                width: 80px;
+                height: 28px;
+                border-radius: 25px;
+                color: $color2;
+                font-size: .75em;
+                text-align: right;
+                box-shadow: 1px 1px 2px darken($color2,10%);
+                @include v-gradient(#fff,#dedede,#dedede);
+                span{
+                    margin-right: 5px;
+                }
+            }
+        }
+        .tuijian{
+            padding: 5px 0;
+            margin: 0;
+            text-align: center;
+            color: #fff;
+            font-size: .75em;
+            label{
+                font-size: 1.2em;
+            }
+            a{
+                color: #fff;
+                text-decoration: none;
+                &:before{
+                    position: relative;
+                    top: -2px;
+                    display: inline-block;
+                    width: 3px;
+                    height: 3px;
+                    margin: 0 3px;
+                    line-height: 1em;
+                    border-radius: 50%;
+                    background: #fff;
+                    content: "";
+                }
+            }
+        }
+    }
+    @at-root footer{
+        height: 55px;
+        line-height: 55px;
+        text-align: center;
+        background: rgba(255,255,255,.5);
+        .tiaoguo{
+            width: 205px;
+            height: 28px;
+            border: 1px solid $color1;
+            border-radius: 23px;
+            text-align: center;
+            color: $color1;
+            background: #fff;
+        }
+    }
+}
