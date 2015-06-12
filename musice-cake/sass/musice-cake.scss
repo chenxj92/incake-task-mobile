@@ -6,7 +6,7 @@ $color2:#13328c;
 body{
     position: relative;
     background: url(../img/voicecake.jpg) no-repeat top center;
-    background-size: 100% auto;
+    background-size: cover;
     @include font-fm;
 }
 .fn-hide{
@@ -18,6 +18,7 @@ body{
     position: absolute;
     bottom: 0;
     width: 100%;
+    padding-bottom: 55px;
     @at-root .content{
         padding-top: 20px;
         background: rgba(255,255,255,.3);
@@ -39,6 +40,18 @@ body{
                 color: $color2;
                 overflow: hidden;
             }
+            .watch-list{
+                margin: 5px 0;
+                line-height: 20px;
+                overflow: hidden;
+                background: rgba(255,255,255,.3);
+                a{
+                    margin: 0 20px 0 10px;
+                    outline: none;
+                    color: $color2;
+                    font-size: .75em;
+                }
+            }
             button{
                 float: right;
                 padding: 0;
@@ -49,7 +62,7 @@ body{
             .start-btn{
                 width: 70px;
                 height: 70px;
-                margin-top: -20px;
+                margin-top: -10px;
                 margin-bottom: 10px;
                 border-radius: 50%;
                 box-shadow: 0 0 0 3px rgba(255,255,255,.5);
@@ -70,9 +83,8 @@ body{
             }
         }
         .tuijian{
-            padding: 5px 0;
+            padding: 5px 15px;
             margin: 0;
-            text-align: center;
             color: #fff;
             font-size: .75em;
             label{
@@ -96,19 +108,24 @@ body{
             }
         }
     }
-    @at-root footer{
-        height: 55px;
-        line-height: 55px;
+}
+
+//跳过
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    background: rgba(255,255,255,.5);
+    .tiaoguo{
+        width: 205px;
+        height: 28px;
+        border: 1px solid $color1;
+        border-radius: 23px;
         text-align: center;
-        background: rgba(255,255,255,.5);
-        .tiaoguo{
-            width: 205px;
-            height: 28px;
-            border: 1px solid $color1;
-            border-radius: 23px;
-            text-align: center;
-            color: $color1;
-            background: #fff;
-        }
+        color: $color1;
+        background: #fff;
     }
 }
