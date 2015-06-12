@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh-CN">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>noUiSlider - 小巧的jQuery区域范围滑块插件演示_做好网站</title>
+		<link rel="stylesheet" href="css/nouislider.fox.css">
+		<style>
+			body {
+				margin: 20px;
+				background-repeat: no-repeat;
+			}
+		</style>
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/jquery.nouislider.min.js"></script>
+		<script>
+			$(function() {
+				$(".noUiSlider1").noUiSlider({
+					range: [0, 100],
+					start: 0,
+					step: 10,
+					handles: 1
+				});
+				$(".noUiSlider2").noUiSlider({
+					range: [0, 100],
+					start: [30, 60],
+					step: 10,
+					handles: 2
+				});
+				$(".noUiSlider3").noUiSlider({
+					range: [0, 100],
+					start: 50,
+					handles: 1
+				}).noUiSlider("disabled", true);
+				$(".noUiSlider4").noUiSlider({
+					range: [0, 50],
+					start: 0,
+					step: 10,
+					handles: 1,
+					orientation: 'vertical'
+				});
+				$(".noUiSlider5").noUiSlider({
+					range: [0, 100],
+					start: 30,
+					handles: 1,
+					step: 1,
+					slide: function() {
+						var values = $(this).val();
+						$("#num1").text(values);
+					}
+				});
+				$(".noUiSlider6").noUiSlider({
+					range: [0, 100],
+					start: 30,
+					handles: 1,
+					serialization: {
+						to: $("#num2"),
+						resolution: 0.01
+					}
+				});
+				$(".noUiSlider7").noUiSlider({
+					range: [0, 100],
+					start: [30, 60],
+					step: 10,
+					slide: function() {
+						var values = $(this).val();
+						$("#s1").text(values[0] + " - " + values[1]);
+					}
+				});
+				$(".noUiSlider8").noUiSlider({
+					range: [0, 1],
+					start: 0,
+					step: 1,
+					handles: 1
+				});
+				$(".noUiSlider9").noUiSlider({
+					range: [0, 6],
+					start: 0,
+					step: 1,
+					handles: 1,
+					slide: function() {
+						$("#images>div").animate({
+							"left": $(this).val() * -80
+						});
+					}
+				});
+			});
+		</script>
+	</head>
+
+	<body>
+		<h1>noUiSlider - 小巧的jQuery区域范围滑块插件演示</h1>
+		<div class="demo">
+			<p>最简单的滑块</p>
+			<div class="noUiSlider noUiSlider1"></div>
+		</div>
+
+		<div class="demo">
+			<p>选择区间范围</p>
+			<div class="noUiSlider noUiSlider2"></div>
+		</div>
+
+		<div class="demo">
+			<p>禁止滑动</p>
+			<div class="noUiSlider noUiSlider3"></div>
+		</div>
+
+		<div class="demo">
+			<p>纵向</p>
+			<div class="noUiSlider noUiSlider4" style="height: 100px;"></div>
+		</div>
+
+		<div class="demo">
+			<p>带数值</p>
+			<div class="noUiSlider noUiSlider5"></div>
+			<span id="num1">30</span>
+		</div>
+
+		<div class="demo">
+			<p>带数值 input</p>
+			<div class="noUiSlider noUiSlider6"></div>
+			<input title="type" id="num2">
+		</div>
+
+		<div class="demo">
+			<p>带数值</p>
+			<div class="noUiSlider noUiSlider7"></div>
+			<span class="example" id="s1">40 - 80</span>
+		</div>
+
+		<div class="demo">
+			<p>开关（编写样式可做成 Andriod 等智能手机的开关）</p>
+			<div class="noUiSlider noUiSlider8" style="width: 30px;"></div>
+		</div>
+
+		<div class="demo">
+			<p>图片展示（编写样式可做成漂亮的图片展示，不过功能简单了些）</p>
+			<div style="width:100%;overflow:hidden;height:50px;margin: 25px 0;position:relative;" id="images">
+				<div style="position: absolute; height: 100%; left: 0px;">
+					<div style="background:red;width:70px;float:left;height:50px;margin:0 5px;">1</div>
+					<div style="background:blue;width:70px;float:left;height:50px;margin:0 5px;">2</div>
+					<div style="background:green;width:70px;float:left;height:50px;margin:0 5px;">3</div>
+					<div style="background:purple;width:70px;float:left;height:50px;margin:0 5px;">4</div>
+					<div style="background:orange;width:70px;float:left;height:50px;margin:0 5px;">5</div>
+					<div style="background:red;width:70px;float:left;height:50px;margin:0 5px;">6</div>
+					<div style="background:blue;width:70px;float:left;height:50px;margin:0 5px;">7</div>
+					<div style="background:green;width:70px;float:left;height:50px;margin:0 5px;">8</div>
+					<div style="background:purple;width:70px;float:left;height:50px;margin:0 5px;">9</div>
+					<div style="background:orange;width:70px;float:left;height:50px;margin:0 5px;">10</div>
+				</div>
+			</div>
+			<div class="noUiSlider noUiSlider9" style="width: 100%;"></div>
+		</div>
+
+	</body>
+
+</html>
