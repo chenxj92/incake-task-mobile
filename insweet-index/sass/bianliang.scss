@@ -33,6 +33,12 @@ $_gray:#9C9D9D;
     -moz-opacity: $value;
 }
 
+//制作一个圆
+@mixin round($d){
+    width: $d;
+    height: $d;
+    border-radius: 50%;
+}
 //清楚浮动
 @mixin fn_clear{
     .fn_clear{

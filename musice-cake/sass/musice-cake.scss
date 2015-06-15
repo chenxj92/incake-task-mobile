@@ -1,13 +1,35 @@
 @charset "utf-8";
 @import "../../insweet-index/sass/bianliang";
 @include reset-normalize;
-$color1:#d9b86b;
+$color1:#0a2c90;
 $color2:#13328c;
+%backgound-img{
+     background: url(../img/d3_01_01.png) no-repeat;
+     background-size: 64px 92px;
+}
 body{
     position: relative;
-    background: url(../img/voicecake.jpg) no-repeat top center;
-    background-size: cover;
     @include font-fm;
+    -webkit-user-select: none;
+}
+//musice-cake页面
+.musice-cake{
+    background: url(../img/d1.jpg);
+    background-size: cover;
+    .container{
+        position: absolute;
+        bottom: 0;
+        width: 100%;    
+    }
+}
+
+//musice-list 页面
+.musice-list{
+    background: url(../img/d3_03.jpg) no-repeat top center;
+    background-size: 100% auto;
+    footer{
+        background: #f0f0f0;
+    }
 }
 .fn-hide{
     width: 100%;
@@ -15,12 +37,17 @@ body{
     visibility: hidden;
 }
 .container{
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding-bottom: 55px;
+    .theme-logo{
+        text-align: right;
+        img{
+            margin-right: 26px;
+            margin-bottom: 23px;
+            width: 174px;
+        }
+    }
     @at-root .content{
         padding-top: 20px;
+        padding-bottom: 55px;
         background: rgba(255,255,255,.3);
         ul{
             margin: 0;
@@ -56,29 +83,47 @@ body{
                 float: right;
                 padding: 0;
                 margin-left: 5px;
+                color: $color2;
+                font-size: .75em;
                 outline: none;
                 border: none;
             }
             .start-btn{
-                width: 70px;
-                height: 70px;
+                @include round(70px);
                 margin-top: -10px;
                 margin-bottom: 10px;
-                border-radius: 50%;
                 box-shadow: 0 0 0 3px rgba(255,255,255,.5);
                 @include v-gradient(#fff,#dedede,#dedede);
+                &:before{
+                    display: block;
+                    width: 27px;
+                    height: 38px;
+                    margin: 0 auto;
+                    @extend %backgound-img;
+                    content: "";
+                }
             }
             .pure-musice-btn{
                 width: 80px;
                 height: 28px;
+                line-height: 28px;
                 border-radius: 25px;
-                color: $color2;
-                font-size: .75em;
-                text-align: right;
                 box-shadow: 1px 1px 2px darken($color2,10%);
                 @include v-gradient(#fff,#dedede,#dedede);
                 span{
                     margin-right: 5px;
+                }
+                &:before{
+                    position: relative;
+                    top: -1px;
+                    @include round(25px);
+                    margin-right: 5px;
+                    display: inline-block;
+                    @extend %backgound-img;
+                    vertical-align: middle;
+                    background-color: #fff;
+                    background-position: -28px 3px;
+                    content: "";
                 }
             }
         }
@@ -115,17 +160,230 @@ footer{
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 55px;
-    line-height: 55px;
+    min-height: 55px;
     text-align: center;
     background: rgba(255,255,255,.5);
+    p{
+        margin: 5px 10px;
+        text-align: left;
+        font-size: .8em;
+    }
+    button{
+       width: 205px;
+       height: 28px;
+       margin: 10px 0;
+       border-radius: 23px; 
+       outline: none;
+    }
+    .queding{
+        background: #133694;
+        color: #fff;
+        border: none;
+    }
     .tiaoguo{
-        width: 205px;
-        height: 28px;
         border: 1px solid $color1;
-        border-radius: 23px;
         text-align: center;
         color: $color1;
         background: #fff;
     }
 }
+//遮罩层
+.ui_mask{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9;
+    background: #fff;
+    @include opacity(0.5);
+}
+
+//弹出窗口样式
+.modal-dialog{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    width: 80%;
+    max-width: 300px;
+    min-height: 320px;
+    border: 8px solid #fff;
+    border-radius: 4px;
+    background: url(../img/d3_03.jpg) no-repeat top center;
+    background-size: 100% auto;
+    background-color: #fff;
+    box-shadow: 2px 2px 8px #999;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+}
+.dialog-record{
+    p{
+        text-align: center;
+        margin-top: 120px;
+        font-size: .8em;
+        color: $color1;
+    }
+    .switch{
+        display: block;
+        @include round(60px);
+        margin: 38px auto 0;
+        background-color: #378aea;
+        border: none;
+        outline: none;
+        span{
+            display: inline-block;
+            width: 23px;
+            height: 32px;
+            @extend %backgound-img;
+        }
+    }
+    .switch-on{
+        span{
+            background-position: 0 -42px;
+        }
+    }
+    .switch-off{
+        span{
+            background-position: -26px -39px;
+        }
+    }
+}
+#bars1,
+#bars2 {
+    position: relative;
+    height: 30px;
+    width: 152px;
+    margin: 40px auto 0;
+}
+.bar {
+    background: #4bb0e6;
+    bottom: 1px;
+    height: 3px;
+    position: absolute;
+    width: 7px;
+}
+.on .bar {
+    animation: sound 0ms -800ms linear infinite alternate;
+    -webkit-animation: sound 0ms -800ms linear infinite alternate;
+}
+@keyframes sound {
+    0% {
+        opacity: .35;
+        height: 3px;
+    }
+    100% {
+        opacity: 1;
+        height: 38px;
+    }
+}
+@-webkit-keyframes sound {
+    0% {
+        opacity: .35;
+        height: 3px;
+    }
+    100% {
+        opacity: 1;
+        height: 38px;
+    }
+}
+@for $i from 1 through 19 {
+    .bar:nth-child(#{$i}) {
+        left: 1px + $i*8 - 8;
+    }  
+}
+.on .bar:nth-child(1) {
+    -webkit-animation-duration: 474ms;
+    animation-duration: 474ms;
+}
+.on .bar:nth-child(2) {
+    -webkit-animation-duration: 433ms;
+    animation-duration: 433ms;
+}
+.on .bar:nth-child(3) {
+    -webkit-animation-duration: 407ms;
+    animation-duration: 407ms;
+}
+.on .bar:nth-child(4) {
+    -webkit-animation-duration: 458ms;
+    animation-duration: 458ms;
+}
+.on .bar:nth-child(5) {
+    -webkit-animation-duration: 400ms;
+    animation-duration: 400ms;
+}
+.on .bar:nth-child(6) {
+    -webkit-animation-duration: 427ms;
+    animation-duration: 427ms;
+}
+.on .bar:nth-child(7) {
+    -webkit-animation-duration: 441ms;
+    animation-duration: 441ms;
+}
+.on .bar:nth-child(8) {
+    -webkit-animation-duration: 419ms;
+    animation-duration: 419ms;
+}
+.on .bar:nth-child(9) {
+    -webkit-animation-duration: 487ms;
+    animation-duration: 487ms;
+}
+.on .bar:nth-child(10) {
+    -webkit-animation-duration: 442ms;
+    animation-duration: 442ms;
+}
+.on .bar:nth-child(11) {
+    -webkit-animation-duration: 433ms;
+    animation-duration: 433ms;
+}
+.on .bar:nth-child(12) {
+    -webkit-animation-duration: 407ms;
+    animation-duration: 407ms;
+}
+.on .bar:nth-child(13) {
+    -webkit-animation-duration: 458ms;
+    animation-duration: 458ms;
+}
+.on .bar:nth-child(14) {
+    -webkit-animation-duration: 400ms;
+    animation-duration: 400ms;
+}
+.on .bar:nth-child(15) {
+    -webkit-animation-duration: 427ms;
+    animation-duration: 427ms;
+}
+.on .bar:nth-child(16) {
+    -webkit-animation-duration: 441ms;
+    animation-duration: 441ms;
+}
+.on .bar:nth-child(17) {
+    -webkit-animation-duration: 419ms;
+    animation-duration: 419ms;
+}
+.on .bar:nth-child(18) {
+    -webkit-animation-duration: 487ms;
+    animation-duration: 487ms;
+}
+.on .bar:nth-child(19) {
+    -webkit-animation-duration: 442ms;
+    animation-duration: 442ms;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
