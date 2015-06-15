@@ -252,6 +252,8 @@ footer{
         }
     }
 }
+
+//跳动的声波线
 #bars1,
 #bars2 {
     position: relative;
@@ -295,81 +297,12 @@ footer{
         left: 1px + $i*8 - 8;
     }  
 }
-.on .bar:nth-child(1) {
-    -webkit-animation-duration: 474ms;
-    animation-duration: 474ms;
-}
-.on .bar:nth-child(2) {
-    -webkit-animation-duration: 433ms;
-    animation-duration: 433ms;
-}
-.on .bar:nth-child(3) {
-    -webkit-animation-duration: 407ms;
-    animation-duration: 407ms;
-}
-.on .bar:nth-child(4) {
-    -webkit-animation-duration: 458ms;
-    animation-duration: 458ms;
-}
-.on .bar:nth-child(5) {
-    -webkit-animation-duration: 400ms;
-    animation-duration: 400ms;
-}
-.on .bar:nth-child(6) {
-    -webkit-animation-duration: 427ms;
-    animation-duration: 427ms;
-}
-.on .bar:nth-child(7) {
-    -webkit-animation-duration: 441ms;
-    animation-duration: 441ms;
-}
-.on .bar:nth-child(8) {
-    -webkit-animation-duration: 419ms;
-    animation-duration: 419ms;
-}
-.on .bar:nth-child(9) {
-    -webkit-animation-duration: 487ms;
-    animation-duration: 487ms;
-}
-.on .bar:nth-child(10) {
-    -webkit-animation-duration: 442ms;
-    animation-duration: 442ms;
-}
-.on .bar:nth-child(11) {
-    -webkit-animation-duration: 433ms;
-    animation-duration: 433ms;
-}
-.on .bar:nth-child(12) {
-    -webkit-animation-duration: 407ms;
-    animation-duration: 407ms;
-}
-.on .bar:nth-child(13) {
-    -webkit-animation-duration: 458ms;
-    animation-duration: 458ms;
-}
-.on .bar:nth-child(14) {
-    -webkit-animation-duration: 400ms;
-    animation-duration: 400ms;
-}
-.on .bar:nth-child(15) {
-    -webkit-animation-duration: 427ms;
-    animation-duration: 427ms;
-}
-.on .bar:nth-child(16) {
-    -webkit-animation-duration: 441ms;
-    animation-duration: 441ms;
-}
-.on .bar:nth-child(17) {
-    -webkit-animation-duration: 419ms;
-    animation-duration: 419ms;
-}
-.on .bar:nth-child(18) {
-    -webkit-animation-duration: 487ms;
-    animation-duration: 487ms;
-}
-.on .bar:nth-child(19) {
-    -webkit-animation-duration: 442ms;
-    animation-duration: 442ms;
+$headings: (1: 474ms, 2: 433ms, 3: 407ms, 4: 458ms, 5: 400ms, 6: 427ms,7: 441ms, 8: 419ms, 9:487ms, 10: 442ms, 11: 433ms, 12: 407ms, 13: 458ms, 14: 400ms, 15: 427ms, 16: 441ms, 17: 419ms, 18: 487ms, 19: 442ms);
+@each $header, $size in $headings {
+  .on .bar:nth-child(#{$header}) {
+     -webkit-animation-duration: $size;
+    animation-duration: $size;
+  }
 }
 
 
