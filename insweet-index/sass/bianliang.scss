@@ -26,6 +26,13 @@ $_gray:#9C9D9D;
     background-image: -ms-linear-gradient(left, $color_start, $color_end);
     background-image: linear-gradient(to right, $color_start, $color_end); 
 }
+@mixin progress($deg,$color_base){
+    background-image: -webkit-linear-gradient($deg,$color_base 25%,transparent 25%,transparent 50%,$color_base 50%,$color_base 75%,transparent 75%,transparent);
+    background-image: -moz-linear-gradient($deg,$color_base 25%,transparent 25%,transparent 50%,$color_base 50%,$color_base 75%,transparent 75%,transparent);
+    background-image: -o-linear-gradient($deg,$color_base 25%,transparent 25%,transparent 50%,$color_base 50%,$color_base 75%,transparent 75%,transparent);
+    background-image: -ms-linear-gradient($deg,$color_base 25%,transparent 25%,transparent 50%,$color_base 50%,$color_base 75%,transparent 75%,transparent);
+    background-image: linear-gradient($deg,$color_base 25%,transparent 25%,transparent 50%,$color_base 50%,$color_base 75%,transparent 75%,transparent);
+}
 //透明度
 @mixin opacity($value){
     opacity: $value;

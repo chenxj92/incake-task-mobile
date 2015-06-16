@@ -7,6 +7,12 @@ $color2:#13328c;
      background: url(../img/d3_01_01.png) no-repeat;
      background-size: 64px 92px;
 }
+
+@mixin padding-bottom($padding-value){
+    .container{
+        padding-bottom: $padding-value;
+    }
+}
 body{
     position: relative;
     @include font-fm;
@@ -24,11 +30,114 @@ body{
 }
 
 //musice-list 页面
-.musice-list{
+.musice-list, .musice-list2, .musice-myaudio{
     background: url(../img/d3_03.jpg) no-repeat top center;
     background-size: 100% auto;
+    h2{
+        margin: 160px 0 0;
+        padding-left: 15px;
+        border-bottom: 1px solid $color2;
+        font-size: 1em;
+        font-weight: normal;
+        color: $color2;
+        span{
+            margin-left: 10px;
+            font-size: .8em;
+            color: #505050;
+        }
+    }
+    ul{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li{
+            padding: 0 15px;
+            &:last-child{
+                dl{
+                    border: none;
+                }
+            }
+        }
+        .select-on{
+            background: #e6f0fa;
+           .start-play{
+               background-position: -14px -77px;
+               &.start-play-on{
+                  background-position: -28px -77px; 
+               }
+           } 
+           dt{
+              color: $color2;
+              @extend %backgound-img;
+              background-position: -49px 14px;
+           }
+           span{
+               color: $color2;
+           }
+        }
+        dl{
+            margin: 0;
+            border-bottom: 1px solid #f0f0f0;
+            line-height: 40px;
+            font-size: .8em;
+            color: #505050;
+            overflow: hidden;
+        }
+        dt{
+            padding-left: 19px;
+            float: left;
+        }
+        dd{
+            margin: 0;
+            float: right;
+            :nth-child(n){
+                margin-right: 15px;
+                vertical-align: middle;
+            }
+            :last-child{
+                margin: 0;
+            }
+            button{
+                 padding: 0;
+                 outline: none;
+                 border: none;
+                 @extend %backgound-img;
+            }
+            .start-play{
+                width: 16px;
+                height: 16px;
+                background-position: 3px -77px;
+            }
+            .delete-editor{
+                width: 16px;
+                height: 16px;
+                background-position: -43px -77px;
+            }
+        }
+    }
     footer{
         background: #f0f0f0;
+    }
+}
+
+.musice-list,.musice-myaudio{
+    @include padding-bottom(96px);
+}
+
+//背景音乐列表
+.musice-list2{
+     @include padding-bottom(55px);
+    h2{
+      &:before{
+          display: inline-block;
+          width: 12px;
+          height: 19px;
+          margin-right: 10px;
+          @extend %backgound-img;
+          background-position: -37px 0px;
+          vertical-align: top;
+          content: "";
+      }  
     }
 }
 .fn-hide{
@@ -186,6 +295,10 @@ footer{
         color: $color1;
         background: #fff;
     }
+    .re-record{
+        margin-left: 20px;
+        color: $color2;
+    }
 }
 //遮罩层
 .ui_mask{
@@ -196,7 +309,7 @@ footer{
     right: 0;
     z-index: 9;
     background: #fff;
-    @include opacity(0.5);
+    @include opacity(.7);
 }
 
 //弹出窗口样式
@@ -219,16 +332,20 @@ footer{
     -ms-transform: translate(-50%,-50%);
     -o-transform: translate(-50%,-50%);
     transform: translate(-50%,-50%);
-}
-.dialog-record{
     p{
         text-align: center;
         margin-top: 120px;
         font-size: .8em;
         color: $color1;
     }
+    button{
+       padding: 0;
+       display: block;
+       outline: none;
+    }
+}
+.dialog-record{
     .switch{
-        display: block;
         @include round(60px);
         margin: 38px auto 0;
         background-color: #378aea;
@@ -252,7 +369,72 @@ footer{
         }
     }
 }
-
+.dialog-synthetic{
+    .progress{
+        width: 80%;
+        height: 15px;
+        margin: 30px auto 20px;
+        border-radius:10px;
+        overflow: hidden;
+        border:1px solid #f0f0f0;
+        box-shadow: inset 1px 1px 2px rgba(0,0,0,.1);
+        .progress-bar{
+            width: 45%;
+            height: 100%;
+            border-radius: 10px;
+            @include progress(-45deg,rgba(255,255,255,.25));
+            background-color: #112d90;
+            background-size: 20px 20px;
+            -webkit-animation: progress-bar-stripes 2s linear infinite;
+            animation: progress-bar-stripes 2s linear infinite;
+            @at-root{
+                @keyframes progress-bar-stripes{
+                    from{
+                        background-position:0 0;
+                    }
+                    to{
+                        background-position:20px 0;
+                    }
+                }
+                @-webkit-keyframes progress-bar-stripes{
+                    from{
+                        background-position:0 0;
+                    }
+                    to{
+                        background-position:20px 0;
+                    }
+                }
+            }
+        }
+    }
+    .cancel-btn{
+        width: 80%;
+        margin: 80px auto 0;
+        padding: 0;
+        border-radius: 20px;
+        background: #fff;
+        color: $color2;
+        line-height: 25px;
+        border: 1px solid $color2;
+    }
+}
+.dialog-success{
+    background: #fff;
+    min-height: 100px !important;
+    p{
+        margin-top: 30px;
+        font-size: 1.2em;
+    }
+    .start-select{
+        width: 165px;
+        height: 25px;
+        margin: 0 auto 20px;
+        border: none;
+        border-radius: 20px;
+        background: $color2;
+        color: #fff;
+    }
+}
 //跳动的声波线
 #bars1,
 #bars2 {
@@ -271,25 +453,27 @@ footer{
 .on .bar {
     animation: sound 0ms -800ms linear infinite alternate;
     -webkit-animation: sound 0ms -800ms linear infinite alternate;
-}
-@keyframes sound {
-    0% {
-        opacity: .35;
-        height: 3px;
-    }
-    100% {
-        opacity: 1;
-        height: 38px;
-    }
-}
-@-webkit-keyframes sound {
-    0% {
-        opacity: .35;
-        height: 3px;
-    }
-    100% {
-        opacity: 1;
-        height: 38px;
+    @at-root{
+        @keyframes sound {
+            0% {
+                opacity: .35;
+                height: 3px;
+            }
+            100% {
+                opacity: 1;
+                height: 38px;
+            }
+        }
+        @-webkit-keyframes sound {
+            0% {
+                opacity: .35;
+                height: 3px;
+            }
+            100% {
+                opacity: 1;
+                height: 38px;
+            }
+        }
     }
 }
 @for $i from 1 through 19 {
