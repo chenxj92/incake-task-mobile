@@ -5,6 +5,8 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link rel="stylesheet" type="text/css" href="css/musice-cake.css" />
+		<script src="js/jquery-1.8.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/control.js" type="text/javascript" charset="utf-8"></script>
 		<title></title>
 	</head>
 
@@ -17,15 +19,15 @@
 			<div class="content">
 				<ul>
 					<li>
-						<button class="start-btn">开始录音</button>
+						<button class="start-btn" onclick="window.location.href='musice-list.html?id=1'">开始录音</button>
 						<p>开始60秒的语音录制，让您的声音与音乐结合，我们将把它变化为Voicecake送到您的身边。</p>
 						<div class="watch-list">
-							<a href="javascript:;">查看录音(<span>12</span>)</a>
-							<a href="javascript:;">查看音频(<span>10</span>)</a>
+							<a href="musice-list.html">查看录音(<span>12</span>)</a>
+							<a href="musice-myaudio.html">查看音频(<span>10</span>)</a>
 						</div>
 					</li>
 					<li>
-						<button class="pure-musice-btn"><span>纯音乐</span>
+						<button class="pure-musice-btn" onclick="window.location.href='musice-list2.html?id=2'"><span>纯音乐</span>
 						</button>
 						<p>您也可以制作纯音乐Voicecake,选择音乐就可以完成。</p>
 					</li>
@@ -43,32 +45,6 @@
 		<footer>
 			<button class="tiaoguo">跳过，我不需要</button>
 		</footer>
-		<div class="ui_mask"></div>
-		<div class="modal-dialog dialog-record">
-			<p>你可以进行60's录音</p>
-			<div id="bars1" class="on">
-				<div class="bar"></div>
-				<div class="bar"></div>
-				<div class="bar"></div>
-				<div class="bar"></div>
-				<div class="bar"></div>
-				<div class="bar"></div>
-				<div class="bar"></div>
-				<div class="bar"></div>
-				<div class="bar"></div>
-				<div class="bar"></div>
-				<div class="bar"></div>
-				<div class="bar"></div>
-				<div class="bar"></div>
-				<div class="bar"></div>
-				<div class="bar"></div>
-				<div class="bar"></div>
-				<div class="bar"></div>
-				<div class="bar"></div>
-				<div class="bar"></div>
-			</div>
-			<button class="switch switch-off"><span></span></button>
-		</div>
 	</body>
 
 </html>

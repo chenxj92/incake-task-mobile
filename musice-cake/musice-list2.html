@@ -5,6 +5,8 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link rel="stylesheet" type="text/css" href="css/musice-cake.css" />
+		<script src="js/jquery-1.8.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/control.js" type="text/javascript" charset="utf-8"></script>
 		<title></title>
 	</head>
 
@@ -22,7 +24,7 @@
 						<dt>爱之初体验(张震)</dt>
 						<dd>
 							<span>00:00:30</span>
-							<button class="start-play start-play-on"></button>
+							<button class="start-play"></button>
 						</dd>
 					</dl>
 				</li>
@@ -102,6 +104,7 @@
 		</div>
 		<footer>
 			<button class="queding">确定</button>
+			<a class="re-record" href="musice-cake.html">返回</a>
 		</footer>
 		<div class="ui_mask"></div>
 		<div class="modal-dialog dialog-synthetic">
@@ -110,6 +113,10 @@
 				<div class="progress-bar"></div>
 			</div>
 			<button class="cancel-btn">放弃合成，返回</button>
+		</div>
+		<div class="modal-dialog dialog-success">
+			<p>您的音频已成功提交</p>
+			<button class="start-select">开始选择蛋糕吧</button>
 		</div>
 	</body>
 

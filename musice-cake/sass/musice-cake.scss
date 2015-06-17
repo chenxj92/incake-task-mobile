@@ -20,7 +20,7 @@ body{
 }
 //musice-cake页面
 .musice-cake{
-    background: url(../img/d1.jpg);
+    background: url(../img/d1.jpg) no-repeat;
     background-size: cover;
     .container{
         position: absolute;
@@ -60,12 +60,9 @@ body{
         }
         .select-on{
             background: #e6f0fa;
-           .start-play{
+            .start-play{
                background-position: -14px -77px;
-               &.start-play-on{
-                  background-position: -28px -77px; 
-               }
-           } 
+           }
            dt{
               color: $color2;
               @extend %backgound-img;
@@ -75,6 +72,11 @@ body{
                color: $color2;
            }
         }
+        .start-play{
+           &.start-play-on{
+              background-position: -28px -77px; 
+           }
+       }
         dl{
             margin: 0;
             border-bottom: 1px solid #f0f0f0;
@@ -124,6 +126,33 @@ body{
     @include padding-bottom(96px);
 }
 
+//录音列表页
+.musice-list{
+    .record{
+        position: absolute;
+        right: 0;
+        width: 55px;
+        margin-top: -10px;
+        margin-right: 10px;
+        line-height: 25px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: .75em;
+        text-align: center;
+        background: #3c8ce5;
+        color: #fff;
+        &:before{
+            display: inline-block;
+            width: 13px;
+            height: 18px;
+            background: url(../img/d3_01_01.png) no-repeat;
+            background-size: 35px auto;
+            background-position: 0px -23px;
+            content: "";
+            vertical-align: middle;
+        }
+    }
+}
 //背景音乐列表
 .musice-list2{
      @include padding-bottom(55px);
@@ -289,6 +318,9 @@ footer{
         color: #fff;
         border: none;
     }
+    .tijiao{
+        @extend .queding;
+    }
     .tiaoguo{
         border: 1px solid $color1;
         text-align: center;
@@ -302,6 +334,7 @@ footer{
 }
 //遮罩层
 .ui_mask{
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -314,6 +347,7 @@ footer{
 
 //弹出窗口样式
 .modal-dialog{
+    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -345,6 +379,18 @@ footer{
     }
 }
 .dialog-record{
+    .close{
+        position: absolute;
+        top: -15px;
+        right: -15px;
+        display: block;
+        border: 1px solid #c9c9cb;
+        @include round(20px);
+        @extend %backgound-img;
+        background-color: #fff;
+        background-position: -34px -24px;
+        cursor: pointer;
+    }
     .switch{
         @include round(60px);
         margin: 38px auto 0;

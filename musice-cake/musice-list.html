@@ -5,11 +5,16 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link rel="stylesheet" type="text/css" href="css/musice-cake.css" />
+		<script src="js/jquery-1.8.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/control.js" type="text/javascript" charset="utf-8"></script>
 		<title></title>
 	</head>
 
 	<body class="musice-list">
 		<div class="container">
+			<div class="record">
+				录音
+			</div>
 			<h2>我的录音<span>共100个录音</span></h2>
 			<ul>
 				<li>
@@ -166,9 +171,36 @@
 		</div>
 		<footer>
 			<p>请选择你要使用的录音，录音我们将为你保存24小时，请你及时完成你的Voicecake。</p>
-			<button class="queding">确定，前往选择背景音乐</button>
+			<button class="queding" onclick="window.location.href = 'musice-list2.html'">确定，前往选择背景音乐</button>
+			<a class="re-record" href="musice-cake.html">返回</a>
 		</footer>
-		<!--<div class="ui_mask"></div>-->
+		<div class="ui_mask"></div>
+		<div class="modal-dialog dialog-record">
+			<span class="close"></span>
+			<p>你可以进行60's录音</p>
+			<div id="bars1">
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+			</div>
+			<button class="switch switch-on"><span></span></button>
+		</div>
 	</body>
 
 </html>
