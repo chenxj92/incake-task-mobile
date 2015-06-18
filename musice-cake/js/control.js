@@ -20,18 +20,18 @@ $(function() {
 	//关闭录音弹框
 	$('.close').click(function(){
 		$('.ui_mask').hide();
-		$('.dialog-record').hide()
+		$('.dialog-record').hide();
+		$('.switch').removeClass().addClass('switch switch-on')
+		$('#bars1').removeClass('on');
 	});
 
 	//录音
 	$('.switch').click(function() {
 		if ($(this).hasClass('switch-on')) {
-			$(this).removeClass('switch-on');
-			$(this).addClass('switch-off');
+			$(this).removeClass('switch-on').addClass('switch-off');
 			$('#bars1').addClass('on')
 		} else {
-			$(this).removeClass('switch-off');
-			$(this).addClass('switch-on');
+			$(this).removeClass('switch-off').addClass('switch-on');
 			$('#bars1').removeClass('on');
 			$('.ui_mask').hide();
 			$('.dialog-record').hide()
