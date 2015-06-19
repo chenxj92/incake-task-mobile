@@ -51,6 +51,34 @@
     display: none;
 }
 
+.shop_car{
+    .box{
+        .dhmeg{
+            padding-left: 10px;
+            text-align: left;
+        }
+    }
+    @at-root .consignee-switch{
+        float: right;
+        margin-right: 40px;
+        label{
+            font-weight: normal;
+            color: #b4b4b4;
+        }
+        input[type=checkbox]{
+            -webkit-appearance: none;
+            width: 12px;
+            height: 12px;
+            border-radius: 2px;
+            border: 1px solid #b4b4b4;
+            outline: none;
+            &:checked{
+                background: url(../img/checked-switch.jpg) no-repeat center;
+                background-size: contain;
+            }
+        }
+    }
+}
 
 
 
