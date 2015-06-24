@@ -82,7 +82,7 @@
 				</div>
 				<div class="swiper-container page_content" style="position: absolute; top:114px; bottom: 0;width: 100%;">
 					<div class="swiper-wrapper">
-						<div class="swiper-slide">
+						<!--<div class="swiper-slide">
 							<div class="about_incake">
 								<h1 class="imooc-icon">&#xe613;</h1>
 								<p>
@@ -93,6 +93,96 @@
 									<br />先预订&nbsp;后生产冷藏配送限时抵达保证新鲜
 								</p>
 							</div>
+
+						</div>-->
+						<div class="swiper-slide" style="height: 100%;">
+							<div class="swiper-container scroll_content scroll_content1" style="height: 100%;">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide" style="height: auto;">
+										<div class="link_wo">
+											<h1 class="imooc-icon">&#xe613;</h1>
+											<hr />
+											<address style="display: none;">
+
+												为了给予您更优质贴心的服务,
+
+												<br />请拨打INCAKE 400-921-5757服务热线提出
+
+												<br />您的宝贵建议与任何疑问，
+
+												<br />INCAKE在此感谢您的支持。
+
+											</address>
+											<hr />
+											<address>
+
+												上海印克电子商务有限公司
+
+												<br />电话：021-26063569
+
+												<br />招商热线：021-26063569-8051
+
+												<br />传真：021-26063570
+
+												<br />地址：上海闸北区广中西路777弄江裕大厦506室
+
+											</address>
+											<address>
+
+												上海印克电子商务有限公司福州分公司
+
+												<br />电话：0591-86397901
+
+												<br />传真：0591-86395502
+
+												<br />地址“福州市鼓楼区五一中路18号正大广场帝景台1205
+
+											</address>
+										</div>
+										<div class="link_wo">
+											<h1 class="imooc-icon">&#xe613;</h1>
+											<hr />
+											<address>
+
+												为了给予您更优质贴心的服务,
+
+												<br />请拨打INCAKE 400-921-5757服务热线提出
+
+												<br />您的宝贵建议与任何疑问，
+
+												<br />INCAKE在此感谢您的支持。
+
+											</address>
+											<hr />
+											<address>
+
+												上海印克电子商务有限公司
+
+												<br />电话：021-26063569
+
+												<br />招商热线：021-26063569-8051
+
+												<br />传真：021-26063570
+
+												<br />地址：上海闸北区广中西路777弄江裕大厦506室
+
+											</address>
+											<address>
+
+												上海印克电子商务有限公司福州分公司
+
+												<br />电话：0591-86397901
+
+												<br />传真：0591-86395502
+
+												<br />地址“福州市鼓楼区五一中路18号正大广场帝景台1205
+
+											</address>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-scrollbar"></div>
+							</div>
 						</div>
 						<div class="swiper-slide" style="overflow: auto;">
 							<div class="peisong_scope">
@@ -100,13 +190,13 @@
 							</div>
 						</div>
 						<div class="swiper-slide" style="height: 100%;">
-							<div class="swiper-container scroll_content" style="height: 100%;">
+							<div class="swiper-container scroll_content scroll_content2" style="height: 100%;">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide" style="height: auto;">
 										<div class="link_wo">
 											<h1 class="imooc-icon">&#xe613;</h1>
 											<hr />
-											<address>
+											<address style="display: none;">
 
 												为了给予您更优质贴心的服务,
 
@@ -205,8 +295,9 @@
 				//初始化页面
 				var tabsSwiper = new Swiper('.page_content', {
 					speed: 500,
-					followFinger:false,
+					followFinger: false,
 					initialSlide: 2,
+					onlyExternal: true,
 					onInit: function(tabsSwiper) {
 						$(".tabs .active").removeClass('active');
 						$(".tabs a").eq(tabsSwiper.activeIndex).addClass('active');
@@ -245,36 +336,46 @@
 				$(".tabs a").click(function(e) {
 					e.preventDefault()
 				});
-				
-				$('.scroll_content').each(function() {
-					$(this).swiper({
-						scrollbar: '.swiper-scrollbar',
+//				$('.scroll_content').each(function() {
+//					 $(this).swiper({
+//						scrollbar: '.swiper-scrollbar',
+//						direction: 'vertical',
+//						slidesPerView: 'auto',
+//						mousewheelControl: true,
+//						freeMode: true
+//					});
+//				});
+				var aaa=$('.scroll_content1').swiper({
+					scrollbar: '.swiper-scrollbar',
 						direction: 'vertical',
 						slidesPerView: 'auto',
 						mousewheelControl: true,
 						freeMode: true
-					})
 				});
+				var bbb=$('.scroll_content2').swiper({
+					scrollbar: '.swiper-scrollbar',
+						direction: 'vertical',
+						slidesPerView: 'auto',
+						mousewheelControl: true,
+						freeMode: true
+				});
+				
+				$('.link_wo h1').click(function() {
+					$('.link_wo address').show();
+//					aaa.update(true);
+//					bbb.update(true);
+					aaa.onResize();
+					bbb.onResize();
+				});
+				
 				$('.img_box button').tap(function() {
 					$('.img_box').hide()
 				});
 				$('.img_box img').on('doubleTap', function() {
 					$('.img_box').hide()
-				})
+				});
 			})
 		</script>
-		<!--<script>
-			var myscroll;
-
-			function loaded() {
-				setTimeout(function() {
-					myscroll = new iScroll("wrapper", {
-						hScroll: false
-					});
-				}, 100);
-			}
-			window.addEventListener("load", loaded, false);
-		</script>-->
 		<!--活动组件end-->
 	</body>
 
