@@ -600,6 +600,9 @@ article .big {
 article .small {
   width: 50%;
 }
+.swiper-slide {
+  overflow: auto;
+}
 .about_incake {
   padding: 20px;
 }
