@@ -13,6 +13,9 @@ $color2:#13328c;
         padding-bottom: $padding-value;
     }
 }
+html{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
 body{
     position: relative;
     @include font-fm;
@@ -534,7 +537,6 @@ $headings: (1: 474ms, 2: 433ms, 3: 407ms, 4: 458ms, 5: 400ms, 6: 427ms,7: 441ms,
     animation-duration: $size;
   }
 }
-
 
 
 

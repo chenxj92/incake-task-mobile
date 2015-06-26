@@ -265,6 +265,10 @@ table {
   background-size: 64px 92px;
 }
 
+html {
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
   position: relative;
   font-family: "Microsoft Yahei","微软雅黑";
