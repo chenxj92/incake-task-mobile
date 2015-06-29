@@ -260,7 +260,7 @@ table {
   border-spacing: 0;
 }
 
-.musice-list ul .select-on dt, .musice-list2 ul .select-on dt, .musice-myaudio ul .select-on dt, .musice-list ul dt, .musice-list2 ul dt, .musice-myaudio ul dt, .musice-list ul dd button, .musice-list2 ul dd button, .musice-myaudio ul dd button, .musice-list2 h2:before, .content ul .start-btn:before, .content ul .pure-musice-btn:before, .dialog-record .close, .dialog-record .switch span {
+.musice-list ul .select-on dt, .musice-list2 ul .select-on dt, .musice-myaudio ul .select-on dt, .musice-list ul dt, .musice-list2 ul dt, .musice-myaudio ul dt, .musice-list2 h2:before, .content ul .start-btn:before, .content ul .pure-musice-btn:before, .dialog-record .close, .dialog-record .switch span {
   background: url(../img/d3_01_01.png) no-repeat;
   background-size: 64px 92px;
 }
@@ -317,7 +317,7 @@ body {
   background: #e6f0fa;
 }
 .musice-list ul .select-on .start-play, .musice-list2 ul .select-on .start-play, .musice-myaudio ul .select-on .start-play {
-  background-position: -14px -77px;
+  background-position: -13px -83px;
 }
 .musice-list ul .select-on dt, .musice-list2 ul .select-on dt, .musice-myaudio ul .select-on dt {
   color: #13328c;
@@ -327,7 +327,7 @@ body {
   color: #13328c;
 }
 .musice-list ul .start-play.start-play-on, .musice-list2 ul .start-play.start-play-on, .musice-myaudio ul .start-play.start-play-on {
-  background-position: -28px -77px;
+  background-position: -33px -83px;
 }
 .musice-list ul dl, .musice-list2 ul dl, .musice-myaudio ul dl {
   margin: 0;
@@ -336,6 +336,7 @@ body {
   font-size: .8em;
   color: #505050;
   overflow: hidden;
+  padding: 5px 0;
 }
 .musice-list ul dt, .musice-list2 ul dt, .musice-myaudio ul dt {
   padding-left: 19px;
@@ -357,16 +358,18 @@ body {
   padding: 0;
   outline: none;
   border: none;
+  background: url(../img/d3_01_01.png) no-repeat;
+  background-size: 70px auto;
 }
 .musice-list ul dd .start-play, .musice-list2 ul dd .start-play, .musice-myaudio ul dd .start-play {
-  width: 16px;
-  height: 16px;
-  background-position: 3px -77px;
+  width: 20px;
+  height: 20px;
+  background-position: 5px -83px;
 }
 .musice-list ul dd .delete-editor, .musice-list2 ul dd .delete-editor, .musice-myaudio ul dd .delete-editor {
-  width: 16px;
-  height: 16px;
-  background-position: -43px -77px;
+  width: 20px;
+  height: 20px;
+  background-position: -50px -82px;
 }
 .musice-list footer, .musice-list2 footer, .musice-myaudio footer {
   background: #f0f0f0;
