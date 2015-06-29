@@ -260,7 +260,7 @@ table {
   border-spacing: 0;
 }
 
-.musice-list ul .select-on dt, .musice-list2 ul .select-on dt, .musice-myaudio ul .select-on dt, .musice-list ul dd button, .musice-list2 ul dd button, .musice-myaudio ul dd button, .musice-list2 h2:before, .content ul .start-btn:before, .content ul .pure-musice-btn:before, .dialog-record .close, .dialog-record .switch span {
+.musice-list ul .select-on dt, .musice-list2 ul .select-on dt, .musice-myaudio ul .select-on dt, .musice-list ul dt, .musice-list2 ul dt, .musice-myaudio ul dt, .musice-list ul dd button, .musice-list2 ul dd button, .musice-myaudio ul dd button, .musice-list2 h2:before, .content ul .start-btn:before, .content ul .pure-musice-btn:before, .dialog-record .close, .dialog-record .switch span {
   background: url(../img/d3_01_01.png) no-repeat;
   background-size: 64px 92px;
 }
@@ -321,7 +321,7 @@ body {
 }
 .musice-list ul .select-on dt, .musice-list2 ul .select-on dt, .musice-myaudio ul .select-on dt {
   color: #13328c;
-  background-position: -49px 14px;
+  background-position: -49px -4px;
 }
 .musice-list ul .select-on span, .musice-list2 ul .select-on span, .musice-myaudio ul .select-on span {
   color: #13328c;
@@ -340,6 +340,7 @@ body {
 .musice-list ul dt, .musice-list2 ul dt, .musice-myaudio ul dt {
   padding-left: 19px;
   float: left;
+  background-position: -49px -37px;
 }
 .musice-list ul dd, .musice-list2 ul dd, .musice-myaudio ul dd {
   margin: 0;
@@ -643,7 +644,7 @@ footer .re-record {
   height: 20px;
   border-radius: 50%;
   background-color: #fff;
-  background-position: -34px -24px;
+  background-position: -32px -24px;
   cursor: pointer;
 }
 .dialog-record .switch {
