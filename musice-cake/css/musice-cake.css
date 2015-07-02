@@ -276,7 +276,7 @@ body {
 }
 
 .musice-cake {
-  background: url(../img/d1.jpg) no-repeat;
+  background: url(../img/d1.jpg) no-repeat #d8e2f0;
   background-size: cover;
 }
 .musice-cake .container {
