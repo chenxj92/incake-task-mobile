@@ -1,0 +1,102 @@
+@charset "utf-8";
+@import "../../insweet-index/sass/bianliang";
+@include reset-normalize;
+$_blue:#0e2f8e;
+html{
+    -webkit-tap-highlight-color: transparent;
+}
+body{
+    background: #f0f0f0;
+}
+
+//小的预览样式
+.preview-small-box{
+    width: 90px;
+    height: 90px;
+    margin: 45px auto 10px;
+    background: #fff;
+    img{
+        width: 100%;
+    }
+}
+.cbtn{
+    display: block;
+    margin: 0 auto;
+    width: 78px;
+    height: 23px;
+    background: #fff url(../img/camera.jpg) no-repeat center;
+    background-size: 19px 15px;
+}
+
+p{
+    text-align: center;
+    color: #969696;
+}
+button{
+    border-radius: 100px;
+    outline: none;
+    border: 1px solid $_blue;
+}
+
+.preview-container{
+    position: relative;
+    text-align: center;
+    @at-root .preview-content{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include round(119px);
+        -webkit-transform: translate(-50%,-50%);
+        -moz-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        -o-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        border: 1px solid #c8c9c4;
+        overflow: hidden;
+        background: #fff;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    line-height: 50px;
+    background: #fff;
+    text-align: center;
+    button{
+        display: inline-block;
+        height: 28px;
+        width: 80%;
+        background: #fff;
+        color: $_blue;
+    }
+}
+
+.ui-mask{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #000;
+    z-index: 99;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
