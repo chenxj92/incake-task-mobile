@@ -9,9 +9,7 @@ define(['jquery', 'zepto'], function(jquery, zepto) {
 		$('.preview-small-box').click(function() {
 			//创建蒙版图层
 			$("<div>").prependTo($('body')).addClass('ui-mask');
-
 			//创建图片
-
 			var imgsrc = "./img/ditu.jpg",
 				zWin = $(window),
 				Img = new Image();
@@ -41,9 +39,9 @@ define(['jquery', 'zepto'], function(jquery, zepto) {
 
 			};
 		});
-		$('.large-img').live('tap',function(e){
-			e.stopPropagation();
-		});
+//		$('.large-img').live('tap',function(e){
+//			e.stopPropagation();
+//		});
 		$('.ui-mask').live('tap', function() {
 			$(this).remove()
 		});
