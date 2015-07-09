@@ -30,19 +30,23 @@ define(['jquery', 'zepto'], function(jquery, zepto) {
 				if (h / w > 1.2) {
 					$('.large-img').css({
 						'height': winHeight,
-						'padding-left': +realw + 'px'
+						'margin-left': +realw + 'px'
 					})
 				} else {
 					$('.large-img').css({
 						'height': winWidth,
-						'padding-top': +realh + 'px'
+						'margin-top': +realh + 'px'
 					})
 				}
 
 			};
 		});
+		$('.large-img').live('tap',function(e){
+			e.stopPropagation();
+		});
 		$('.ui-mask').live('tap', function() {
 			$(this).remove()
-		})
+		});
+		
 	});
 });
