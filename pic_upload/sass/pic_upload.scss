@@ -55,7 +55,8 @@ button{
         overflow: hidden;
         background: #fff;
         img{
-            width: 100%;
+            position: absolute;
+//          width: 100%;
         }
     }
 }

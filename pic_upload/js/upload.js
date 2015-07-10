@@ -5,12 +5,41 @@ require.config({
 	}
 });
 define(['jquery', 'zepto'], function(jquery, zepto) {
+	var hastouch = "ontouchstart" in window ? true : false,
+		tapstart = hastouch ? "tap" : "click";
 	$(function() {
-		$('.preview-small-box').click(function() {
+		var Imgssrc = $('.pr-small-pic').attr('data-src'),
+			Imgs = new Image();
+		Imgs.src = Imgssrc;
+		Imgs.onload = function() {
+			var w = this.width,
+				h = this.height,
+				boxWidth = $('.preview-small-box').width(),
+				boxHeight = $('.preview-small-box').height(),
+				realw = parseInt((boxWidth - boxHeight * w / h) / 2),
+				realh = parseInt((boxHeight - boxWidth * h / w) / 2);
+			$('.pr-small-pic').attr("src", Imgs.src);
+			if (h / w > 1.2) {
+				$('.pr-small-pic').css({
+					'height': boxHeight,
+					'width': 'auto',
+					'margin-left': +realw + 'px'
+				})
+			} else {
+				$('.pr-small-pic').css({
+					'width': boxWidth,
+					'margin-top': +realh + 'px'
+				})
+			}
+		}
+
+
+		$('.preview-small-box').on(tapstart, function() {
 			//创建蒙版图层
 			$("<div>").prependTo($('body')).addClass('ui-mask');
-			//创建图片
-			var imgsrc = "./img/ditu.jpg",
+
+			//显示大图片
+			var imgsrc = "./img/big-pic.jpg",
 				zWin = $(window),
 				Img = new Image();
 			Img.src = imgsrc;
@@ -32,19 +61,18 @@ define(['jquery', 'zepto'], function(jquery, zepto) {
 					})
 				} else {
 					$('.large-img').css({
-						'height': winWidth,
+						'width': winWidth,
 						'margin-top': +realh + 'px'
 					})
 				}
 
 			};
 		});
-		$('.large-img').live('tap',function(e){
-			e.stopPropagation();
-		});
-		$('.ui-mask').live('tap', function() {
+
+		//隐藏大图
+		$('.ui-mask').live(tapstart, function() {
 			$(this).remove()
 		});
-		
 	});
+
 });
