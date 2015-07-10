@@ -10,7 +10,6 @@ define(['jquery', 'zepto'], function(jquery, zepto) {
 	$(function() {
 		var Imgssrc = $('.pr-small-pic').attr('data-src'),
 			Imgs = new Image();
-		Imgs.src = Imgssrc;
 		Imgs.onload = function() {
 			var w = this.width,
 				h = this.height,
@@ -32,7 +31,7 @@ define(['jquery', 'zepto'], function(jquery, zepto) {
 				})
 			}
 		}
-
+		Imgs.src = Imgssrc;
 
 		$('.preview-small-box').on(tapstart, function() {
 			//创建蒙版图层
@@ -42,7 +41,6 @@ define(['jquery', 'zepto'], function(jquery, zepto) {
 			var imgsrc = "./img/big-pic.jpg",
 				zWin = $(window),
 				Img = new Image();
-			Img.src = imgsrc;
 			Img.onload = function() {
 				var w = this.width,
 					h = this.height,
@@ -65,8 +63,8 @@ define(['jquery', 'zepto'], function(jquery, zepto) {
 						'margin-top': +realh + 'px'
 					})
 				}
-
 			};
+			Img.src = imgsrc;
 		});
 
 		//隐藏大图
