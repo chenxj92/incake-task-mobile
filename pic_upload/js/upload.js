@@ -12,7 +12,8 @@ define(['jquery', 'zepto'], function(jquery, zepto) {
 			
 			//创建图片
 			var Img = new Image();
-			Img.src = "../img/ditu.jpg";
+			Img.src = "./img/ditu.jpg";
+			alert(Img.width)
 			$('<img>').prependTo($('body')).attr("src",Img.src)
 
 		});
