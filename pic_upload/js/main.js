@@ -1,6 +1,6 @@
 require.config({
 	paths: {
-		"pre-img": "upload"
+		"pre-img": "pre-img"
 	}
 })
 require(['pre-img'], function() {
