@@ -1,0 +1,41 @@
+@charset "utf-8";
+@import "bianliang";
+//蛋糕筛选样式--在index.scss中引用
+.screening-content{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 56px;
+    right: 0;
+    z-index: 99;
+    padding: 15px;
+    background: #fff;
+    dt{
+        line-height: 2em;
+    }
+    dd{
+        border-bottom: 1px solid #e6e6e6;
+        margin-bottom: 10px;
+        &:last-child{
+            border: none;
+        }
+        a{
+            display: inline-block;
+            width: 75px;
+            line-height: 30px;
+            margin-right: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #e6e6e6;
+            font-size: .75em;
+            text-align: center;
+            white-space: nowrap;
+            color: #888888;
+            background: #fff;
+            &.active{
+                color: #fff;
+                background: #00a0ea;
+                border-color: #00a0ea;
+            }
+        }
+    }
+}
