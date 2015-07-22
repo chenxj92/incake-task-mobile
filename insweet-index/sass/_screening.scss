@@ -7,7 +7,7 @@
     bottom: 0;
     left: 56px;
     right: 0;
-    z-index: 99;
+    z-index: 99999;
     padding: 15px;
     background: #fff;
     dt{
@@ -38,4 +38,15 @@
             }
         }
     }
+}
+//帅选按钮
+menu{
+    z-index: 19999;
+   .screen-btn{
+       display: block;
+       width: 56px;
+       height: 56px;
+       background: url(../img/screening.png) no-repeat;
+       background-size: 100%;
+   } 
 }
