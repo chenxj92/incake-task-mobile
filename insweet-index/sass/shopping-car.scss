@@ -3,6 +3,10 @@
 %filter-gray{
     filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1); 
     -webkit-filter: grayscale(1);
+    -moz-filter: grayscale(100%);    /* 其他内核现在并不支持，为了将来兼容性书写 */  
+     -ms-filter: grayscale(100%);  
+      -o-filter: grayscale(100%);  
+         filter: grayscale(100%);
 }
 //推荐套餐样式
 .car_package{
@@ -90,7 +94,14 @@
               position: absolute;
               bottom: 0;
               right: 0;
+              top: 0;
+              left: 0;
+              text-align: center;
+              line-height: 40px;
               font-size: .65em;
+              color: #fff;
+              background: #000;
+              @include opacity(.6);
           }
           img{
               width: 100%;
@@ -139,6 +150,20 @@
 .shop_car .invalid{
     position: relative;
     @extend %filter-gray;
+    & *{
+        color: #A1A2A2 !important;
+    }
+    .left{
+        position: relative;
+    }
+    .mengban{
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 100px;
+        background: #000;
+        @include opacity(0.8);
+    }
     mark{
         position: absolute;
         top: 0;
@@ -146,6 +171,7 @@
         padding: 2px;
         color: #fff;
         background: #666;
+        z-index: 100;
     }
 }
 
