@@ -1,15 +1,21 @@
 @charset "utf-8";
 @import "bianliang";
-
+//定义公共行高
 %line-height{
     line-height: 50px;
 }
+//清楚输入框默认样式
 %obb{
    outline: none;
    border: none;
 }
+html{
+    height: 100%;
+}
 body{
+    overflow-y: scroll;
     background: #e6e6e6;
+    -webkit-overflow-scrolling: touch;
 }
 .on-off{
     position: absolute;
@@ -17,14 +23,42 @@ body{
     top: 12px;
     line-height: 27px;
 }
-.select select{
-    //@include opacity(0);
+ //下拉框公共样式
+.select{
+    position: relative;
+    overflow: hidden;
+    input{
+        text-align: right;
+    }
+    select{
+        position: absolute;
+        direction: rtl;
+        top: 0;
+        right: 0;
+        left: auto;
+        width: 100%;
+        height: 100%;
+        @include opacity(0);
+    }
+    textarea{
+        width: 100%;
+        height: 50px;
+        margin-top: 17px;
+        padding: 0px 5px;
+        @extend %obb;
+    }
 }
+//订单提交页主题内容
+.order-content{
+    padding-bottom: 64px;
+}
+//功能模块样式
 .list-box{
     background: #fff;
     margin-bottom: 10px;
     .box-header,.box-content{
         position: relative;
+        overflow: hidden;
         padding: 0 15px;
         border-bottom: 1px solid #e6e6e6;
         input{
@@ -34,16 +68,29 @@ body{
             @extend %obb;
         }
     }
+    //配送方式
+    .way{
+        float: right;
+        @extend %line-height;
+    }
     @at-root .box-header{
         h2{
+            float: left;
             color: $_blue;
             @extend %line-height;
         }
     }
     @at-root .box-content{
-        input{
-          
+        label{
+            float: left;
+            @extend %line-height;
         }
+        //城市
+        .city{
+            text-align: right;
+            @extend %line-height;
+        }
+        //获得验证码
         .get-yz{
             position: absolute;
             top: 0;
@@ -51,7 +98,60 @@ body{
             padding: 0 20px;
             @extend %obb;
             @extend %line-height;
+            background: #e6e6e6;
             cursor: pointer;
+        }
+        .input-widget{
+            overflow: hidden;
+            text-align: right;
+            span{
+                display: inline-block;
+                text-align: center;
+                width: 35%;
+            }
+            input{
+                padding: 0;
+                -webkit-appearance: textfield;
+                -moz-appearance: textfield;
+                appearance: textfield;
+                background: none;
+                direction: rtl;
+            }
         }
     }
 }
+//商品清单
+@import "order-submit-list";
+
+.subbtn{
+    display: inline-block;
+    background: #4BB0EA;
+    color: #fff;
+    border-radius: 4px;
+    padding: 10px 30px;
+    font-size: 1.2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

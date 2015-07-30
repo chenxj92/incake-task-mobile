@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import "bianliang";
+@import "order-submit-list";
 * {
   margin: 0px;
   padding: 0px;
@@ -1537,42 +1538,6 @@ menu {
       float: left;
       border: none;
       margin-left: 10px;
-    }
-  }
-}
-
-.index_goods_list {
-  .index_goods_list_box {
-    border: 1px solid #d5d5d5;
-    padding: 10px 10px 0 0;
-    margin: 10px;
-    .ui_link {
-      width: 80px;
-      height: auto;
-    }
-  }
-  .text {
-    line-height: 22px;
-    margin-top: 5px;
-    margin-left: 10px;
-  }
-  .index_price {
-    padding: 10px;
-    line-height: 22px;
-    .w50 {
-      width: 50%;
-      float: left;
-    }
-    .right {
-      text-align: center;
-      line-height: 34px;
-      padding-top: 20px;
-      span {
-        font-size: 16px;
-      }
-      .c_red {
-        font-size: 25px;
-      }
     }
   }
 }

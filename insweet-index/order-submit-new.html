@@ -28,13 +28,13 @@
 		<dl class="list-box">
 			<dt class="box-header">
 				<div class="on-off">
-					也是本人收货
 					<span id="hecard" class="ui-radio-ios fn_right">
 						<a href="javascript:;" class="ui-radio-btn"></a>
 						<div class="ui-radio-bg"></div>
 						<i class="yes">是</i>
 						<i class="no">否</i>
 					</span>
+					也是本人收货
 				</div>
 				<h2>订货信息</h2>
 			</dt>
@@ -42,7 +42,7 @@
 				<input type="text" placeholder="姓名（字符必须在2~6之间）" data-role="none"/>
 			</dd>
 			<dd class="box-content">
-				<input type="text" placeholder="订单人手机号" data-role="none"/>
+				<input type="number" placeholder="订单人手机号" data-role="none"/>
 				<button class="get-yz" data-role="none">获取验证码</button>
 			</dd>
 			<dd class="box-content">
@@ -52,7 +52,7 @@
 		<dl class="list-box">
 			<dd class="box-content">
 				<label>城市</label>
-				<span>上海</span>
+				<p class="city">上海</p>
 			</dd>
 			<dd class="box-content">
 				<label>地区</label>
@@ -83,19 +83,19 @@
 		</dl>
 		<dl class="list-box">
 			<dt class="box-header">
-				<p>商品预计在2015-07-23开始配送</p>
+				<p class="way">商品预计在2015-07-23开始配送</p>
 				<h2>配送方式</h2>
 			</dt>
 			<dd class="box-content">
 				<label>配送日期</label>
-				<div>
+				<div class="input-widget">
 					<input type="date" data-role="none"/>
 				</div>
 			</dd>
 			<dd class="box-content">
 				<label>配送时间</label>
-				<div>
-					<span><input type="time" data-role="none"/></span>
+				<div class="input-widget">
+					<span><input type="time" data-role="none"/></span>-
 					<span><input type="time" data-role="none"/></span>
 				</div>
 			</dd>
@@ -111,13 +111,13 @@
 			</dd>
 			<dd class="box-content">
 				<label>运费</label>
-				<p>INCAKE冷链配送 ￥0.00</p>
+				<p class="way">INCAKE冷链配送 ￥0.00</p>
 			</dd>
 		</dl>
 		<dl class="list-box">
 			<dd class="box-content">
 				<label>优惠</label>
-				<p>微信订购9折优惠</p>
+				<p class="way">微信订购9折优惠</p>
 			</dd>
 			<dd class="box-content">
 				<label>优惠团购券</label>
@@ -190,25 +190,39 @@
 			</dd>
 			<dd class="box-content">
 				<label>订单备注</label>
-				<textarea data-role="none">我是好人</textarea>
+				<div class="select">
+					<textarea placeholder="请在这里输入备注内容" data-role="none"></textarea>
+				</div>
 			</dd>
 		</dl>
-		<div class="box index_goods_list">
+		<div class="index_goods_list">
 				<h5>商品清单</h5>
-				<div class="index_goods_list_box fn_clear">
+				<div class="index_goods_list_box">
 					<a href="#" class="fn_left ui_link">
 						<img src="http://img.incake.net/UpImages/three2015050717534923423.png">
 					</a>
-					<p class="fn_left text">
+					<p class="text">
 						榴莲千层蛋糕
 						<br>
-						<i class="c_red">市场价：￥62.00</i> /两片装 数量：1
+						<i class="c_red">市场价：￥62.00</i> /两片装 <span>数量：1</span>
+						<br> 小计：
+						<i class="c_red">￥62.00</i>
+					</p>
+				</div>
+				<div class="index_goods_list_box">
+					<a href="#" class="fn_left ui_link">
+						<img src="http://img.incake.net/UpImages/three2015050717534923423.png">
+					</a>
+					<p class="text">
+						榴莲千层蛋糕
+						<br>
+						<i class="c_red">市场价：￥62.00</i> /两片装 <span>数量：1</span>
 						<br> 小计：
 						<i class="c_red">￥62.00</i>
 					</p>
 				</div>
 				<div class="index_price">
-					<div class="w50 goods_box_line">
+					<div class="w50">
 						<span>总计：<span class="IsClude" style="display:none;">（含外环费）</span></span>
 						<br/>
 						<i class="c_red">￥0.00</i>

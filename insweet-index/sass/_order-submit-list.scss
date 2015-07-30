@@ -1,0 +1,56 @@
+//定义公共行高
+%line-height{
+    line-height: 50px;
+}
+.index_goods_list {
+    background: #fff;
+    h5{
+        padding: 0 15px;
+        color: #3b87c1;
+        @extend %line-height;
+    }
+  .index_goods_list_box {
+      overflow: hidden;
+      padding: 10px 15px;
+    border-bottom: 1px solid #d5d5d5;
+    -webkit-user-select: none;
+    .ui_link {
+      width: 80px;
+      height: auto;
+      border: 1px solid #f0f0f0;
+    }
+    &:active{
+        background: #f0f0f0;
+    }
+  }
+  .text {
+      overflow: hidden;
+    line-height: 22px;
+    padding: 10px 0 10px 10px;
+    span{
+        float: right;
+    }
+  }
+  .index_price {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #eeeeee;
+    padding: 10px;
+    line-height: 22px;
+    .w50 {
+      width: 50%;
+      float: left;
+    }
+    .right {
+      text-align: center;
+      span {
+        font-size: 16px;
+      }
+      .c_red {
+        font-size: 25px;
+      }
+    }
+  }
+}
