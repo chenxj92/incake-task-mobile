@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<!-- 针对WebApp的页头声明 -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telephone=yes">
+		<meta name="format-detection" content="email=no">
+		<!-- 加载jquery库 -->
+		<link rel="stylesheet" href="css/jquery.mobile-1.2.0.css">
+		<script src="js/jquery-1.8.2.min.js"></script>
+		<script src="js/jquery.mobile-1.2.0.min.js"></script>
+		<!-- 加载iscroll库 -->
+		<script src="js/iscroll.min.js" type="text/javascript"></script>
+		<!-- 本站引用 -->
+		<link href="css/mobiscroll.custom-2.6.2.min.css" rel="stylesheet" type="text/css">
+		<script src="js/mobiscroll.custom-2.6.2.min.js" type="text/javascript"></script>
+		<script src="js/script.js" type="text/javascript"></script>
+		<!--自定义样式-->
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/fonts.css" />
+		<link rel="stylesheet" type="text/css" href="css/dingdantijiao.css" />
+		<script src="js/dingdantijiao.js" type="text/javascript" charset="utf-8"></script>
+		<title>INCAKE</title>
+	</head>
+
+	<body>
+		<section data-role="page" data-url="/ICake/order/FirmOrder.aspx" tabindex="0" class="ui-page ui-body-c ui-page-active pbottom" style="min-height: 389px;">
+			<nav class="navigation">
+				<a href="javascript:history.go(-1);" data-role="button" data-rel="back" class="back_link ui-btn ui-btn-up-c ui-shadow ui-btn-corner-all" data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-theme="c"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text">返回</span></span></a>
+				<h3>订单提交</h3>
+			</nav>
+			<section class="shop_car">
+				<div class="box">
+					<h5 class="address">收货地址<a class="imooc-icon" href="javascript:;">&#xe601;</a></h5>
+					<div class="add_box">
+						<ul class="list">
+							<li class="li">
+								<div class="ui-radio">
+									<label data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="radio-off" data-theme="c" class="ui-btn ui-btn-corner-all ui-btn-icon-left ui-radio-on ui-btn-up-c">
+										<span class="ui-btn-inner ui-btn-corner-all">
+											<span class="ui-btn-text">王涛(18621694183) 
+												<br>上海市黄浦区石潭弄250号3楼  </span>
+										<span class="ui-icon ui-icon-shadow ui-icon-radio-on">&nbsp;</span>
+										</span>
+									</label>
+									<input data-role='none' type="radio" class="radio" checked="" realname="于涛" phone="18621694183" telephone="" waihuan="0" areaid="310120" name="add" quyu="外环以内" province="上海市" city="黄浦区" value="0.00" adr="石潭弄250号3楼">
+								</div>
+							</li>
+							<li class="li">
+								<div class="ui-radio">
+									<label data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="radio-off" data-theme="c" class="ui-btn ui-btn-corner-all ui-btn-icon-left ui-radio-on ui-btn-up-c">
+										<span class="ui-btn-inner ui-btn-corner-all">
+											<span class="ui-btn-text">于涛(18621694183) 
+												<br>上海市黄浦区石潭弄250号3楼  </span>
+										<span class="ui-icon ui-icon-shadow ui-icon-radio-on">&nbsp;</span>
+										</span>
+									</label>
+									<input data-role='none' type="radio" class="radio" checked="" realname="于涛" phone="18621694183" telephone="" waihuan="0" areaid="310120" name="add" quyu="外环以内" province="上海市" city="黄浦区" value="0.00" adr="石潭弄250号3楼">
+								</div>
+							</li>
+							<li class="li">
+								<div class="ui-radio">
+									<label data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="radio-off" data-theme="c" class="ui-btn ui-btn-corner-all ui-btn-icon-left ui-radio-on ui-btn-up-c">
+										<span class="ui-btn-inner ui-btn-corner-all">
+											<span class="ui-btn-text">涛(18621694183) 
+												<br>上海市黄浦区石潭弄250号3楼  </span>
+										<span class="ui-icon ui-icon-shadow ui-icon-radio-on">&nbsp;</span>
+										</span>
+									</label>
+									<input data-role='none' type="radio" class="radio" checked="" realname="于涛" phone="18621694183" telephone="" waihuan="0" areaid="310120" name="add" quyu="外环以内" province="上海市" city="黄浦区" value="0.00" adr="石潭弄250号3楼">
+								</div>
+							</li>
+						</ul>
+						<a href="http://wap.incake.net/user/AddressInfo.aspx?url=C1x8RvwCqrdNwCc72CvKCcEU6hONxvFx9qntqHbjJT2v3pnSZ0IL65hxGVzfZehpm1%2f6gLV5ASDxTLbU3PFQFw%3d%3d" rel="external" class="blue_btn add_address">添  加  收  货  地  址</a>
+					</div>
+				</div>
+				<div class="box time_box">
+					<h5>收货时间</h5>
+					<p class="time_p">
+						亲，商品预计再 <i class="c_red">2015-03-07</i> 才能配送！
+					</p>
+					<div class="select_time fn_clear">
+						<div class="fn_left txt">
+							配送时间
+							<input type="text" name="" onchange=" ChangHour();" class="ui_input_text ui-input-text ui-body-c ui-corner-all ui-shadow-inset" value="上午" id="ConsigneeDateTime" readonly="">
+						</div>
+						<div class="fn_left">
+							<div class="select_box fn_clear">
+								<div class="ui-select">
+									<div data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="arrow-d" data-iconpos="right" data-theme="c" class="ui-btn ui-shadow ui-btn-corner-all ui-btn-icon-right ui-btn-up-c"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text"><span>09</span></span><span class="ui-icon ui-icon-arrow-d ui-icon-shadow">&nbsp;</span></span>
+										<select id="starttimehour" onchange="ChangHour();" class="" data-role='none'>
+											<option selected="selected" value="9">09</option>
+											<option value="10">10</option>
+											<option value="11">11</option>
+											<option value="12">12</option>
+											<option value="13">13</option>
+											<option value="14">14</option>
+											<option value="15">15</option>
+											<option value="16">16</option>
+											<option value="17">17</option>
+											<option value="18">18</option>
+											<option value="19">19</option>
+											<option value="20">20</option>
+										</select>
+									</div>
+								</div>&nbsp;&nbsp;:&nbsp;&nbsp;
+								<div class="ui-select">
+									<div data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="arrow-d" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-up-c ui-shadow ui-btn-corner-all ui-btn-icon-right"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text"><span>30</span></span><span class="ui-icon ui-icon-arrow-d ui-icon-shadow">&nbsp;</span></span>
+										<select id="starttimeminte" onchange="ChangMinte();" class="" data-role='none'>
+											<option value="30">30</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div class="select_box fn_clear">
+								<div class="ui-select">
+									<div data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="arrow-d" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-up-c ui-shadow ui-btn-corner-all ui-btn-icon-right ui-disabled" aria-disabled="true">
+										<span class="ui-btn-inner ui-btn-corner-all">
+											<span class="ui-btn-text">
+												<span class="mobile-selectmenu-disabled ui-state-disabled">10</span>
+										</span>
+										<span class="ui-icon ui-icon-arrow-d ui-icon-shadow"></span>
+										</span>
+										<select id="endtimehour" disabled="disabled" class="mobile-selectmenu-disabled ui-state-disabled" aria-disabled="true" data-role='none'>
+											<option value="10">10</option>
+											<option value="11">11</option>
+											<option value="12">12</option>
+											<option value="13">13</option>
+											<option value="14">14</option>
+											<option value="15">15</option>
+											<option value="16">16</option>
+											<option value="17">17</option>
+											<option value="18">18</option>
+											<option value="19">19</option>
+											<option value="20">20</option>
+											<option value="21">21</option>
+										</select>
+									</div>
+								</div>&nbsp;&nbsp;:&nbsp;&nbsp;
+								<div class="ui-select">
+									<div data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="arrow-d" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-up-c ui-shadow ui-btn-corner-all ui-btn-icon-right ui-disabled" aria-disabled="true"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text"><span class="mobile-selectmenu-disabled ui-state-disabled">30</span></span><span class="ui-icon ui-icon-arrow-d ui-icon-shadow">&nbsp;</span></span>
+										<select id="endtimeminte" disabled="disabled" class="mobile-selectmenu-disabled ui-state-disabled" aria-disabled="true" data-role='none'>
+											<option value="00">00</option>
+											<option value="30">30</option>
+										</select>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="box match">
+					<h5>配送方式</h5>
+					<div class="table_data">
+						<table class="table" border="0" cellspacing="0" cellpadding="0">
+							<thead>
+								<tr>
+									<th>配送方式</th>
+									<th>备注</th>
+									<th>运费</th>
+									<th>优惠信息</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<div class="ui-radio">
+											<label data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="radio-off" data-theme="c" class="ui-btn ui-btn-up-c ui-btn-corner-all ui-btn-icon-left ui-radio-on">
+												<span class="ui-btn-inner ui-btn-corner-all">
+													<span class="ui-btn-text">
+														<font id="spanquyu">外环以内</font>
+													</span>
+												<span class="ui-icon ui-icon-shadow ui-icon-radio-on">&nbsp;</span>
+												</span>
+											</label>
+											<input data-role='none' type="radio" class="radio" name="" value="" checked="">
+										</div>
+									</td>
+									<td>INCAKE
+										<br>冷链配送</td>
+									<td id="tdyunfei">￥0.00</td>
+									<td>无</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="box yhxx" style="display: block ;">
+					<h5>优惠信息<a class="imooc-icon" href="javascript:;">&#xe601;</a></h5>
+					<div data-role="tab-main" class="tab_content" style="display: none;">
+						<div class="tabnav">
+							<ul class="fn_clear" data-role="tab-nav">
+								<li data-role="tab-li" class="on first" style="width: 50%;">
+									<div class="name">我的优惠券</div>
+								</li>
+								<li data-role="tab-li" class="" ys="ys" style="width: 50%;">
+									<div class="name">优惠/团购券</div>
+								</li>
+							</ul>
+						</div>
+						<div class="code_box" data-role="tab-con">
+							<div data-role="tab-li" style="display:block;">
+								<div class="ui-select">
+									<div data-corners="true" data-shadow="true" data-iconshadow="true" data-wrapperels="span" data-icon="arrow-d" data-iconpos="right" data-theme="c" class="ui-btn ui-btn-up-c ui-shadow ui-btn-corner-all ui-btn-icon-right"><span class="ui-btn-inner ui-btn-corner-all"><span class="ui-btn-text"><span class="main_select">我的优惠券</span></span><span class="ui-icon ui-icon-arrow-d ui-icon-shadow">&nbsp;</span></span>
+										<select class="main_select" id="myCoupon" data-role='none'>
+											<option value="0" price="0.00">我的优惠券</option>
+											<option value="71127" xztype="1" otitle="10元红包" price="10.00">10元红包</option>
+										</select>
+									</div>
+								</div>
+							</div>
+							<div data-role="tab-li" class="on" style="display:none;">
+								<dl class="fn_clear code_li">
+									<dt class="fn_left">优惠券/团购券密码</dt>
+									<dd class="fn_left">
+										<input type="text" class="ui_input_text ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
+									</dd>
+								</dl>
+								<dl class="fn_clear code_li">
+									<dt class="fn_left">&nbsp;</dt>
+									<dd class="fn_left">
+										<a href="javascript:;" class="blue_btn ui-link" id="verifygroup">兑&nbsp;&nbsp;&nbsp;&nbsp;换</a>
+									</dd>
+								</dl>
+								<input type="hidden" id="grouplist" value="" class="">
+								<input type="hidden" id="groupvalue" value="0.00" class="">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="box select_pay">
+					<h5 class="zhifu">支付方式<a class="imooc-icon" href="javascript:;">&#xe601;</a></h5>
+					<ul>
+						<li>
+							<div>
+								<label for="zf">
+									<input type="radio" name="zf" id="zf" value="" data-role="none" />货到付款-现金
+								</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<label for="zf">
+									<input type="radio" name="zf" id="zf" value="" data-role="none" />货到付款-POS
+								</label>
+							</div>
+						</li>
+						<li>
+							<div>
+								<label for="zf">
+									<input type="radio" name="zf" id="zf" value="" data-role="none" checked />微信支付
+								</label>
+								<p style="padding-left: 5px; padding-top: 5px; color: #9FA0A0;">订阅号不支持微信支付功能，如需线上支付请关注微信服务号【INCAKE订购】订购您喜爱的蛋糕。</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="box djkq" style="display: block ;">
+					<h5>代金卡券<a class="imooc-icon" href="javascript:;">&#xe601;</a></h5>
+					<div data-role="tab-main" class="tab_content" style="display: none;">
+						<div class="tabnav">
+							<ul class="fn_clear" data-role="tab-nav">
+								<li data-role="tab-li" class="on first" ys="ys" style="width: 50%;">
+									<div class="name">蛋糕卡</div>
+								</li>
+								<li data-role="tab-li" class="" ys="ys" style="width: 50%;">
+									<div class="name">现金券</div>
+								</li>
+							</ul>
+						</div>
+						<div class="code_box" data-role="tab-con">
+							<div data-role="tab-li" style="display:block;" class="on">
+								<dl class="fn_clear code_li">
+									<dt class="fn_left">卡号后5位</dt>
+									<dd class="fn_left">
+										<input type="text" class="ui_input_text ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
+									</dd>
+								</dl>
+								<dl class="fn_clear code_li">
+									<dt class="fn_left">蛋糕卡密码</dt>
+									<dd class="fn_left">
+										<input type="text" class="ui_input_text ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
+									</dd>
+								</dl>
+								<dl class="fn_clear code_li">
+									<dt class="fn_left">&nbsp;</dt>
+									<dd class="fn_left">
+										<a href="javascript:;" class="blue_btn ui-link" id="verifycard">兑&nbsp;&nbsp;&nbsp;&nbsp;换</a>
+									</dd>
+								</dl>
+
+								<p class="one_p" style="color:#d16658;">温馨提醒：蛋糕卡、现金券只能抵用蛋糕部分。</p>
+								<p class="one_p">您已明确知晓蛋糕卡的使用规则。抵扣完成如有未支付金额，请选择以下支付方式。</p>
+							</div>
+							<div data-role="tab-li" style="display:none;">
+								<dl class="fn_clear code_li">
+									<dt class="fn_left">卡号后5位</dt>
+									<dd class="fn_left">
+										<input type="text" class="ui_input_text ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
+									</dd>
+								</dl>
+								<dl class="fn_clear code_li">
+									<dt class="fn_left">现金券密码</dt>
+									<dd class="fn_left">
+										<input type="text" class="ui_input_text ui-input-text ui-body-c ui-corner-all ui-shadow-inset">
+									</dd>
+								</dl>
+								<dl class="fn_clear code_li">
+									<dt class="fn_left">&nbsp;</dt>
+									<dd class="fn_left">
+										<a href="javascript:;" class="blue_btn ui-link" id="verifymoney">兑&nbsp;&nbsp;&nbsp;&nbsp;换</a>
+									</dd>
+								</dl>
+								<input type="hidden" id="moneylist" value="" class="">
+								<input type="hidden" id="moneyvalue" value="0.00" class="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="box indent_piao">
+					<div data-role="tab-main" class="tab_content" id="tbqita">
+						<div class="tabnav">
+							<ul class="fn_clear" data-role="tab-nav">
+								<li data-role="tab-li" class="on first" style="width: 25%;">
+									<div class="name">发票信息</div>
+								</li>
+								<li data-role="tab-li" class="" style="width: 25%;">
+									<div class="name">生日牌</div>
+								</li>
+								<li data-role="tab-li" class="" style="width: 25%;">
+									<div class="name">贺卡</div>
+								</li>
+								<li data-role="tab-li" class="" style="width: 25%;">
+									<div class="name">订单备注</div>
+								</li>
+							</ul>
+						</div>
+						<div data-role="tab-con">
+							<div data-role="tab-li" style="display:block;" class="indent_piao_box">
+								<ul>
+									<li class="li tit">
+										<i class="fn_left">
+										是否需要发票
+									</i>
+										<div id="fapiao" class="ui-radio-ios fn_right">
+											<a href="javascript:;" class="ui-radio-btn ui-link"></a>
+											<div class="ui-radio-bg"></div>
+											<i class="yes">是</i>
+											<i class="no">否</i>
+										</div>
+									</li>
+									<li class="li">发票抬头</li>
+									<li class="li">
+										<div class="ui-radio ui-disabled">
+											<label for="fp" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="radio-off" data-theme="c" class="ui-btn ui-btn-up-c ui-btn-corner-all ui-btn-icon-left ui-radio-on">
+												<span class="ui-btn-inner ui-btn-corner-all">
+											<span class="ui-btn-text">个人</span>
+												<span class="ui-icon ui-icon-shadow ui-icon-radio-on">&nbsp;</span>
+												</span>
+											</label>
+											<input type="radio" class="main_radio" disabled="" name="fp" value="geren" checked="">
+										</div>
+									</li>
+									<li class="li">
+										<div class="ui-radio ui-disabled">
+											<label for="fp" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="radio-off" data-theme="c" class="ui-btn ui-btn-up-c ui-btn-corner-all ui-btn-icon-left ui-radio-off">
+												<span class="ui-btn-inner ui-btn-corner-all">
+											<span class="ui-btn-text">公司 </span>
+												<span class="ui-icon ui-icon-radio-off ui-icon-shadow">&nbsp;</span>
+												</span>
+											</label>
+											<input type="radio" class="main_radio" disabled="" name="fp" value="gongsi">
+										</div>
+										<input type="text" name="" id="txtgongsi" disabled="disabled" class="ui-input-text ui-body-c ui-corner-all ui-shadow-inset ui-disabled mobile-textinput-disabled ui-state-disabled" placeholder="请输入抬头" aria-disabled="true">
+									</li>
+									<li class="li">内容</li>
+									<li class="li">
+										<div class="ui-radio ui-disabled">
+											<label for="nr" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="radio-off" data-theme="c" class="ui-btn ui-btn-up-c ui-btn-corner-all ui-btn-icon-left ui-radio-on">
+												<span class="ui-btn-inner ui-btn-corner-all">
+											<span class="ui-btn-text">蛋糕</span>
+												<span class="ui-icon ui-icon-shadow ui-icon-radio-on">&nbsp;</span>
+												</span>
+											</label>
+											<input type="radio" class="main_radio" disabled="" name="nr" value="蛋糕" checked="">
+										</div>
+									</li>
+									<li class="li">
+										<div class="ui-radio ui-disabled">
+											<label for="nr" data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="radio-off" data-theme="c" class="ui-btn ui-btn-up-c ui-btn-corner-all ui-btn-icon-left ui-radio-off">
+												<span class="ui-btn-inner ui-btn-corner-all">
+											<span class="ui-btn-text">食品</span>
+												<span class="ui-icon ui-icon-radio-off ui-icon-shadow">&nbsp;</span>
+												</span>
+											</label>
+											<input type="radio" class="main_radio" disabled="" name="nr" value="食品">
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div data-role="tab-li" style="display:none;" class="indent_piao_box">
+								<ul class="list">
+									<li class="li tit">
+										<i class="fn_left">是否需要生日牌</i>
+										<div id="shengripai" class="ui-radio-ios fn_right">
+											<a href="javascript:;" class="ui-radio-btn ui-link"></a>
+											<div class="ui-radio-bg"></div>
+											<i class="yes">是</i>
+											<i class="no">否</i>
+										</div>
+									</li>
+									<li class="li">
+										<div class="ui-radio ui-disabled">
+											<label data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="radio-off" data-theme="c" class="ui-btn ui-btn-up-c ui-btn-corner-all ui-btn-icon-left ui-radio-on">
+												<span class="ui-btn-inner ui-btn-corner-all">
+											<span class="ui-btn-text">中文（生日快乐）</span>
+												<span class="ui-icon ui-icon-shadow ui-icon-radio-on">&nbsp;</span>
+												</span>
+											</label>
+											<input type="radio" class="main_radio" disabled="" name="card" tp="1" value="生日快乐" checked="">
+										</div>
+									</li>
+									<li class="li">
+										<div class="ui-radio ui-disabled">
+											<label data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="radio-off" data-theme="c" class="ui-btn ui-btn-up-c ui-btn-corner-all ui-btn-icon-left ui-radio-off">
+												<span class="ui-btn-inner ui-btn-corner-all">
+											<span class="ui-btn-text">英文（Happy Birthday）</span>
+												<span class="ui-icon ui-icon-radio-off ui-icon-shadow">&nbsp;</span>
+												</span>
+											</label>
+											<input type="radio" class="main_radio" disabled="" name="card" tp="2" value="Happy Birthday">
+										</div>
+									</li>
+									<li class="li">
+										<div class="ui-radio ui-disabled">
+											<label data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="radio-off" data-theme="c" class="ui-btn ui-btn-up-c ui-btn-corner-all ui-btn-icon-left ui-radio-off">
+												<span class="ui-btn-inner ui-btn-corner-all">
+											<span class="ui-btn-text">自定义（7个汉字或14个英文字母）</span>
+												<span class="ui-icon ui-icon-radio-off ui-icon-shadow">&nbsp;</span>
+												</span>
+											</label>
+											<input type="radio" class="main_radio ka_comment" disabled="" name="card" tp="3" value="">
+										</div>
+									</li>
+									<li id="ka_comment" style="display:none" class="li_comment">
+										<div class="gray_table">
+											内容
+											<br>
+											<textarea name="" disabled="disabled" id="custom" class="ui_textarea_text ui-input-text ui-body-c ui-corner-all ui-shadow-inset ui-disabled mobile-textinput-disabled ui-state-disabled" aria-disabled="true"></textarea>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<div data-role="tab-li" class="indent_piao_box" style="display:none;">
+								<ul class="list">
+									<li class="li tit">
+										<i class="fn_left">是否需要贺卡</i>
+										<div id="hecard" class="ui-radio-ios fn_right">
+											<a href="javascript:;" class="ui-radio-btn ui-link"></a>
+											<div class="ui-radio-bg"></div>
+											<i class="yes">是</i>
+											<i class="no">否</i>
+										</div>
+									</li>
+									<li class="li">
+										<div class="ui-radio ui-disabled">
+											<label data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="radio-off" data-theme="c" class="ui-btn ui-btn-up-c ui-btn-corner-all ui-btn-icon-left ui-radio-on">
+												<span class="ui-btn-inner ui-btn-corner-all">
+											<span class="ui-btn-text">生日</span>
+												<span class="ui-icon ui-icon-shadow ui-icon-radio-on">&nbsp;</span>
+												</span>
+											</label>
+											<input type="radio" class="main_radio" disabled="" name="ss" value="2" checked="">
+										</div>
+									</li>
+									<li class="li">
+										<div class="ui-radio ui-disabled">
+											<label data-corners="true" data-shadow="false" data-iconshadow="true" data-wrapperels="span" data-icon="radio-off" data-theme="c" class="ui-btn ui-btn-up-c ui-btn-corner-all ui-btn-icon-left ui-radio-off">
+												<span class="ui-btn-inner ui-btn-corner-all">
+											<span class="ui-btn-text">商务</span>
+												<span class="ui-icon ui-icon-radio-off ui-icon-shadow">&nbsp;</span>
+												</span>
+											</label>
+											<input type="radio" class="main_radio" disabled="" name="ss" value="3">
+										</div>
+									</li>
+								</ul>
+								<div class="gray_table">
+									内容
+									<br>
+									<textarea name="" id="hecardcontent" disabled="disabled" class="ui_textarea_text ui-input-text ui-body-c ui-corner-all ui-shadow-inset ui-disabled mobile-textinput-disabled ui-state-disabled" maxlength="100" aria-disabled="true"></textarea>
+									<br> 最多可输入
+									<span class="c_red">50</span>字
+								</div>
+							</div>
+							<div data-role="tab-li" style="display: none;">
+								<div class="gray_table">
+									给INCAKE留言
+									<br>
+									<textarea name="" maxlength="200" id="txtRemark" class="ui_textarea_text ui-input-text ui-body-c ui-corner-all ui-shadow-inset"></textarea>
+									<br> 最多可输入
+									<span class="c_red">100</span>字
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="box index_goods_list">
+					<h5>商品清单</h5>
+					<div class="index_goods_list_box fn_clear">
+						<a href="http://wap.incake.net/ICake/order/FirmOrder.aspx#" class="fn_left ui_link ui-link">
+							<img src="./pic/2015020409154756582.png">
+						</a>
+						<p class="fn_left text">
+							至爱红丝绒
+							<br>
+							<i class="c_red">市场价：￥169.00</i> /1.2磅 数量：1
+							<br> 小计：
+							<i class="c_red">￥169.00</i>
+						</p>
+					</div>
+
+					<div class="fn_clear index_price">
+						<div class="w50 goods_box_line">
+							<span>总计：（含外环费）</span>
+							<br>
+							<i class="c_red">￥169.00</i>
+						</div>
+						<div class="w50 right">
+							<a href="javascript:;" id="submitorder" rel="external" class="subbtn">提交订单</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<script>
+				var curr = 2015,
+					currM = 2,
+					currD = 07,
+					_curr = 2015,
+					_currM = 3,
+					_currD = 07,
+					ispcmark = "1",
+					tcid = "0";
+			</script>
+			<!--遮罩层-->
+			<div class="ui_mask"></div>
+		</section>
+
+	</body>
+
+</html>

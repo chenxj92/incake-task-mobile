@@ -1,0 +1,57 @@
+@charset "utf-8";
+@import "bianliang";
+
+%line-height{
+    line-height: 50px;
+}
+%obb{
+   outline: none;
+   border: none;
+}
+body{
+    background: #e6e6e6;
+}
+.on-off{
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    line-height: 27px;
+}
+.select select{
+    //@include opacity(0);
+}
+.list-box{
+    background: #fff;
+    margin-bottom: 10px;
+    .box-header,.box-content{
+        position: relative;
+        padding: 0 15px;
+        border-bottom: 1px solid #e6e6e6;
+        input{
+            height: 50px;
+            line-height: 50px\9;
+            width: 100%;
+            @extend %obb;
+        }
+    }
+    @at-root .box-header{
+        h2{
+            color: $_blue;
+            @extend %line-height;
+        }
+    }
+    @at-root .box-content{
+        input{
+          
+        }
+        .get-yz{
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 0 20px;
+            @extend %obb;
+            @extend %line-height;
+            cursor: pointer;
+        }
+    }
+}
