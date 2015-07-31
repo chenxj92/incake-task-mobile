@@ -14,8 +14,8 @@
 	<script src="js/script.js" type="text/javascript" charset="utf-8"></script>
 	<link rel="stylesheet" href="css/style.css" />
 	<link rel="stylesheet" type="text/css" href="css/fonts.css" />
-	<link rel="stylesheet" type="text/css" href="css/order-submit-new.css" />
-	<script src="js/order-submit-new.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" type="text/css" href="css/order-submit-new.css?v11" />
+	<script src="js/order-submit-new.js?v222" type="text/javascript" charset="utf-8"></script>
 	<title>INCAKE</title>
 </head>
 
@@ -39,14 +39,20 @@
 				<h2>订货信息</h2>
 			</dt>
 			<dd class="box-content">
-				<input type="text" placeholder="姓名（字符必须在2~6之间）" data-role="none"/>
+				<input type="text" id="realname" placeholder="姓名（字符必须在2~6之间）" data-role="none"/>
 			</dd>
 			<dd class="box-content">
-				<input type="number" placeholder="订单人手机号" data-role="none"/>
+				<input type="text" id="realphone" placeholder="订单人手机号" data-role="none"/>
 				<button class="get-yz" data-role="none">获取验证码</button>
 			</dd>
 			<dd class="box-content">
-				<input type="text" placeholder="验证码" data-role="none"/>
+				<input type="text" id="tel" placeholder="验证码" data-role="none"/>
+			</dd>
+			<dd class="box-content">
+				<input type="text" id="name" placeholder="收货人(字符必须在2~6之间)" data-role="none"/>
+			</dd>
+			<dd class="box-content">
+				<input type="text" id="phone" placeholder="收货人手机号" data-role="none"/>
 			</dd>
 		</dl>
 		<dl class="list-box">
@@ -56,21 +62,23 @@
 			</dd>
 			<dd class="box-content">
 				<label>地区</label>
-				<div class="select">
+				<div class="select jiantou">
+					<i class="imooc-icon">&#xe601;</i>
 					<input type="text" placeholder="请选择城区" data-role="none"/>
 					<select data-role="none">
-						<option value="">上海</option>
-						<option value="">北京</option>
+						<option value="">黄埔</option>
+						<option value="">闸北</option>
 					</select>
 				</div>
 			</dd>
 			<dd class="box-content">
 				<label>街道</label>
-				<div class="select">
+				<div class="select jiantou">
+					<i class="imooc-icon">&#xe601;</i>
 					<input type="text" placeholder="请选择街道" data-role="none"/>
 					<select data-role="none">
-						<option value="">上海xxxxxx</option>
-						<option value="">北京xxxxxx</option>
+						<option value="">广西中路</option>
+						<option value="">广西北路</option>
 					</select>
 				</div>
 			</dd>
@@ -88,20 +96,23 @@
 			</dt>
 			<dd class="box-content">
 				<label>配送日期</label>
-				<div class="input-widget">
+				<div class="input-widget jiantou">
+					<i class="imooc-icon">&#xe601;</i>
 					<input type="date" data-role="none"/>
 				</div>
 			</dd>
 			<dd class="box-content">
 				<label>配送时间</label>
-				<div class="input-widget">
-					<span><input type="time" data-role="none"/></span>-
-					<span><input type="time" data-role="none"/></span>
+				<div class="input-widget jiantou">
+					<i class="imooc-icon">&#xe601;</i>
+					<span class="time"><i>111</i><input type="time" data-role="none"/> </span> ——
+					<span class="time"><i></i><input type="time" data-role="none"/> </span>
 				</div>
 			</dd>
 			<dd class="box-content">
 				<label>范围</label>
-				<div class="select">
+				<div class="select jiantou">
+					<i class="imooc-icon">&#xe601;</i>
 					<input type="text" placeholder="环线以内" data-role="none"/>
 					<select data-role="none">
 						<option value="">环线以外</option>
@@ -122,7 +133,7 @@
 			<dd class="box-content">
 				<label>优惠团购券</label>
 				<div class="on-off">
-					<span id="hecard" class="ui-radio-ios fn_right">
+					<span class="ui-radio-ios fn_right">
 						<a href="javascript:;" class="ui-radio-btn"></a>
 						<div class="ui-radio-bg"></div>
 						<i class="yes">是</i>
@@ -133,12 +144,26 @@
 			<dd class="box-content">
 				<label>代金卡券</label>
 				<div class="on-off">
-					<span id="hecard" class="ui-radio-ios fn_right">
+					<span id="djkq" class="ui-radio-ios fn_right">
 						<a href="javascript:;" class="ui-radio-btn"></a>
 						<div class="ui-radio-bg"></div>
 						<i class="yes">是</i>
 						<i class="no">否</i>
 					</span>
+				</div>
+				<div class="kq-msg">
+					<input type="radio" checked name="a" data-role = "none"/>蛋糕卡
+					<input type="radio" name="a" data-role = "none"/>现金券
+					<div class="text-box">
+						<label>考号后 5 位:</label>
+						<div><input type="text" data-role = "none"/></div>
+					</div>
+					<div class="text-box">
+						<label>蛋糕卡密码:</label>
+						<div><input type="text" data-role = "none"/></div>
+					</div>
+					<p class="tishi">温馨提醒：针对持有面值为129元，149元，239元，359元的蛋糕卡用户，可以在企业客户兑换专区使用可享受免差价，去[<a href="#">企业客户兑换专区</a>]。</p>
+					<p class="shuoming">您已明确知晓蛋糕卡的使用规则。抵扣完成如有未支付金额，请选择以下支付方式。</p>
 				</div>
 			</dd>
 		</dl>
@@ -158,7 +183,7 @@
 			<dd class="box-content">
 				<label>生日牌</label>
 				<div class="on-off">
-					<span id="hecard" class="ui-radio-ios fn_right">
+					<span class="ui-radio-ios fn_right">
 						<a href="javascript:;" class="ui-radio-btn"></a>
 						<div class="ui-radio-bg"></div>
 						<i class="yes">是</i>
@@ -169,7 +194,7 @@
 			<dd class="box-content">
 				<label>贺卡</label>
 				<div class="on-off">
-					<span id="hecard" class="ui-radio-ios fn_right">
+					<span class="ui-radio-ios fn_right">
 						<a href="javascript:;" class="ui-radio-btn"></a>
 						<div class="ui-radio-bg"></div>
 						<i class="yes">是</i>
@@ -180,7 +205,7 @@
 			<dd class="box-content">
 				<label>发票</label>
 				<div class="on-off">
-					<span id="hecard" class="ui-radio-ios fn_right">
+					<span class="ui-radio-ios fn_right">
 						<a href="javascript:;" class="ui-radio-btn"></a>
 						<div class="ui-radio-bg"></div>
 						<i class="yes">是</i>

@@ -61,7 +61,7 @@ body{
         overflow: hidden;
         padding: 0 15px;
         border-bottom: 1px solid #e6e6e6;
-        input{
+        input:not([type=radio]){
             height: 50px;
             line-height: 50px\9;
             width: 100%;
@@ -104,10 +104,22 @@ body{
         .input-widget{
             overflow: hidden;
             text-align: right;
-            span{
+            line-height: 50px;
+            .time{
+                position: relative;
                 display: inline-block;
                 text-align: center;
-                width: 35%;
+                width: 20%;
+                height: 50px;
+                vertical-align: middle;
+                input{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    @include opacity(0);
+                }
             }
             input{
                 padding: 0;
@@ -118,6 +130,53 @@ body{
                 direction: rtl;
             }
         }
+        @at-root .kq-msg{
+            clear: both;
+            input[type=radio] + input[type=radio]{
+                margin-left: 20px;
+            }
+            .text-box{
+                margin: 10px 0;
+                label{
+                    margin-right: 5px;
+                    line-height: 40px !important;
+                }
+                div{
+                     overflow: hidden;
+                    input{
+                        width: 90% !important;
+                        height: 30px !important;
+                        padding: 5px;
+                        border: 1px solid #e6e6e6 !important;
+                        border-radius: 5px;
+                    }
+                }
+            }
+            p{
+                line-height: 1.5em;
+               &.tishi{
+                   color: #ca5e5c;
+                   a{
+                       text-decoration: underline;
+                   }
+               } 
+               &.shuoming{
+                   color: #a4a4a4;
+                   margin: 20px 0;
+               }
+            }
+        }
+    }
+}
+//箭头
+.jiantou{
+    position: relative;
+    padding-right: 20px;
+    .imooc-icon{
+        position: absolute;
+        right: 0;
+        font-size: 1.5em;
+        line-height: 50px;
     }
 }
 //商品清单
