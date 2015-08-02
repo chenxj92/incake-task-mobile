@@ -10,29 +10,43 @@ $(function() {
 		$(this).parent().find('i').html(Time)
 	});
 	//判断订货人和收货人是否为同一人
-	function hecard() {
-		if ($("#hecard").hasClass('ui-radio-on')) {
-			$('#name').parent().hide();
-			$('#phone').parent().hide();
-		} else {
-			$('#name').parent().show();
-			$('#phone').parent().show();
-		}
-	};
-	hecard();
+	var funck = new Fncheck();
 	$("#hecard").click(function() {
-		hecard();
+		funck.hecard();
 	});
-	//代金卡券
-	function djkq() {
-		if ($("#djkq").hasClass('ui-radio-on')) {
-			$('.kq-msg').show();
-		} else {
-			$('.kq-msg').hide();
+	//代金券
+	$("#djkq").click(function() {
+		funck.djkq();
+	});
+});
+
+//封装了一类方法
+(function($) {
+	var Fncheck = function() {
+		var self = this;
+		this.init();
+	};
+	Fncheck.prototype = {
+		hecard: function() {
+			if ($("#hecard").hasClass('ui-radio-on')) {
+				$('#name').parent().hide();
+				$('#phone').parent().hide();
+			} else {
+				$('#name').parent().show();
+				$('#phone').parent().show();
+			}
+		},
+		djkq: function() {
+			if ($("#djkq").hasClass('ui-radio-on')) {
+				$('.kq-msg').show();
+			} else {
+				$('.kq-msg').hide();
+			}
+		},
+		init: function() {
+			this.hecard(); //订货人
+			this.djkq(); //代金券
 		}
 	};
-	djkq();
-	$("#djkq").click(function() {
-		djkq();
-	});
-})
+	window["Fncheck"] = Fncheck;
+})(jQuery);
