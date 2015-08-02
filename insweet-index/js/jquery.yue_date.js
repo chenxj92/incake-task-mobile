@@ -155,6 +155,7 @@
 						$iscroll1 = $('<div class="iscroll"></div>'),
 						$middleScroll1 = $('<div></div>');
 					$leftRealTime.append($middleScroll1);
+					
 					for (var j = 0; j <= 23; j++) {
 						if (j == 0) {
 							finalOptions.intervalHeight = $('<div></div>');
@@ -193,8 +194,12 @@
 						timeSure = $('<a href="javascript:void(0);">确定</a>');
 					timeBottom.append(timeSure, timeCancell);
 
-					this.$timePanel.append($timeTitle, $timeSelectDay, $realTime, timeBottom);
+					this.$timePanel.append($timeTitle);
+					this.$timePanel.append($timeSelectDay);
+					this.$timePanel.append($realTime);
+					this.$timePanel.append(timeBottom);
 					//添加到页面
+					
 					this.$target.append(this.$mainPanel);
 					if (finalOptions.type == 'onlytime') {
 						// 初始化滚动
