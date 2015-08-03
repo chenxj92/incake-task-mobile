@@ -237,7 +237,7 @@
 					var date = finalOptions.date,
 						// currentMonth = defaultOptions.czNum[parseInt(date.getMonth())],
 						currentMonth = this.singleToDouble(parseInt(date.getMonth()) + 1),
-						$tableContainer = $('<div></div>'),
+						$tableContainer = $('<div class="tableContainer"></div>'),
 						table = '<div class="u-cal-table">',
 						count = date.getDay() + 1,
 						day = parseInt(date.getTime()) - 24 * 60 * 60 * 1000;
