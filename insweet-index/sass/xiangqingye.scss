@@ -74,7 +74,20 @@
     }
 }
 
-
-
+//套餐样式
+.goods_page .taocan-btn{
+    .price{
+        width: 100%;
+        font-size: .9em;
+        color: red;
+    }
+}
+.taocan_banner{
+   .swiper-slide{
+       img{
+           width: 100%;
+       }
+   } 
+}
 
 
