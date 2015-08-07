@@ -1,0 +1,125 @@
+@charset "utf-8";
+@import "animation";
+//Demo Styles
+html,body {
+    height: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;  
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;  
+    background: #FAFAFA;
+}
+.device {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0px 0px 5px #000;
+}
+.swiper-container {
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    -webkit-perspective: 1200px;
+    -moz-perspective: 1200px;
+    -ms-perspective: 1200px;
+    perspective: 1200px;
+}
+//媒体查询适配
+
+@media only screen and (min-width: 640px) {
+    .device {
+        position: relative;
+        width: 24em;
+        height: 37.8em;
+        padding: 1.2em 1em;
+        margin: 5px auto;
+        border-radius: 20px;
+        background: #111;
+        border: 3px solid white;
+        box-shadow: 0px 0px 5px #000;
+    }
+    .swiper-container {
+        width: 24em;
+        height: 37.8em;
+    }
+}
+.swiper-wrapper {
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.swiper-slide {
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.content-slide {
+    padding: 20px;
+    color: #bbbbbb;
+}
+.title {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+//翻页箭头
+.nextpage{
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    text-align: center;
+    animation: page_updowm 1.5s both infinite;
+    -webkit-animation: page_updowm 1.5s both infinite;
+    img{
+        width: 2em;
+    }
+}
+//第一页
+$color1:#0e2f8e;
+$color2:#1769b3;
+.page1{
+    background: #fff;
+    .logo{
+        padding: 16px 0 8px 18px;
+        background: $color1;
+        img{
+            width: 168px;
+            height: auto;
+        }
+    }
+    .box01{
+        padding-top: 18px;
+        img{
+            width: 100%;
+        }
+    }
+    .jingxi{
+        position: relative;
+    }
+}
+.page2{
+    .box2{
+        img{
+            width: 100%;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
