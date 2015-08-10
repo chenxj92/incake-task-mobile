@@ -1,0 +1,169 @@
+@charset "utf-8";
+@import "huodongyemian";
+$color1:#0e2f8e;
+$color2:#1769b3;
+.qixi{
+    position: relative;
+    background: #fff;
+    .box01{
+        padding-top: 20px;
+        img{
+            width: 100%;
+        }
+    }
+    @at-root .jingxi{
+        position: relative;
+        width: 70%;
+        margin-top: 30px;
+        margin-left: 25%;
+        h1{
+            position: absolute;
+            right: 100%;
+            margin: 0;
+            margin-top: -3px;
+            margin-left: 5px;
+            font-size: 1.2em;
+            font-style: italic;
+            white-space: nowrap;
+            color: #e60012;
+        }
+        p{
+            margin: 0;
+            width: 80%;
+            border-bottom: 1px solid $color2;
+            font-size: 1.2em;
+            line-height: 1.5em;
+            text-align: center;
+            color: $color2;
+            em{
+                font-size: 1.25em;
+                font-weight: bold;
+            }
+        }
+        h2{
+            margin: 0;
+            font-size: 1.6em;
+            line-height: 1.5em;
+            font-weight: normal;
+            color: $color2;
+        }
+        button{
+                display: block;
+                width: 85%;
+                padding: 2px;
+                font-size: 1.4em;
+                line-height: 1.5em;
+                white-space: nowrap;
+                color: #fff;
+                background: #d11f41;
+                border: none;
+                outline: none;
+                a{
+                    float: right;
+                    padding: 0 .35em;
+                    text-decoration: none;
+                    font-size: .8em;
+                    background: #fff;
+                    color: #d11f41;
+                }
+        }
+        .box1{
+                margin-left: 1.5em;
+                font-size: .85em;
+                color: #666;
+                span{
+                    color: $color2;
+                }
+        }
+        .box2{
+            margin-left: 15px;
+            font-size: 1.4em;
+            color: #1769b3;
+            b{
+                font-size: 2.5em;
+            }
+            a{
+                position: relative;
+                top: 2px;
+                display: inline-block;
+                width: 60px;
+                height: 30px;
+                margin-left: 10px;
+                background: url(../img/qixi/tu02.jpg) no-repeat center;
+                background-size: contain;
+            }
+        }
+        h3{
+            margin: 0;
+            line-height: 1.4em;
+            font-size: 1.4em;
+            color: $color2;
+            span{
+                color: red;
+            }
+        }
+        h6{
+            margin-bottom: 5px;
+            -webkit-transform: scale(.8);
+            transform: scale(.8);
+            -webkit-transform-origin: left center;
+            transform-origin: left center;
+            white-space: nowrap;
+            font-size: .75em;
+            font-weight: normal;
+            line-height: 1.4em;
+            color: #666;
+            span{
+                font-size: 1.4em;
+                color: $color2;
+            }
+        }
+    }
+    .time{
+        margin: 1.5em 0;
+        font-size: 1.2em;
+        text-align: center;
+        color: $color2;
+    }
+}
+.qixi{
+    position: relative;
+    .box2{
+        img{
+            display: block;
+            width: 100%;
+        }
+    }
+    dl{
+        padding: 15px;
+        color: #fff;
+        font-size: .75em;
+        background: #1769b3;
+        dt{
+            float: left;
+            padding: 2px 5px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            line-height: 1.5em;
+            color: #1769b3;
+            background: #fff;
+        }
+        dd{
+            clear: both;
+            margin: 0;
+            padding-left: 10px;
+            line-height: 1.35em;
+            text-align: justify;
+            &:before{
+                position: absolute;
+                display: block;
+                margin-left: -10px;
+                margin-top: 3px;
+                content: '';
+                width: 3px;
+                height: 3px;
+                background: #fff;
+            }
+        }
+    }
+}
