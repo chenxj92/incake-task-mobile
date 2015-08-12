@@ -1,0 +1,122 @@
+@charset "utf-8";
+.dialog{
+    position: fixed;
+    z-index: 10000;
+    top: 50%;
+    left: 50%;
+    width: 95%;
+    max-width: 370px;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 8px #000000;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    background: #fff;
+}
+.taozhuang{
+    .content{
+        padding: 20px 5px 10px;
+        a{
+            float: left;
+            width: 70px;
+            height: 70px;
+            margin-right: 10px;
+            img{
+                width: 100%;
+            }
+        }
+        .inner-box{
+            overflow: hidden;
+            h1,h2{
+                color: #379ce4;
+            }
+            h1{
+                padding-left: 30px;
+                font-size: 1.4em;
+                background: url(../pic/cake-list/xin.jpg) no-repeat left center;
+                background-size: auto 80%;
+            }
+            h2{
+                line-height: 2em;
+            }
+            dl{
+                list-style-type: square;
+                padding: 5px;
+                padding-left: 15px;
+                border-radius: 4px;
+                font-size: .75em;
+                background: #f8f8f8;
+            }
+            dt{
+                line-height: 1.4em;
+                color: #505050;
+            }
+            dd{
+                position: relative;
+                display: flex;
+                display: -webkit-flex;
+                margin-bottom: 5px;
+                align-items: center;
+                justify-content: space-between;
+                line-height: 1.25em;
+                color: #979797;
+                &:before{
+                    content: '';
+                    position: absolute;
+                    top: 5px;
+                    left: -10px;
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    background: #979797;
+                }
+                span{
+                    white-space: nowrap;
+                    text-align: right;
+                }
+                p{
+                    overflow: hidden;
+                }
+            }
+        }
+    }
+    .footer{
+        margin-bottom: 15px;
+        text-align: center;
+        a{
+            width: 42%;
+            margin: 0 5px;
+            display: inline-block;
+            line-height: 2.5em;
+            color: #fff;
+            background: #b8d7eb;
+            &.noneed{
+                &:active{
+                    background: darken(#b8d7eb,10%);
+                }
+            }
+            &.go_buy{
+                background: #379ce2;
+                &:active{
+                    background: darken(#379ce2,10%);
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

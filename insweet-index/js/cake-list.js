@@ -22,5 +22,19 @@
 	},function(){
 		$(".ui_mask").hide().css('background-color','#fff');
 		$("dl.screening-content").hide()
-	})
+	});
+	//购买套餐
+	$(".shan_gou").click(function(){
+		$(".ui_mask").show().css('background-color','#000000');
+		$(".taozhuang").show()
+	});
+	$(".taozhuang .noneed").click(function(){
+		$(".ui_mask").hide().css('background-color','#fff');
+		$(".taozhuang").hide()
+	});
+	$(".go_buy").click(function(){
+		$(".ui_mask").hide().css('background-color','#fff');
+		$(".taozhuang").hide()
+		alert('购买成功')
+	});
 });
