@@ -1,0 +1,44 @@
+@charset "UTF-8";
+html { -webkit-tap-highlight-color: transparent; }
+
+body { margin: 0; font-size: 62.5%; font-family: "微软雅黑"; }
+
+header { padding: 1.6em 1.8em .9em; background: #0e2f8e; }
+header img { width: 16.9em; }
+
+.qixi-app { position: relative; background: #fff; }
+.qixi-app .box01 { margin-top: 20px; width: 100%; height: 0; padding-top: 31.5%; background-size: 100%; }
+.qixi-app .time { margin: 1.2em 0; font-size: 1em; text-align: center; color: #333333; }
+.qixi-app .jingxi1 .dinggou1 a, .jingxi1 .dinggou1 .qixi-app a, .qixi-app .jingxi2 > a { display: block; width: 5.4em; height: 5.5em; background: url(../img/qixi-app/qixi_ljgm.png) no-repeat; background-size: 100%; }
+.qixi-app .jingxi1 h1, .jingxi1 .qixi-app h1, .qixi-app .jingxi2 h1, .jingxi2 .qixi-app h1 { font-size: 2.1em; font-style: italic; color: #e60012; }
+.jingxi1 { position: relative; }
+.jingxi1 h1 { margin: 0 0 0 1.4em; padding-top: 3em; }
+.jingxi1 p { position: relative; z-index: 1; width: 65%; font-size: 1.8em; line-height: 1.5em; text-align: center; white-space: nowrap; color: #1769b3; }
+.jingxi1 p b { font-size: 1.1em; }
+.jingxi1 p strong { font-size: 1.2em; font-style: italic; }
+.jingxi1 .dinggou1 { position: absolute; right: 0; top: 0; z-index: 0; width: 15.4em; }
+.jingxi1 .dinggou1 .dangao { width: 100%; }
+.jingxi1 .dinggou1 a { position: absolute; top: 80%; left: 4em; }
+.jingxi2 { position: relative; margin-top: -4em; }
+.jingxi2 .beijing { width: 100%; height: 0; padding-top: 62%; background: url(../img/qixi-app/beijing1.png) no-repeat; background-size: contain; }
+.jingxi2 > a { position: absolute; top: 45%; left: 10%; }
+.jingxi2 .j-box { position: absolute; top: 0; left: 20%; right: 0; padding-top: 3em; text-align: center; }
+.jingxi2 .box1 { margin: 0; color: #727272; }
+.jingxi2 .box1 .color-blue { color: #1769b3; }
+.jingxi2 .box1 .color-red { color: #e60012; }
+.jingxi2 .box1 .price { font-size: 2em; }
+.jingxi2 .box1 b { font-size: 2em; }
+.jingxi2 .box1 a { display: inline-block; width: 6.3em; height: 3em; margin-left: 1em; margin-top: 5px; background: url(../img/qixi-app/qixi_huangou.png) no-repeat; background-size: 100%; }
+.jingxi2 .box1 .title1 { font-size: 2em; }
+.qixi-app .box2 { width: 80%; margin: 0 auto; }
+.qixi-app .box2 a { display: block; width: 100%; height: 0; padding-top: 113.6%; background-repeat: no-repeat; background-size: 100%; }
+.qixi-app dl { margin: 0; padding: 15px; color: #1769b3; font-size: 1em; }
+.qixi-app dl dt { font-weight: bold; line-height: 2em; color: #1769b3; }
+.qixi-app dl dd { margin: 0; padding-left: 10px; line-height: 1.35em; text-align: justify; }
+.qixi-app dl dd:before { position: absolute; display: block; margin-left: -10px; margin-top: 3px; content: ''; width: 3px; height: 3px; background: #1769b3; }
+
+footer { padding: 1em 0; text-align: center; background: #0e2f8e; }
+footer img { width: 6.6em; height: 6.8em; }
+footer h3 { margin-bottom: 0; font-weight: normal; color: #fff; }
+
+/*# sourceMappingURL=qixi-app.css.map */
