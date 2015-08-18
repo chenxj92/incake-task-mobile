@@ -1,0 +1,218 @@
+@charset "utf-8";
+@import "reset";
+header{
+    img{
+        display: block;
+        width: 100%;
+    }
+}
+.content{
+    background: #fff4e2;
+    .img-box{
+        width: 90%;
+        margin: 0 auto;
+        img{
+            width: 100%;
+        }
+    }
+    .form_box{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 65%;
+        margin: 0 auto;
+        li{
+           & + li{
+                margin-top: 1.5em;
+           }
+           >:nth-child(n){
+               border-radius: 8px;
+           }
+        }
+        input[type=text]{
+            width: 99%;
+            line-height: 3.5em;
+            text-indent: .5em;
+            border: 1px solid #0e2f8f;
+            background: #fff;
+            outline: none;
+        }
+        button{
+            width: 99%;
+            line-height: 3.5em;
+            font-size: 1.2em;
+            color: #fff;
+            border-color: transparent;
+            outline: none;
+            cursor: pointer;
+            &.liqu{
+                background: #0e2f8f;
+            }
+            &.share{
+                background: #ea6e6e;
+                span{
+                    display: inline-block;
+                    width: 2em;
+                    height: 2em;
+                    margin-right: 1em;
+                    vertical-align: middle;
+                    background: url(../img/xiamen/sharefriend.png) no-repeat;
+                    background-size: 100%;
+                }
+            }
+        }
+    }
+}
+
+footer{
+    margin-top: -.5em;
+    padding: 3.9em .8em 1em;
+    background: #0e2f8f url(../img/xiamen/beijingjiao.jpg) no-repeat top center;
+    background-size: 100% auto;
+    h1{
+        margin: 0;
+        padding: 0;
+        color: #0e2f8f;
+        font-size: 1.2em;
+        font-weight: normal;
+    }
+    dl{
+        margin: 0;
+        padding-top: 1em;
+        padding: 1em 0 .5em;
+        dt{
+            color: #f8c557;
+        }
+        dd{
+           margin: 0;
+           margin-bottom: 1em;
+           line-height: 1.5em;
+           text-align: justify;
+           color: #fff;
+       }
+    }
+    .ditu{
+        width: 90%;
+        margin: 0 auto;
+        img{
+            width: 100%;
+        }
+    }
+}
+//蒙层
+.ui-mask{
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,.75);
+}
+
+.share-jiantou{
+    position: fixed;
+    z-index: 3;
+    top: 1em;
+    right: 1em;
+    width: 21em;
+    img{
+        width: 100%;
+    }
+}
+.dialog{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 68.75%;
+    max-width: 22em;
+    padding: 10px;
+    z-index: 4;
+    background: #fff;
+    border-radius: 5px;
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    -o-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    .close-btn{
+        position: absolute;
+        top: -.25em;
+        right: -.25em;
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 2em;
+        text-decoration: none;
+        text-align: center;
+        box-shadow: 0 0 2px 0px #000000;
+        border-radius: 50%;
+        color: #bd0000;
+        background: #fff;
+    }
+    .dialog-header{
+        margin-top: 1.2em;
+        text-align: center;
+        font-size: 1.4em;
+        line-height: 2em;
+        color: #ea6e6e;
+    }
+    .dialog-content{
+        text-align: center;
+        a{
+            display: inline-block;
+            width: 8.2em;
+            img{
+                width: 100%;
+            }
+        }
+        p{
+            margin: 0;
+            font-size: 1.2em;
+            line-height: 1.5em;
+        }
+    }
+    .dialog-foot{
+        margin-top: 1.2em;
+        text-align: center;
+        button{
+            width: 70%;
+            line-height: 3em;
+            background: #0e2f8f;
+            color: #fff;
+            border: none;
+            outline: none;
+            span{
+                display: inline-block;
+                width: 2em;
+                height: 2em;
+                margin-right: .5em;
+                vertical-align: middle;
+                background: url(../img/xiamen/sharefriend.png) no-repeat center;
+                background-size: 100%;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
