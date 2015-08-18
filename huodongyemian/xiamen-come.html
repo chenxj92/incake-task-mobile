@@ -6,7 +6,7 @@
 		<title>INCAKE来厦门了</title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<link rel="stylesheet" type="text/css" href="css/xiamen-come.css" />
-		<script src="js/zepto_min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/zepto.min.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 
 	<body>
@@ -87,7 +87,8 @@
 	</body>
 	<script type="text/javascript">
 		$(function(){
-			$('.close-btn').click(function(){
+			var tap='ontouchstart' in window?'tap':'click';
+			$('.close-btn').on(tap,function(){
 				$('.dialog').hide();
 				$(".ui-mask").hide()
 			})
