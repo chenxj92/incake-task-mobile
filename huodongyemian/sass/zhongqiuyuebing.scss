@@ -1,0 +1,140 @@
+@charset "utf-8";
+@import "reset";
+@import "public";
+.zhqyb{
+   .head{
+       position: relative;
+       img{
+           display: block;
+           width: 100%;
+       }
+       div{
+           position: absolute;
+           top: 68%;
+           padding-left: 10%;
+           color: #505050;
+           h1,h2{
+               margin: 0;
+           }
+           span{
+               font-size: .5em;
+               vertical-align: middle;
+           }
+           h2{
+               font-weight: normal;
+           }
+       }
+   } 
+   //公共样式
+   %box{
+       .btn{
+           display: inline-block;
+           width: 8.7em;
+           padding: 0 .6em;
+           line-height: 2.5em;
+           border-radius: 50px;
+           font-size: 1em;
+           text-align: right;
+           text-decoration: none;
+           white-space: nowrap;
+           color: #fff;
+           background: #c6b074;
+           span{
+               float: left;
+               font-size: 1.4em;
+               vertical-align: middle;
+               color: #c80000;
+           }
+       }
+       .list{
+           list-style: none;
+           margin: 0;
+           padding: 0;
+           line-height: 1.4em;
+           color: #666666;
+           font-size: 1.2em;
+       }
+       h1{
+           font-size: 1.2em;
+           font-family: sans-serif;
+           color: #000;
+           span{
+               display: inline-block;
+               margin-left: .8em;
+               padding: 0 1em;
+               line-height: 1.5em;
+               font-size: .8em;
+               font-weight: normal;
+               background: #dcdcdc;
+           }
+       }
+       p{
+           line-height: 1.2em;
+           font-size: 1.2em;
+           color: #505050;
+       }
+       h2{
+           @extend p;
+           font-weight: normal;
+           text-decoration: underline;
+       }
+   }
+   .box1{
+       @extend %box;
+       position: relative;
+       >img{
+           width: 100%;
+       }
+       .inner-box{
+           position: absolute;
+           top: 0;
+           left: 0;
+           right: 0;
+           padding-right: 1.2em;
+       }
+       .left{
+           float: left;
+           width: 40.5%;
+           img{
+               margin-left: .5em;
+               width: 10em;
+           }
+           .btn{
+               display: block;
+               margin: 0 auto;
+           }
+           .list{
+               margin-left: 1.5em;
+               margin-top: 1.5em;
+           }
+       }
+       .right{
+           padding-top: 2em;
+           overflow: hidden;
+           img{
+               width: 14.3em;
+           }
+       }
+   }
+   .box2{
+       @extend %box;
+       margin: 0 1em;
+       margin-bottom: 1.2em;
+       background: url(../img/zhongqiuyuebing/06.png) no-repeat bottom right;
+       background-size: 7.2em auto;
+       .pic1{
+           float: right;
+           margin-right: 1em;
+           width: 10em;
+       }
+       .btn{
+           margin: 1em 0;
+       }
+       .pic2{
+           position: absolute;
+           width: 9.6em;
+           margin-left: 10.5em;
+           margin-top: 1em;
+       }
+   }
+}

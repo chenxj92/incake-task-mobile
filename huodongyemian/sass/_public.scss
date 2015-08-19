@@ -1,0 +1,23 @@
+$color1:#0e2f8e;//深蓝
+$color2:#1769b3;//浅蓝
+header{
+    padding: 1.6em 1.8em .9em;
+    background: $color1;
+    img{
+        width: 16.9em;
+    }
+}
+footer{
+    padding: 1em 0;
+    text-align: center;
+    background: $color1;
+    img{
+        width: 6.6em;
+        height: 6.8em;
+    }
+    h3{
+        margin-bottom: 0;
+        font-weight: normal;
+        color: #fff;
+    }
+}
