@@ -1,8 +1,31 @@
 html{
     -webkit-tap-highlight-color: transparent;
 }
+/*
+ * 取消input,button,select,textarea等的浏览器默认样式
+ */
+input,button,select,textarea{
+    outline:none;
+}
 body{
     margin: 0;
     font-size: 62.5%;
     font-family: "微软雅黑";
+}
+/*
+ * 修改input标签内提示文字颜色
+ */
+@mixin placeholder($color){
+    &::-webkit-input-placeholder{
+       color: $color;
+    }
+    &::-ms-input-placeholder{
+       color: $color;
+    }
+    &:-moz-placeholder{
+       color: $color;
+    }
+    &::-moz-placeholder{
+       color: $color;
+    }
 }
