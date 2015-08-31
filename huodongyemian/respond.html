@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>自适应网页</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script type="text/javascript">
+			window.onload = function() {
+				window.onresize = function() {
+					setrootsize()
+				}
+
+				function setrootsize() {
+					var docEle = document.documentElement;
+					docEle.style.fontSize = parseInt(docEle.getBoundingClientRect().width) / 16 + 'px';
+				}
+				setrootsize();
+			}
+		</script>
+		<style type="text/css">
+			body {
+				margin: 0;
+			}
+			p {
+				font-size: .5rem;
+			}
+			.div1 {
+				font-size: 1rem;
+			}
+			.div1 span{
+				font-size: 2em;
+			}
+			.div2 {
+				width: 8rem;
+				height: 2rem;
+				background: red;
+			}
+		</style>
+	</head>
+
+	<body>
+		<p>我是好人</p>
+		<div class="div1">我也是<span>好人</span></div>
+		<div class="div2"></div>
+	</body>
+
+</html>
